@@ -32,6 +32,33 @@
       --gradient-primary: linear-gradient(135deg, #FF9800, #E53935);
     }
 
+    /* Logo and Header Styling */
+    .logo img {
+        max-height: 220px;
+        margin-top: 5px !important;
+    }
+    
+    .header-bottom {
+        background-color: #1a2142;
+        height: 100px;
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+    
+    .main-menu ul li a {
+        padding: 10px 18px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Batman Text Styling */
+    .batman-text {
+        font-family: 'Arial Black', sans-serif !important;
+        font-weight: 900 !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
     /* Logo Theme Colors */
     .gradient-text {
       background: var(--gradient-primary);
@@ -52,10 +79,9 @@
       margin-bottom: 2rem;
     }
 
-    /* Glass Cards */
+    /* Glass Cards - Fixed blur issue */
     .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 1);
       padding: 2.5rem;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(255, 152, 0, 0.15);
@@ -182,12 +208,28 @@
     .stock-text h2 {
       font-size: 8rem !important;
       font-weight: 900 !important;
+      text-align: center;
+      margin: 0 auto;
     }
 
     @media (max-width: 768px) {
       .stock-text h2 {
         font-size: 4rem !important;
       }
+    }
+
+    /* Hero Text Styling */
+    .hero-text2 {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .hero-text2 a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+      margin: 0 auto;
     }
 
     /* Feature Lists */
@@ -225,6 +267,29 @@
     .hover-zoom:hover img {
       transform: scale(1.1);
     }
+
+    /* Auto Image Carousel */
+    .image-carousel {
+      position: relative;
+    }
+
+    .carousel-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-image.active {
+      opacity: 1;
+    }
+
+    .carousel-image:first-child {
+      position: relative;
+    }
 </style>
 </head>
 
@@ -261,22 +326,29 @@
                             </div>
                             <!--main-->
                             <div class="col-xl-8 col-lg-8 d-none d-lg-block">
-    <div class="main-menu f-right">
+                                <div class="main-menu f-right">
                                     <nav>
-                                        <ul id="navigation">
+                                        <ul id="navigation" class="nav-gradient font-bold batman-text">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="aboutus.html">About</a></li>
-                           <li class="dropdown">
-  <a href="#">Services</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text">W</span>aste Water Treatment</a></li>
-    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
-    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
-    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
-        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="watertreatment.html"><span
+                                                                class="gradient-text batman-text">W</span>ater & Waste
+                                                            Water Treatment</a></li>
+                                                    <li><a class="dropdown-item" href="environment.html"><span
+                                                                class="gradient-text ">E</span>nvironment</a></li>
+                                                    <li><a class="dropdown-item" href="technology.html"><span
+                                                                class="gradient-text">T</span>echnology</a></li>
+                                                    <li><a class="dropdown-item" href="renewable_energy.html"><span
+                                                                class="gradient-text">E</span>ngineering</a></li>
+                                                    <li><a class="dropdown-item" href="carbonmonitor.html"><span
+                                                                class="gradient-text">C</span>limatic & Carbon
+                                                            Monitoring</a></li>
 
-  </ul>
-</li>
+                                                </ul>
+                                            </li>
 
                                             <!-- <li><a href="contact.html">Contact</a></li> -->
                                             <!-- <li><a href="#">FAQ</a></li> -->
@@ -284,20 +356,20 @@
                                     </nav>
                                 </div>
                             </div>
-<div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                                <div class="header-right-btn f-right d-none d-lg-block">
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
                                     <a href="contact.html" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
-                        <div class="col-6 d-flex align-items-center d-lg-none">
-  <div class="mobile_menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+                            <div class="col-6 d-flex align-items-center d-lg-none">
+                                <div class="mobile_menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
 
-</div>
+                            </div>
 
                         </div>
                     </div>
@@ -309,17 +381,17 @@
 
     <main>
         <!-- Slider Area Start -->
-        <div class="slider-area">
+        <div class="slider-area ">
             <div class="slider-active">
-                <div class="single-slider hero-overly slider-height d-flex align-items-center"
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
                     data-background="assets/img/banner/tech.jpg">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 text-center">
                                 <div class="hero__caption">
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>TECHNOLOGY</h2>
-                                        <h2>TECHNOLOGY</h2>
+                                        <h2 class="batman-text">TECHNOLOGY</h2>
+                                        <h2 class="batman-text">TECHNOLOGY</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
                                         <span><a href="#">Advanced Monitoring and Control Technologies for Environmental Solutions</a></span>
@@ -355,7 +427,7 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6 scroll-slide-left">
                         <div class="hover-zoom">
-                            <img src="assets/img/banner/Flow_Meter.webp" class="img-fluid rounded shadow-lg" alt="Flow Meter pH">
+                            <img src="assets/img/banner/S-Flowmeter.png" class="img-fluid rounded shadow-lg" alt="Flow Meter pH">
                         </div>
                     </div>
                     <div class="col-lg-6 scroll-slide-right">
@@ -396,9 +468,9 @@
             <div class="container">
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6 order-lg-2 scroll-slide-right">
-                        <div class="hover-zoom">
-                            <img src="assets/img/banner/Ph_meter.avif" class="img-fluid rounded shadow-lg" alt="Online pH and TDS Meter">
-                            <img src="assets/img/banner/T.D.S_Meter.jpg" class="img-fluid rounded shadow-lg" alt="Online pH and TDS Meter">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <img src="assets/img/banner/Ph_meter.avif" class="w-full h-auto rounded-2xl shadow-lg transition-opacity duration-1000 opacity-100" id="image1" alt="Online pH and TDS Meter">
+                            <img src="assets/img/banner/T.D.S_Meter.jpg" class="w-full h-auto rounded-2xl shadow-lg transition-opacity duration-1000 opacity-0 absolute top-0 left-0" id="image2" alt="Online pH and TDS Meter">
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1 scroll-slide-left">
@@ -434,7 +506,7 @@
             </div>
         </section>
 
-        <!-- Sensor Technologies Section -->
+       <!-- Sensor Technologies Section -->
         <section class="py-16">
             <div class="container">
                 <div class="text-center mb-5 scroll-scale">

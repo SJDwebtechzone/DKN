@@ -297,7 +297,48 @@
       background-clip: text;
       font-weight: 600;
     }
+
+    /* Batman Font */
+    .batman-text {
+      font-family: 'Creepster', cursive;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Navbar Size Reduction */
+    .header-bottom {
+      background-color: #1a2142;
+      height: 100px;
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+    }
+    
+    .main-menu ul li a {
+      padding: 10px 18px !important;
+      line-height: 1.2 !important;
+    }
+    
+    .logo img {
+      max-height: 220px;
+      margin-top: 5px !important;
+    }
+
+    /* Custom Hero Text Styling */
+    .stock-text h2 {
+      font-size: 5rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.2 !important;
+    }
+
+    @media (max-width: 768px) {
+      .stock-text h2 {
+        font-size: 3rem !important;
+      }
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -314,50 +355,55 @@
                                 <div class="logo">
                                     <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
                                             alt=""></a>
-                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
                                 </div>
                             </div>
                             <!--main-->
                             <div class="col-xl-8 col-lg-8 d-none d-lg-block">
-    <div class="main-menu f-right">
+                                <div class="main-menu f-right">
                                     <nav>
-                                        <ul id="navigation">
+                                        <ul id="navigation" class="nav-gradient font-bold batman-text">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="aboutus.html">About</a></li>
-                           <li class="dropdown">
-  <a href="#">Services</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text">W</span>aste Water Treatment</a></li>
-    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
-    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
-    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
-        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="watertreatment.html"><span
+                                                                class="gradient-text batman-text">W</span>ater & Waste
+                                                            Water Treatment</a></li>
+                                                    <li><a class="dropdown-item" href="environment.html"><span
+                                                                class="gradient-text ">E</span>nvironment</a></li>
+                                                    <li><a class="dropdown-item" href="technology.html"><span
+                                                                class="gradient-text">T</span>echnology</a></li>
+                                                    <li><a class="dropdown-item" href="renewable_energy.html"><span
+                                                                class="gradient-text">E</span>ngineering</a></li>
+                                                    <li><a class="dropdown-item" href="carbonmonitor.html"><span
+                                                                class="gradient-text">C</span>limatic & Carbon
+                                                            Monitoring</a></li>
 
-  </ul>
-</li>
-
-                                            <!-- <li><a href="contact.html">Contact</a></li> -->
-                                            <!-- <li><a href="#">FAQ</a></li> -->
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-<div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                                <div class="header-right-btn f-right d-none d-lg-block">
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
                                     <a href="contact.html" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
-                        <div class="col-6 d-flex align-items-center d-lg-none">
-  <div class="mobile_menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+                            <div class="col-6 d-flex align-items-center d-lg-none">
+                                <div class="mobile_menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
 
-</div>
+                            </div>
 
                         </div>
                     </div>
@@ -367,18 +413,15 @@
         <!-- Header End -->
     </header>
     <main>
+<!-- Slider Area Start -->
         <div class="slider-area ">
             <div class="slider-active">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="assets/img/banner/splant.jpg">
+                    data-background="assets/img/banner/rplant.jpg">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 text-center">
                                 <div class="hero__caption">
-                                    <!-- <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing service</span>
-                                    </div> -->
-                                    <!-- <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1> -->
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
                                         <h2 class="batman-text">ENVIRONMENT</h2>
                                         <h2 class="batman-text">ENVIRONMENT</h2>
@@ -392,10 +435,9 @@
                         </div>
                     </div>
                 </div>
-                
-                </div>
             </div>
         </div>
+        <!-- Slider Area End -->
 
     <!-- Overview Section -->
     <section class="py-16 bg-gradient-to-br from-orange-50 to-red-50">
@@ -639,7 +681,7 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-6 mb-4 mb-lg-0 bounce-in">
             <div class="hover-zoom">
-              <img src="assets/img/banner/wastesegregate.jpg" class="img-fluid rounded w-100 shadow-lg" alt="Waste Segregation">
+              <img src="assets/img/banner/D.png" class="img-fluid rounded w-100 shadow-lg" alt="Waste Segregation">
             </div>
           </div>
           <div class="col-lg-6 flip-in">
@@ -654,15 +696,15 @@
               <h6 class="gradient-text mt-4">Industry Practices</h6>
               <ul class="list-unstyled mb-3">
                 <li class="mb-2">
-                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <i class="bi bi-check-circle-fill text-success me-2"> </i>
                   Source-level segregation into wet, dry, and hazardous waste
                 </li>
                 <li class="mb-2">
-                  <i class="bi bi-trash-fill text-success me-2"></i>
+                  <i class="bi bi-trash-fill text-success me-2"> </i>
                   Color-coded bins as per regulatory standards
                 </li>
                 <li class="mb-2">
-                  <i class="bi bi-people-fill text-success me-2"></i>
+                  <i class="bi bi-people-fill text-success me-2"> </i>
                   Awareness and compliance monitoring programs
                 </li>
               </ul>
@@ -670,11 +712,13 @@
               <h6 class="gradient-text">Key Benefits</h6>
               <ul class="list-unstyled">
                 <li class="mb-2">
-                  <i class="bi bi-arrow-repeat text-primary me-2"></i>
+                  <i class="bi bi-arrow-repeat text-primary me-2">
+                  </i>
                   Improved recycling and composting efficiency
                 </li>
                 <li class="mb-2">
-                  <i class="bi bi-bar-chart-fill text-primary me-2"></i>
+                  <i class="bi bi-bar-chart-fill text-primary me-2">
+                  </i>
                   Reduced landfill burden
                 </li>
                 <li>

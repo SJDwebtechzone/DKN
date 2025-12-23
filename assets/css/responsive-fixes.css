@@ -1,0 +1,696 @@
+/* ===================================
+   COMPREHENSIVE RESPONSIVE FIXES
+   For Desktop and Mobile Support
+   =================================== */
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===================================
+   MOBILE NAVIGATION FIXES
+   =================================== */
+
+/* Mobile Menu Toggle Button */
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Mobile Menu Styles */
+.mobile_menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile_menu span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
+}
+
+/* Mobile Navigation Active State */
+#navigation.active {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: #1a2142;
+    z-index: 9999;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#navigation.active li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#navigation.active li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 18px;
+}
+
+#navigation.active .dropdown-menu {
+    position: static;
+    display: block;
+    background: rgba(255,255,255,0.1);
+    box-shadow: none;
+    border: none;
+    margin-top: 10px;
+}
+
+#navigation.active .dropdown-menu li a {
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   =================================== */
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .stock-text h2 {
+        font-size: 6rem !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+        padding: 0 15px;
+    }
+    
+    .stock-text h2 {
+        font-size: 4rem !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 60px !important;
+    }
+    
+    .main-menu {
+        display: none !important;
+    }
+    
+    .mobile_menu {
+        display: flex !important;
+    }
+    
+    .header-right-btn {
+        display: none !important;
+    }
+    
+    /* Service Cards */
+    .single-service-cap {
+        margin-bottom: 30px;
+    }
+    
+    .service-img img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* Glass Cards */
+    .glass-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Process Items */
+    .process-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Header Fixes */
+    .header-bottom {
+        height: 80px !important;
+        padding: 10px 0 !important;
+    }
+    
+    .logo img {
+        max-height: 60px !important;
+        margin-top: 0 !important;
+    }
+    
+    .main-menu {
+        display: none !important;
+    }
+    
+    .mobile_menu {
+        display: flex !important;
+    }
+    
+    .header-right-btn {
+        display: none !important;
+    }
+    
+    .navbar-toggler {
+        display: block !important;
+    }
+    
+    /* Hero Section */
+    .slider-height {
+        min-height: 60vh !important;
+    }
+    
+    .stock-text h2 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        margin: 10px 0 !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 40px !important;
+    }
+    
+    .hero-text2 span {
+        font-size: 14px !important;
+    }
+    
+    /* Typography */
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.75rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    h4 { font-size: 1.25rem !important; }
+    h5 { font-size: 1.1rem !important; }
+    
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .gradient-text {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Service Cards */
+    .single-service-cap {
+        margin-bottom: 30px;
+    }
+    
+    .service-img {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .service-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .service-cap h4 {
+        font-size: 1.1rem !important;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    
+    /* Glass Cards */
+    .glass-card {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .glass-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    /* Stats Boxes */
+    .stats-box {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .stats-box h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Process Section */
+    .process-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px 15px;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .step-content h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Stage Items */
+    .stage-item {
+        margin-bottom: 30px;
+        padding: 20px 15px;
+    }
+    
+    .stage-item img {
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .stage-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    /* Service Grid */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .service-card {
+        padding: 20px !important;
+    }
+    
+    .service-image {
+        margin-bottom: 15px !important;
+    }
+    
+    .service-image img {
+        height: 200px !important;
+    }
+    
+    /* Advanced Grid */
+    .advanced-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .advanced-meter-card {
+        padding: 20px !important;
+    }
+    
+    .meter-image {
+        min-height: 150px !important;
+    }
+    
+    .meter-title {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Technology Cards */
+    .tech-card {
+        padding: 20px !important;
+        margin-bottom: 20px;
+    }
+    
+    .tech-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Meter Cards */
+    .meter-card {
+        padding: 20px !important;
+        margin-bottom: 20px;
+    }
+    
+    .meter-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    /* Images */
+    .wastewater-image img,
+    .renewable-image img,
+    .hover-zoom img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* Tailwind Grid Overrides */
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .grid-cols-4 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    
+    .lg\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    
+    .md\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .md\:grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    
+    /* Flexbox Overrides */
+    .lg\:flex-row { flex-direction: column !important; }
+    .flex-lg-row-reverse { flex-direction: column !important; }
+    
+    /* Spacing */
+    .py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    .py-20 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+    .mb-12 { margin-bottom: 2rem !important; }
+    .gap-12 { gap: 1.5rem !important; }
+    .gap-8 { gap: 1rem !important; }
+    
+    /* Text Alignment */
+    .lg\:text-left { text-align: center !important; }
+    .text-justify { text-align: left !important; }
+    
+    /* Order */
+    .lg\:order-1 { order: 1 !important; }
+    .lg\:order-2 { order: 2 !important; }
+    
+    /* Width */
+    .lg\:w-1\/2 { width: 100% !important; }
+    .w-full { width: 100% !important; }
+    
+    /* Footer */
+    .footer-links-center {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+        max-height: 80px;
+    }
+    
+    .footer-tittle ul {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .footer-tittle ul li {
+        margin-bottom: 10px;
+    }
+    
+    /* Contact Page */
+    .contact-info {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .qr-card {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    .qr-img {
+        max-width: 120px;
+    }
+    
+    /* About Page */
+    .about-img {
+        margin-bottom: 30px;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    /* Team Section */
+    .single-team {
+        margin-bottom: 30px;
+    }
+    
+    .team-img img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    /* Why Choose Us */
+    .why-card {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .why-icon {
+        font-size: 2rem;
+        color: #FF9800;
+        margin-bottom: 15px;
+    }
+}
+
+/* ===================================
+   ADDITIONAL MOBILE OPTIMIZATIONS
+   =================================== */
+
+/* Touch-friendly buttons */
+@media (max-width: 767px) {
+    .btn {
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+        min-height: 44px;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    /* Clickable areas */
+    .dropdown-item,
+    .nav-link,
+    a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Form elements */
+    input, textarea, select {
+        font-size: 16px !important;
+        padding: 12px !important;
+        border-radius: 8px;
+    }
+    
+    /* Prevent zoom on input focus */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* ===================================
+   LANDSCAPE MOBILE FIXES
+   =================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .slider-height {
+        min-height: 50vh !important;
+    }
+    
+    .stock-text h2 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 20px !important;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    .header-area,
+    .mobile_menu,
+    .navbar-toggler,
+    footer {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY IMPROVEMENTS
+   =================================== */
+
+/* Focus states */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #FF9800;
+    outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.skip-to-content:focus {
+    top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .gradient-text {
+        background: none !important;
+        color: #000 !important;
+        -webkit-text-fill-color: initial !important;
+    }
+    
+    .glass-card {
+        background: #fff !important;
+        border: 2px solid #000 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATIONS
+   =================================== */
+
+/* GPU acceleration for animations */
+.scroll-animate,
+.glass-card,
+.service-card,
+.tech-card {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* Optimize images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lazy loading support */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
