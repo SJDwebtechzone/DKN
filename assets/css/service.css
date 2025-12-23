@@ -1,0 +1,439 @@
+.wastewater-section {
+  padding: 60px 0;
+  background: #f5faff;
+}
+
+.wastewater-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.wastewater-content {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.wastewater-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #005fa3;
+}
+
+.wastewater-image {
+  flex: 1;
+  text-align: right;
+}
+
+.wastewater-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* types*/
+  .process-section {
+    max-width: 900px;
+  margin-left: 160px;
+    margin-top: 100px;
+  }
+
+  .process-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d1b5a;
+    margin-bottom: 40px;
+  }
+
+  .process-list {
+  position: relative;
+  padding-left: 40px; /* space for timeline */
+}
+
+.process-list::before {
+  content: "";
+  position: absolute;
+  left: 0; /* position the line */
+  top: 0;
+  width: 3px; /* thickness of the line */
+  height: 100%;
+  background: linear-gradient(120deg, #FFD700, #FF9800, #E53935); /* gradient */
+  border-radius: 2px; /* optional: smooth edges */
+}
+
+
+ .process-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  position: relative; /* important for :before positioning */
+}
+
+.process-item:before {
+  content: "";
+  width: 12px;               /* slightly larger for visibility */
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #FFD700, #FF9800, #E53935); /* gradient dot */
+  position: absolute;
+  left: -47px;               /* adjust based on your layout */
+  top: 10px;                 /* adjust vertical alignment */
+  z-index: 1;                /* ensure it’s above background */
+}
+
+
+  .step-number {
+   background: linear-gradient(120deg, #FFD700, #FF9800, #E53935);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 60, 180, 0.25);
+    margin-right: 25px;
+  }
+
+  .step-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #0d1b5a;
+  }
+
+  .step-content p {
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+  }
+  /* Animation keyframes */
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to each process item */
+/* When in view, add a class to trigger animation */
+.process-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* stages */
+
+.wwt-section{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  padding:28px;
+  border-radius:8px;
+  background:#f7f9fb;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  max-width:1100px;
+  margin:20px auto;
+}
+.wwt-content{flex:1; padding:8px 12px;}
+.wwt-content h2{margin:0 0 12px; font-size:1.5rem; color:#0b3b5c;}
+.wwt-content ol{margin:0 0 10px 18px; line-height:1.6;}
+.wwt-content .note{font-size:0.95rem; color:#374151; margin-top:8px;}
+.wwt-image{flex:0 0 360px; text-align:center;}
+.wwt-image img{max-width:100%; height:auto; border-radius:6px; box-shadow:0 4px 12px rgba(11,59,92,0.08);}
+@media (max-width:800px){
+  .wwt-section{flex-direction:column;}
+  .wwt-image{width:100%;}
+}
+
+
+.stages-section {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe0b3 100%);
+  position: relative;
+}
+
+.stages-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23FF9800" opacity="0.1"/></svg>') repeat;
+  background-size: 50px 50px;
+}
+
+.stages-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.stage-item {
+  background: rgba(255,255,255,0.9);
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255,152,0,0.15);
+  border: 2px solid transparent;
+  position: relative;
+  pointer-events: none;
+}
+
+
+
+.stage-number {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF9933, #CC3300);
+  margin: 0 auto 15px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(255,153,51,0.6);
+}
+
+.stage-number::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.stage-item img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stage-item h3 {
+  margin: 0 0 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #CC3300;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.stage-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media(max-width: 900px) {
+  .stage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media(max-width: 600px) {
+  .stage-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .stages-section {
+    padding: 60px 3%;
+  }
+}
+
+
+
+/* Services Section */
+.services-section {
+  padding: 60px 5%;
+  background-color: #f8f9fa;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.services-section .section-title {
+  margin-bottom: 30px;
+}
+
+.services-section p {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  text-align: justify;
+  line-height: 1.6;
+  color: #555;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  padding: 20px;
+  position: relative;
+}
+
+.service-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.service-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.service-content a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.service-number {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #005fa3;
+  background: rgba(255,255,255,0.9);
+  padding: 5px 8px;
+  border-radius: 50%;
+  min-width: 30px;
+  text-align: center;
+}
+
+/*Technology Types*/
+/* Section */
+.tech-section {
+  padding: 60px 5%;
+  background: #f4f9ff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #0a3d62;
+}
+
+/* Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+.tech-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border: 1px solid #e1ecff;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Images */
+.tech-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Titles */
+.tech-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1b4f72;
+  font-weight: 600;
+}
+
+/* Text */
+.tech-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Sludge Management Section */
+/* Optional custom styling */
+h2 {
+  font-size: 2.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  border-radius: 12px;
+}
+
+.stock-text h2 {
+  font-size: 5rem !important;
+  color: #005fa3;
+}

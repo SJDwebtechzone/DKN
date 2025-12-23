@@ -1,0 +1,868 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DKN - WW Treatment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/service.css">
+<style>
+    .about-img {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .about-content h2 {
+      font-weight: 800;
+    }
+
+    /* GLASS CARDS */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      height: 100%;
+      transition: 0.4s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .glass-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(120deg, #FFD700, #FF9800, #E53935);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #fff;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    /* STATS */
+    .stats-box {
+      background: linear-gradient(120deg, #FF9800, #E53935);
+      color: white;
+      padding: 35px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .logo img {
+    max-height: 220px;   /* adjust if needed */
+    margin-top: 5px !important;
+}.header-bottom {
+    background-color: #1a2142;   /* light grey */
+    height: 100px;            /* nav height stays fixed */
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+
+}
+.main-menu ul li a {
+    padding: 10px 18px !important;  /* was much larger */
+    line-height: 1.2 !important;
+}
+.logo img {
+    max-height: 220px;   /* adjust if needed */
+    margin-top: 5px !important;
+}
+
+.section-tittle .back-text.batman-text {
+    font-family: 'BatmanFont' !important;
+    font-size: 5rem !important; /* force it */
+    font-weight: normal !important;
+    line-height: 1 !important;
+    letter-spacing: 1px !important;
+}
+
+
+
+
+    /* Scroll Animations */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-animate.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-slide-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-slide-left.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-slide-right.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-scale {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-scale.animate {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Increased WETEC size */
+    .stock-text h2 {
+      font-size: 8rem !important;
+      font-weight: 900 !important;
+    }
+
+    @media (max-width: 768px) {
+      .stock-text h2 {
+        font-size: 4rem !important;
+      }
+    }
+
+    /* Image Carousel Styles */
+    .image-carousel {
+      max-width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      display: block;
+    }
+
+    .carousel-track img:first-child {
+      opacity: 1;
+      animation: imageRotate 9s infinite;
+    }
+
+    .carousel-track img:nth-child(2) {
+      animation: imageRotate 9s infinite 3s;
+    }
+
+    .carousel-track img:nth-child(3) {
+      animation: imageRotate 9s infinite 6s;
+    }
+
+  @keyframes imageRotate {
+  0%, 30% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+.wastewater-content ul {
+    padding-left: 20px; /* space for bullets */
+    list-style-type: disc; /* default bullet */
+}
+
+.wastewater-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.1rem; /* adjust font size */
+}
+
+
+</style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+     <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/banner/logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+     <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header">
+                <div class="header-bottom header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
+                                            alt=""></a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!--main-->
+                            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                                <div class="main-menu f-right">
+                                    <nav>
+                                        <ul id="navigation" class="nav-gradient font-bold batman-text">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="aboutus.html">About</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="watertreatment.html"><span
+                                                                class="gradient-text batman-text">W</span>ater & Waste
+                                                            Water Treatment</a></li>
+                                                    <li><a class="dropdown-item" href="environment.html"><span
+                                                                class="gradient-text ">E</span>nvironment</a></li>
+                                                    <li><a class="dropdown-item" href="technology.html"><span
+                                                                class="gradient-text">T</span>echnology</a></li>
+                                                    <li><a class="dropdown-item" href="renewable_energy.html"><span
+                                                                class="gradient-text">E</span>ngineering</a></li>
+                                                    <li><a class="dropdown-item" href="carbonmonitor.html"><span
+                                                                class="gradient-text">C</span>limatic & Carbon
+                                                            Monitoring</a></li>
+
+                                                </ul>
+                                            </li>
+
+                                            <!-- <li><a href="contact.html">Contact</a></li> -->
+                                            <!-- <li><a href="#">FAQ</a></li> -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
+                                    <a href="contact.html" class="btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-6 d-flex align-items-center d-lg-none">
+                                <div class="mobile_menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
+                    data-background="assets/img/banner/wplant.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="hero__caption">
+                                    <!-- <div class="hero-text1">
+                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing service</span>
+                                    </div> -->
+                                    <!-- <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1> -->
+                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                        <h2>WWTREATMENT</h2>
+                                        <h2>WWTREATMENT</h2>
+                                    </div>
+                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
+                                        <span><a href="#">Shaping a Sustainable future through Advanced
+                                                Engineering and Technology</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <section class="wastewater-section scroll-animate">
+          <div class="wastewater-container">
+
+            <!-- LEFT CONTENT -->
+      <div class="wastewater-content scroll-slide-left">
+    <h2 class="gradient-text batman-text">Waste-Water Treatment Technology</h2>
+    <ul class="wastewater-points">
+        <li>
+            Wastewater treatment technology comprises a <strong>systematic combination of physical, chemical, and biological processes</strong> 
+            engineered to remove contaminants from wastewater generated by <strong>municipal, industrial, and agricultural sources.</strong>
+        </li>
+        <li>
+            These treatment processes are designed to achieve <strong>regulatory-compliant effluent quality</strong>, 
+            enabling safe discharge into the environment or reuse in various applications.
+        </li>
+        <li>
+            Modern wastewater treatment systems emphasize <strong>high-efficiency pollutant removal, process reliability, and environmental protection.</strong>
+        </li>
+        <li>
+            Advanced technologies facilitate resource recovery, including treated water reuse, biogas generation, and nutrient recovery, 
+            while reducing public health risks and environmental impacts.
+        </li>
+        <li>
+            In the context of rapid urbanization and industrial expansion, wastewater treatment plays a vital role in <strong>sustainable water management, pollution control, and climate resilience.</strong>
+        </li>
+    </ul>
+</div>
+
+
+
+            <!-- RIGHT IMAGE CAROUSEL -->
+            <div class="wastewater-image scroll-slide-right">
+              <div class="image-carousel">
+                <div class="carousel-track">
+                  <img src="assets/img/banner/water-plant-treatment.webp" alt="Wastewater Treatment Plant 1">
+                  <img src="assets/img/banner/Wastewater_Treatment1.webp" alt="Wastewater Treatment Plant 2">
+                  <img src="assets/img/banner/Wastewater_Treatment2.webp" alt="Wastewater Treatment Plant 3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Details End -->
+
+
+          <section class="process-section scroll-animate">
+            <h2 class="process-title gradient-text scroll-scale batman-text">Types of Water Treatment</h2>
+
+            <div class="process-list">
+
+              <div class="process-item scroll-slide-left">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                  <h3>Sewage Water Treatment</h3>
+                    <p>This process focuses on <strong>domestic wastewate</strong>—the water coming from homes,
+                     kitchens, bathrooms, and municipal drains.The goal is to<strong> remove organic 
+                     matter, suspended solids, and disease‑causing pathogens.</strong></p>
+                </div>
+              </div>
+
+              <div class="process-item scroll-slide-right">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                  <h3>Effluent Water Treatment</h3>
+                  <p>Effluent refers to <strong>industrial wastewater,</strong>which contains more complex and hazardous pollutants.
+                    This treatment removes <strong>chemicals, oils, dyes, heavy metals, and toxic substances</strong> generated by factories and industrial processes.</p>
+                </div>
+              </div>
+
+              <div class="process-item scroll-slide-left">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                  <h3>Demineralised Water</h3>
+                  <p>Demineralisation removes <strong>dissolved minerals and salts</strong> from water.
+                    Industries such as power plants, pharmaceuticals, and electronics require 
+                    water with <strong>very low mineral content</strong> to prevent scaling, corrosion, or contamination.</p>
+                </div>
+              </div>
+
+              <div class="process-item scroll-slide-right">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                  <h3>Deionized Water</h3>
+                  <p>Deionization removes <strong>charged ions</strong> (like calcium, magnesium, chloride, sulfate) using ion‑exchange resins.
+                     The result is <strong>ultra‑pure water</strong>, often used in laboratories, medical facilities, and precision manufacturing.</p>
+                </div>
+              </div>
+
+               <div class="process-item scroll-slide-left">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                  <h3>Reverse Osmosis (RO)</h3>
+                  <p>Reverse Osmosis is a<strong> pressure‑driven membrane filtration process</strong> that removes dissolved 
+                    salts, ions, microorganisms, and organic molecules from water.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+<!----------Stages of Wastewater Treatment Start--------->
+
+          <section class="stages-section scroll-animate">
+            <h2 class="process-title gradient-text scroll-scale batman-text">Stages of Wastewater Treatment</h2>
+            <div class="stages-wrapper">
+              <div class="stage-grid">
+
+                <div class="stage-item scroll-animate">
+                  <div class="stage-number" data-number="1"></div>
+                  <img src="assets/img/banner/oilskimmers.jpeg" alt="">
+                  <h3 class="gradient-text">Oil Trap</h3>
+                  <p>The first stage where large debris, plastics, rags, and grit are removed to prevent equipment damage.</p>
+                </div>
+
+                <div class="stage-item scroll-animate">
+                  <div class="stage-number" data-number="2"></div>
+                  <img src="assets/img/banner/Primary1.jpg" alt="">
+                  <h3 class="gradient-text">Primary Treatment</h3>
+                  <p>Sedimentation to settle suspended solids and skimming to remove oils and grease.</p>
+                </div>
+
+                <div class="stage-item scroll-animate">
+                  <div class="stage-number" data-number="3"></div>
+                  <img src="assets/img/banner/Secondary1.jpg" alt="">
+                  <h3 class="gradient-text">Secondary Treatment</h3>
+                  <p>Secondary treatment uses biological processes to break down dissolved and suspended organic matter.</p>
+                </div>
+
+                <div class="stage-item scroll-animate">
+                  <div class="stage-number" data-number="4"></div>
+                  <img src="assets/img/banner/Tertiary1.webp" alt="">
+                  <h3 class="gradient-text">Tertiary Treatment</h3>
+                  <p>This final polishing stage removes remaining nutrients, pathogens, and fine particles.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----------Stages of Wastewater Treatment End--------->
+
+
+          <!-----Emerging and Advanced Waste Water Treatment Technology start------>
+
+          <section class="services-section scroll-animate">
+            <h2 class="section-title gradient-text scroll-scale batman-text">Emerging and Advanced Waste Water Treatment Technology</h2>
+
+            <p class="section-subtitle text-justify scroll-slide-left">Emerging and advanced wastewater treatment technologies represent<strong> next-generation 
+              process solutions</strong> engineered to overcome the operational and performance limitations of conventional treatment systems. 
+              These technologies deliver <strong>higher treatment efficiency, advanced contaminant removal, and improved process stability</strong>, enabling 
+              consistent achievement of stringent discharge and reuse standards under varying influent conditions.</p>
+              <br>
+            <p class="scroll-slide-right">Advanced treatment systems are capable of removing <strong>complex pollutants</strong>, including nutrients, refractory organic compounds,
+              and micropollutants, while improving<strong> system reliability and operational resilience.</strong> Through the integration of <strong>resource recovery,
+              energy optimization, and water reuse processes</strong>, these technologies support sustainable wastewater management and play a critical
+              role in meeting the demands of<strong> large-scale municipal and industrial applications</strong>, ensuring long-term environmental protection and
+              regulatory compliance.</p>
+
+            <div class="services-grid">
+
+              <!-- Service 1 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/MBR.jpg" alt="Membrane Bioreactors">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Membrane Bioreactors <br>(MBR)</h3>
+                  <p>Combines biological processing with membrane filtration to deliver high-quality effluent suitable for reuse.</p>
+                  
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/Electrocoagulation.webp" alt="Electrocoagulation">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Electrocoagulation</h3>
+                  <p>Uses an electrical current to destabilize and remove heavy metals, oils, dyes, and suspended solids with high efficiency.</p>
+                  
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/Anaerobic_Digestion.jpg" alt="Anaerobic Digestion">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Anaerobic Digestion</h3>
+                  <p> A biological process where microorganisms break down organic waste in oxygen‑free conditions, producing biogas for energy recovery and a stabilized sludge for safe disposal.</p>
+              
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/AOPs.webp" alt="Advanced Oxidation Processes">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Advanced Oxidation <br>Processes (AOPs)</h3>
+                  <p>A low‑energy membrane process that uses natural osmotic pressure to draw clean water through a semi‑permeable membrane, making it effective for treating complex wastewater and enabling reuse.</p>
+                 
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/RO.jpg" alt="Reverse Osmosis">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Reverse Osmosis <br> (RO)</h3>
+                  <p>A pressure‑driven membrane process that removes dissolved salts, ions, microorganisms, and organic molecules to produce high‑purity water.</p>
+                </div>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="service-card scroll-animate">
+                <div class="service-image">
+                  <img src="assets/img/banner/FO.jpg" alt="Forward Osmosis">
+                </div>
+                <div class="service-content">
+                  <h3 class="gradient-text batman-text">Forward Osmosis <br> (FO)</h3>
+                  <p>Uses natural osmotic pressure to draw clean water through a membrane, offering low‑energy, fouling‑resistant treatment for complex wastewater and enabling reuse.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-------Emerging and Advanced Waste Water Treatment Technology End------->
+
+          <section class="py-16">
+            <div class="container">
+              <div class="row align-items-center">
+
+                <!-- Left Content -->
+                 <!----Sludge Treatment & Disposal---->
+
+                <div class="col-lg-6 scroll-slide-left px-4">
+                  <h2 class="mb-4 section-title gradient-text batman-text">Sludge Treatment & Disposal</h2>
+                  <p>
+                    During wastewater treatment processes, solid residues known as <strong>sludge</strong> are separated from the treated water stream. 
+                    This sludge typically contains<strong> organic and inorganic solids, pathogenic microorganisms, nutrients, heavy metals, and residual chemicals</strong>, depending on the source and treatment process. 
+                  </p>
+                  <p>
+                      Effective sludge treatment and disposal is a critical component of wastewater management, aimed at<strong> reducing environmental risks, 
+                      improving operational efficiency, and ensuring compliance with regulatory standards.</strong>Properly managed sludge systems prevent
+                       secondary pollution, safeguard public health, and support sustainable waste management practices.
+                  </p>
+
+                  <h5 class="mt-4">Key Objectives:</h5>
+                  <ul>
+                    <li>Reduce sludge volume and odors</li>
+                    <li>Destroy harmful pathogens</li>
+                    <li>Recover energy and nutrients</li>
+                    <li>Ensure environmental compliance</li>
+                  </ul>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6 text-center scroll-slide-right">
+                  <img src="assets/img/banner/sludge.jpg" class="img-fluid rounded shadow"
+                    alt="Sludge Treatment Process">
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="py-16">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 scroll-slide-left px-4">
+                  <h2 class="mb-4 section-title gradient-text batman-text ">Thickening and Dewatering</h2>
+                  <p>
+                      Thickening and dewatering are <strong>preliminary sludge treatment operations </strong>aimed at <strong>reducing sludge
+                      volume, improving solids concentration, and optimizing downstream handling and disposal efficiency.</strong>
+                      These processes significantly lower operational costs by minimizing sludge transportation requirements 
+                      and reducing the load on subsequent treatment stages. </p>
+                    <br>
+                    <p><strong>Thickening</strong> increases the solids concentration by separating free water from sludge using gravity thickeners, dissolved air flotation (DAF) units, or rotary drum thickeners, depending on sludge characteristics and plant capacity.<br>
+                      <strong>Dewatering</strong> further reduces residual moisture content through mechanical dewatering systems such as belt filter presses, centrifuges, screw presses, and filter presses, producing a semi-solid sludge cake suitable for stabilization, disposal, or resource recovery.</p>
+                </div>
+                <!-- Right Image -->
+                <div class="col-lg-6 text-center scroll-slide-right">
+                  <img src="assets/img/banner/T-D.webp" class="img-fluid rounded shadow"
+                    alt="Sludge Treatment Process">
+                </div>
+              </div>
+            </div>
+          </section>
+
+            
+          <section class="py-16">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 scroll-slide-left px-4">
+                  <h2 class="mb-4 section-title gradient-text batman-text">Stabilization</h2>
+                  <p>
+                    Sludge stabilization is a critical treatment process designed to<strong> reduce biodegradable organic matter,
+                    inactivate pathogenic microorganisms, control odor generation, and prevent further biological decomposition</strong>
+                     during sludge storage, handling, and final disposal. Stabilization improves sludge safety, minimizes environmental 
+                     risks, and enhances regulatory compliance. </p>
+                    <br>
+                    <p><strong>Anaerobic digestion,</strong>  which biologically stabilizes sludge while producing biogas for energy recovery.<br>
+                      <strong>Chemical stabilization, </strong> using lime or other chemicals to inhibit microbial activity and raise pH levels.<br>
+                      <strong>Thermal treatment,</strong> applies heat to destroy pathogens and reduce volatile solids.</p>
+
+                </div>
+                <!-- Right Image -->
+                <div class="col-lg-6 text-center scroll-slide-right">
+                  <img src="assets/img/banner/stabilization.jpg" class="img-fluid rounded shadow"
+                    alt="Sludge Treatment Process">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="py-16">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 scroll-slide-left px-4">
+                  <h2 class="mb-4 section-title gradient-text batman-text">Final Disposal</h2>
+                  <p>
+                    Final disposal represents the<strong> last stage of sludge management</strong>, involving the <strong>safe, regulated handling, 
+                    treatment, or beneficial reuse of stabilized sludge</strong> in strict compliance with environmental protection 
+                    and pollution control norms. The selected disposal route is determined by sludge characteristics, regulatory 
+                    requirements, environmental risk assessment, and project-specific objectives. </p>
+                    <br>
+                    <p><strong>Land application</strong>  as soil conditioner or fertilizer after meeting regulatory standards.<br>
+                      <strong>Composting,</strong> converting sludge into nutrient-rich organic material.</p>
+                      <strong>Incineration,</strong>  reducing sludge volume and destroying hazardous constituents.</p>
+                      <strong>Secure landfill disposal,</strong>  for sludge that cannot be reused safely.</p>
+                </div>
+                <!-- Right Image -->
+                <div class="col-lg-6 text-center scroll-slide-right">
+                  <img src="assets/img/banner/finaldisposal.jpg" class="img-fluid rounded shadow"
+                    alt="Sludge Treatment Process">
+                </div>
+              </div>
+            </div>
+          </section>
+
+   </main>
+ <footer>
+        <!-- Footer Start-->
+        <div class="footer-main">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-md-6 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mt-10">
+                                    <a href="index.html"><img src="assets/img/banner/b_logo.png" alt=""></a>
+                                </div>
+                                <!-- <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                            eiusmod tempor incididunt ut labore.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- QUICK LINKS -->
+                        <div class="col-lg-6 col-md-7 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-50 mt-16">
+                                <div class="footer-tittle">
+                                    <h4 class="batman-text">Quick Links</h4>
+                                    <ul class="">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
+                                        <li><a href="environment.html">Environment</a></li>
+                                        <li><a href="technology.html">Technology</a></li>
+                                        <li><a href="renewable_energy.html">Engineering</a></li>
+                                        <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
+
+                                        <!-- <li><a href="#">Projects</a></li> -->
+                                        <!-- <li><a href="#">Contact Us</a></li> -->
+                                        <!-- <li><a href="#">FAQ</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-3 col-md-4 col-sm-7">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4>Contact</h4>
+                                        <div class="footer-pera">
+                                            <p class="info1">2nd floor, 9, Cholambedu Rd, Vivek Nagar, Ambattur,
+                                                Chennai,
+                                                Tamil Nadu 600053</p>
+                                        </div>
+                                        <ul>
+                                            <li><a href="tel:9994266616">Phone: 9994266616</a></li>
+                                            <li><a href="tel:9884606311">Cell: 9884606311</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-8">
+                                <div class="single-footer-caption mb-50"> -->
+                        <!-- Form -->
+
+                        <!-- Map -->
+                        <!-- <div class="map-footer">
+                                        <img src="assets/img/gallery/map-footer.png" alt="">
+                                    </div>
+                                </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <!-- Copy-Right -->
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://devspectra.in"
+                                        target="_blank">DevSpectra</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+  <!-- JS here -->
+
+  <!-- All JS Custom Plugins Link Here here -->
+  <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <!-- Date Picker -->
+  <script src="./assets/js/gijgo.min.js"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/animated.headline.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+  <!-- Scrollup, nice-select, sticky -->
+  <script src="./assets/js/jquery.scrollUp.min.js"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="./assets/js/jquery.sticky.js"></script>
+
+  <!-- counter , waypoint -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+
+  <!-- contact js -->
+  <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/jquery.form.js"></script>
+  <script src="./assets/js/jquery.validate.min.js"></script>
+  <script src="./assets/js/mail-script.js"></script>
+  <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+  <!-- Jquery Plugins, main Jquery -->
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    // Scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, index * 100);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.scroll-animate, .scroll-slide-left, .scroll-slide-right, .scroll-scale');
+      animateElements.forEach(el => observer.observe(el));
+    });
+
+    // Legacy process items animation
+    const processItems = document.querySelectorAll('.process-item');
+
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      processItems.forEach((item, index) => {
+        const itemTop = item.getBoundingClientRect().top;
+
+        if (itemTop < triggerBottom) {
+          setTimeout(() => {
+            item.classList.add('show');
+          }, index * 200);
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+
+</html>

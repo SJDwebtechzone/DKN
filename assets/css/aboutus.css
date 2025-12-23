@@ -1,0 +1,25 @@
+.about-hero {
+      background: linear-gradient(90deg, #ffb347, #ff9800, #e53935);
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .about-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-icon {
+      font-size: 40px;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }

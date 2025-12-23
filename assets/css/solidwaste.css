@@ -1,0 +1,44 @@
+.icon-circle {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: linear-gradient(120deg, #FFD700, #FF9800, #E53935);
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 24px;
+margin-bottom: 45px;
+}
+.card{
+    margin-bottom: 15px !important;
+}
+.card-hover:hover {
+transform: translateY(-6px);
+transition: 0.3s ease;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.gradient-icon {
+ background: linear-gradient(120deg, #FFD700, #FF9800, #E53935);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+
+.benefit-btn {
+  background: linear-gradient(90deg, #fbb034, #ffdd00);
+  color: #1a1a1a;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  background: linear-gradient(90deg, #ffdd00, #fbb034);
+  color: #000;
+}
+

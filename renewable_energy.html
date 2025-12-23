@@ -1,0 +1,1008 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DKN - Renewable Energy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    /* Renewable Energy Theme - Orange & Red */
+    .energy-gradient {
+      background: linear-gradient(135deg, #FF6B35, #F7931E, #FF4500);
+    }
+    
+    .energy-text {
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .energy-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 107, 53, 0.2);
+    }
+    
+    .energy-card:hover {
+      border-color: #FF6B35;
+      box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+    }
+
+    @keyframes slide-in-left {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-in-left {
+      animation: slide-in-left 1s ease-out forwards;
+    }
+
+    .scroll-animate {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-animate.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @keyframes solar-shine {
+      0% { transform: translateX(-100%) skewX(-15deg); }
+      100% { transform: translateX(200%) skewX(-15deg); }
+    }
+
+    @keyframes solar-glow {
+      0%, 100% { box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3); }
+      50% { box-shadow: 0 12px 35px rgba(251, 191, 36, 0.6); }
+    }
+
+    .solar-card {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .solar-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.4), transparent);
+      transition: all 0.6s ease;
+      z-index: 1;
+    }
+
+    .solar-card:hover::before {
+      animation: solar-shine 1.2s ease-out;
+    }
+
+    .solar-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(251, 191, 36, 0.25);
+    }
+
+    .solar-card img {
+      transition: all 0.4s ease;
+    }
+
+    .solar-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .blink-effect {
+      animation: solar-glow 0.8s ease-in-out;
+    }
+
+    .solar-benefits {
+      position: relative;
+    }
+
+    .solar-benefits .energy-gradient {
+      transition: all 0.3s ease;
+    }
+
+    .solar-benefits:hover .energy-gradient {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    @keyframes fade-slide-in {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .renewable-intro {
+      position: relative;
+    }
+
+    .renewable-intro::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.03), rgba(247, 147, 30, 0.03));
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .renewable-intro:hover::before {
+      opacity: 1;
+    }
+
+    .renewable-text {
+      transition: all 0.3s ease;
+    }
+
+    .renewable-text:hover {
+      transform: translateX(5px);
+    }
+
+    .renewable-image {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .renewable-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .renewable-image:hover::after {
+      transform: translateX(100%);
+    }
+
+    .renewable-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+    }
+
+    @keyframes wind-flow {
+      0% { transform: translateX(-8px) scale(1); }
+      50% { transform: translateX(4px) scale(1.02); }
+      100% { transform: translateX(0) scale(1); }
+    }
+
+    @keyframes wind-gust {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(2deg) scale(1.05); }
+      75% { transform: rotate(-2deg) scale(1.05); }
+    }
+
+    .wind-animate {
+      animation: wind-flow 3s ease-in-out infinite;
+    }
+
+    .wind-item {
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wind-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.2), transparent);
+      transition: left 0.8s ease;
+    }
+
+    .wind-item:hover::after {
+      left: 100%;
+    }
+
+    .wind-item:hover {
+      transform: translateX(8px) scale(1.01);
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.1), rgba(59, 130, 246, 0.1));
+      box-shadow: 0 8px 20px rgba(125, 211, 252, 0.3);
+    }
+
+    .wind-item:hover .wind-animate {
+      animation: wind-gust 1.5s ease-in-out infinite;
+    }
+
+    .wind-number {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes water-flow {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-3px) scale(1.01); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    .hydro-card {
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hydro-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .hydro-card:hover::before {
+      animation: water-ripple 0.8s ease-out;
+      opacity: 1;
+    }
+
+    @keyframes water-ripple {
+      0% { transform: rotate(45deg) translate(-100%, -100%); }
+      100% { transform: rotate(45deg) translate(100%, 100%); }
+    }
+
+    .hydro-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.25);
+    }
+
+    .water-animate {
+      animation: water-flow 4s ease-in-out infinite;
+    }
+
+    .hydro-card img {
+      transition: transform 0.4s ease;
+    }
+
+    .hydro-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .bio-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bio-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .bio-card:hover::before {
+      left: 100%;
+    }
+
+    .bio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(34, 197, 94, 0.25);
+    }
+
+    .bio-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .bio-card:hover .bio-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .geo-card {
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .geo-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(239, 68, 68, 0.05), rgba(251, 146, 60, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .geo-card:hover::after {
+      opacity: 1;
+    }
+
+    .geo-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 10px 25px rgba(239, 68, 68, 0.2);
+    }
+
+    @keyframes heat-pulse {
+      0%, 100% { border-color: rgba(239, 68, 68, 0.3); }
+      50% { border-color: rgba(251, 146, 60, 0.6); }
+    }
+
+    .heat-animate {
+      animation: heat-pulse 2.5s ease-in-out infinite;
+    }
+</style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/banner/logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Start -->
+     <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header">
+                <div class="header-bottom header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
+                                            alt=""></a>
+                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                                </div>
+                            </div>
+                            <!--main-->
+                            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+    <div class="main-menu f-right">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="aboutus.html">About</a></li>
+                           <li class="dropdown">
+  <a href="#">Services</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text">W</span>aste Water Treatment</a></li>
+    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
+    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
+    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
+        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+
+  </ul>
+</li>
+
+                                            <!-- <li><a href="contact.html">Contact</a></li> -->
+                                            <!-- <li><a href="#">FAQ</a></li> -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+<div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="contact.html" class="btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                        <div class="col-6 d-flex align-items-center d-lg-none">
+  <div class="mobile_menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <!-- Header End -->
+
+    <main>
+        <!-- Slider Area Start -->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
+                    data-background="assets/img/banner/rplant.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="hero__caption">
+                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                        <h2>ENGINEERING</h2>
+                                        <h2>ENGINEERING</h2>
+                                    </div>
+                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
+                                        <span><a href="#">Shaping a Sustainable future through Advanced
+                                                Engineering and Technology</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Area End -->
+
+        <!-- Renewable Energy Introduction Section Start -->
+        <section class="py-20 bg-gradient-to-br from-orange-50 to-red-50 renewable-intro">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="transform -translate-x-10 opacity-0 animate-slide-in-left renewable-text">
+                        <h2 class="text-4xl font-bold energy-text mb-6">Renewable Energy Solutions</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Renewable energy represents the <strong>future of sustainable power generation</strong>, harnessing natural resources 
+                            that are continuously replenished by nature. Our comprehensive renewable energy solutions encompass 
+                            <strong>solar, wind, hydro, geothermal, and bio-energy technologies</strong> designed to reduce carbon footprint 
+                            and provide clean, reliable energy for residential, commercial, and industrial applications.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Through advanced engineering and cutting-edge technology, we deliver <strong>efficient, cost-effective, 
+                            and environmentally responsible energy systems</strong> that contribute to global sustainability goals 
+                            while ensuring energy security and independence.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/banner/Renewable_Energy.jpg" alt="Renewable Energy" 
+                             class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto renewable-image cursor-pointer" onclick="animateRenewableImage(this)">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Renewable Energy Introduction Section End -->
+
+        <!-- Solar Energy Section Start -->
+        <section class="py-16 bg-gradient-to-r from-yellow-100 to-orange-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center energy-text mb-8 scroll-animate">Solar Energy Solutions</h2>
+                
+                <!-- Solar Energy Definition -->
+                <div class="max-w-4xl mx-auto text-center mb-12 scroll-animate">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Solar energy harnesses the <strong>power of the sun</strong> to generate clean, renewable electricity and heat. 
+                        As the most abundant energy resource on Earth, solar technology converts <strong>sunlight into usable energy</strong> 
+                        through photovoltaic cells and thermal collectors, providing <strong>sustainable power solutions</strong> for 
+                        residential, commercial, and industrial applications while reducing carbon emissions and energy costs.
+                    </p>
+                </div>
+
+                <!-- Solar Technologies Grid -->
+                <div class="grid md:grid-cols-3 gap-6 mb-16 max-w-5xl mx-auto scroll-animate">
+                    <!-- Photovoltaic Systems -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
+                        <img src="assets/img/banner/Photovoltaic.webp" alt="Photovoltaic Systems" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Photovoltaic Systems</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Advanced solar panel installations converting sunlight directly into electricity with high efficiency rates and long-term reliability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Solar Thermal -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
+                        <img src="assets/img/banner/Thermal.jpg" alt="Solar Thermal" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Solar Thermal</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Heat collection systems for water heating and space heating applications in residential and commercial buildings.</p>
+                        </div>
+                    </div>
+
+                    <!-- Concentrated Solar Power -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
+                        <img src="assets/img/banner/Concentrated_Solar.jpg" alt="Concentrated Solar Power" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Concentrated Solar Power</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Large-scale solar thermal power plants using mirrors to concentrate sunlight for electricity generation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solar Energy Benefits -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg scroll-animate solar-benefits">
+                    <h3 class="text-2xl font-bold text-center energy-text mb-8">Solar Energy Benefits</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center solar-benefits">
+                            <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-leaf text-white"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Clean Energy</h4>
+                            <p class="text-gray-600 text-sm">Zero emissions during operation, contributing to environmental protection.</p>
+                        </div>
+                        <div class="text-center solar-benefits">
+                            <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-coins text-white"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Cost Effective</h4>
+                            <p class="text-gray-600 text-sm">Significant long-term savings on electricity bills and maintenance.</p>
+                        </div>
+                        <div class="text-center solar-benefits">
+                            <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-infinity text-white"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Renewable</h4>
+                            <p class="text-gray-600 text-sm">Inexhaustible energy source available for billions of years.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Solar Energy Section End -->
+
+        <!-- Wind Energy Section Start -->
+        <section class="py-16 bg-gradient-to-l from-blue-100 to-orange-100">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="assets/img/banner/Wind-Turbines.jpg" alt="Wind Energy" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <div class="order-1 lg:order-2 scroll-animate">
+                        <h2 class="text-4xl font-bold energy-text mb-6">Wind Energy Systems</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4 wind-item p-4 rounded-xl cursor-pointer" onclick="animateWindItem(this)">
+                                <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center flex-shrink-0 wind-animate">
+                                    <span class="text-white font-bold">01</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Onshore Wind Farms</h3>
+                                    <p class="text-gray-600">Large-scale wind turbine installations on land for maximum energy capture and grid integration.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 wind-item p-4 rounded-xl cursor-pointer" onclick="animateWindItem(this)">
+                                <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center flex-shrink-0 wind-animate">
+                                    <span class="text-white font-bold">02</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Offshore Wind Power</h3>
+                                    <p class="text-gray-600">Advanced offshore wind turbines harnessing stronger and more consistent ocean winds.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 wind-item p-4 rounded-xl cursor-pointer" onclick="animateWindItem(this)">
+                                <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center flex-shrink-0 wind-animate">
+                                    <span class="text-white font-bold">03</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Small Wind Systems</h3>
+                                    <p class="text-gray-600">Distributed wind solutions for residential and small commercial applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Wind Energy Section End -->
+
+        <!-- Hydro Energy Section Start -->
+        <section class="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center energy-text mb-12 scroll-animate">Hydro-Electric Power</h2>
+                
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 scroll-animate">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
+                        <img src="assets/img/banner/Large_Hydroelectric.jpg" alt="Large Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Large Hydroelectric</h3>
+                        <p class="text-sm text-gray-600">Major dam installations for large-scale power generation and water management.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
+                        <img src="assets/img/banner/Small_Hydro_Systems.jpg" alt="Small Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Small Hydro Systems</h3>
+                        <p class="text-sm text-gray-600">Run-of-river systems with minimal environmental impact for local communities.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
+                        <img src="assets/img/banner/Pumped_Storage.webp" alt="Pumped Storage" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Pumped Storage</h3>
+                        <p class="text-sm text-gray-600">Energy storage systems using water reservoirs for grid stability and peak demand.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
+                        <img src="assets/img/banner/Micro_Hydropower.jpg" alt="Micro Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Micro Hydropower</h3>
+                        <p class="text-sm text-gray-600">Small-scale systems for remote areas and distributed power generation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hydro Energy Section End -->
+
+        <!-- Geothermal Energy Section Start -->
+        <section class="py-16 bg-gradient-to-r from-red-100 to-orange-100">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-animate">
+                        <h2 class="text-4xl font-bold energy-text mb-6">Geothermal Energy</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                            Harness the Earth's natural heat for <strong>sustainable power generation and heating solutions</strong>. 
+                            Our geothermal systems provide reliable, baseload renewable energy with minimal environmental footprint.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500 geo-card heat-animate" onclick="animateGeoCard(this)">
+                                <h4 class="font-bold text-gray-800 mb-2">Power Generation</h4>
+                                <p class="text-gray-600 text-sm">Binary cycle and flash steam power plants for electricity production.</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 geo-card heat-animate" onclick="animateGeoCard(this)">
+                                <h4 class="font-bold text-gray-800 mb-2">Direct Use Applications</h4>
+                                <p class="text-gray-600 text-sm">Heating systems for buildings, greenhouses, and industrial processes.</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500 geo-card heat-animate" onclick="animateGeoCard(this)">
+                                <h4 class="font-bold text-gray-800 mb-2">Ground Source Heat Pumps</h4>
+                                <p class="text-gray-600 text-sm">Efficient heating and cooling systems for residential and commercial use.</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 geo-card heat-animate" onclick="animateGeoCard(this)">
+                                <h4 class="font-bold text-gray-800 mb-2">Enhanced Geothermal</h4>
+                                <p class="text-gray-600 text-sm">Advanced drilling techniques to access deeper geothermal resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/banner/Geothermal_Energy.jpg" alt="Geothermal Energy" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Geothermal Energy Section End -->
+
+        <!-- Bio Energy Section Start -->
+        <section class="py-16 bg-gradient-to-bl from-green-100 to-orange-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center energy-text mb-12 scroll-animate">Bio-Energy Solutions</h2>
+                
+                <div class="grid lg:grid-cols-3 gap-8 scroll-animate">
+                    <!-- Biomass Power -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
+                        <img src="assets/img/banner/Biomass-power-plant.jpg" alt="Biomass Power" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Mass Power Plants</h3>
+                            <p class="text-gray-600 mb-4">Converting organic waste materials into clean electricity through advanced combustion and gasification technologies.</p>
+                            <div class="flex items-center text-orange-600">
+                                <i class="fas fa-leaf mr-2 bio-icon"></i>
+                                <span class="text-sm font-medium">Carbon Neutral</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biogas Systems -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
+                        <img src="assets/img/banner/Biogas-power-production-plant.webp" alt="Biogas Plant" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Gas Production</h3>
+                            <p class="text-gray-600 mb-4">Anaerobic digestion systems converting organic waste into methane for heating, electricity, and vehicle fuel.</p>
+                            <div class="flex items-center text-orange-600">
+                                <i class="fas fa-recycle mr-2 bio-icon"></i>
+                                <span class="text-sm font-medium">Waste to Energy</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biofuels -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
+                        <img src="assets/img/banner/Biofuel_production,_Brazil.jpg" alt="Biofuels" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Fuel Production</h3>
+                            <p class="text-gray-600 mb-4">Advanced biofuel manufacturing from algae, agricultural residues, and energy crops for transportation.</p>
+                            <div class="flex items-center text-orange-600">
+                                <i class="fas fa-gas-pump mr-2 bio-icon"></i>
+                                <span class="text-sm font-medium">Clean Transportation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bio Energy Section End -->
+
+
+    </main>
+
+    <!-- Footer Start -->
+  <footer>
+        <!-- Footer Start-->
+        <div class="footer-main">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-md-6 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mt-10">
+                                    <a href="index.html"><img src="assets/img/banner/b_logo.png" alt=""></a>
+                                </div>
+                                <!-- <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                            eiusmod tempor incididunt ut labore.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- QUICK LINKS -->
+                        <div class="col-lg-6 col-md-7 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-50 mt-16">
+                                <div class="footer-tittle">
+                                    <h4 class="batman-text">Quick Links</h4>
+                                    <ul class="">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="watertreatment.html">Waste Water Treatment</a></li>
+                                        <li><a href="environment.html">Environment</a></li>
+                                        <li><a href="technology.html">Technology</a></li>
+                                        <li><a href="renewable_energy.html">Engineering</a></li>
+                                        <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
+
+                                        <!-- <li><a href="#">Projects</a></li> -->
+                                        <!-- <li><a href="#">Contact Us</a></li> -->
+                                        <!-- <li><a href="#">FAQ</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-3 col-md-4 col-sm-7">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4>Contact</h4>
+                                        <div class="footer-pera">
+                                            <p class="info1">2nd floor, 9, Cholambedu Rd, Vivek Nagar, Ambattur,
+                                                Chennai,
+                                                Tamil Nadu 600053</p>
+                                        </div>
+                                        <ul>
+                                            <li><a href="tel:9994266616">Phone: 9994266616</a></li>
+                                            <li><a href="tel:9884606311">Cell: 9884606311</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-8">
+                                <div class="single-footer-caption mb-50"> -->
+                        <!-- Form -->
+
+                        <!-- Map -->
+                        <!-- <div class="map-footer">
+                                        <img src="assets/img/gallery/map-footer.png" alt="">
+                                    </div>
+                                </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <!-- Copy-Right -->
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://devspectra.in"
+                                        target="_blank">DevSpectra</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- JS here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.scroll-animate');
+            animateElements.forEach(el => observer.observe(el));
+        });
+
+        // Solar card animation function
+        function blinkCard(element) {
+            element.classList.add('blink-effect');
+            element.style.transform = 'translateY(-8px) scale(1.03)';
+            element.style.background = 'linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1))';
+            
+            // Add shine effect
+            const shine = element.querySelector('::before');
+            if (element.querySelector('::before')) {
+                element.style.setProperty('--shine-active', '1');
+            }
+            
+            setTimeout(() => {
+                element.classList.remove('blink-effect');
+                element.style.transform = '';
+                element.style.background = '';
+            }, 800);
+        }
+
+        // Wind item animation function
+        function animateWindItem(element) {
+            element.style.transform = 'translateX(12px) scale(1.02)';
+            element.style.background = 'linear-gradient(135deg, rgba(125, 211, 252, 0.15), rgba(59, 130, 246, 0.15))';
+            element.style.boxShadow = '0 12px 25px rgba(125, 211, 252, 0.4)';
+            
+            // Add wind gust effect to number
+            const windNumber = element.querySelector('.wind-animate');
+            if (windNumber) {
+                windNumber.style.animation = 'wind-gust 0.8s ease-in-out';
+                setTimeout(() => {
+                    windNumber.style.animation = 'wind-flow 3s ease-in-out infinite';
+                }, 800);
+            }
+            
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.background = '';
+                element.style.boxShadow = '';
+            }, 500);
+        }
+
+        // Hydro card animation function
+        function animateHydroCard(element) {
+            element.style.transform = 'translateY(-8px) scale(1.03)';
+            element.style.boxShadow = '0 16px 32px rgba(59, 130, 246, 0.3)';
+            element.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(147, 197, 253, 0.08))';
+            
+            // Add ripple effect
+            const ripple = element.querySelector('::before');
+            if (element.querySelector('::before')) {
+                element.style.setProperty('--ripple-opacity', '1');
+            }
+            
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.boxShadow = '';
+                element.style.background = '';
+            }, 450);
+        }
+
+        // Bio card animation function
+        function animateBioCard(element) {
+            element.style.transform = 'translateY(-8px) scale(1.02)';
+            element.style.boxShadow = '0 16px 32px rgba(34, 197, 94, 0.3)';
+            element.style.background = 'linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(74, 222, 128, 0.08))';
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.boxShadow = '';
+                element.style.background = '';
+            }, 400);
+        }
+
+        // Geothermal card animation function
+        function animateGeoCard(element) {
+            element.style.transform = 'translateY(-6px) scale(1.03)';
+            element.style.boxShadow = '0 15px 30px rgba(239, 68, 68, 0.35)';
+            element.style.background = 'linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(251, 146, 60, 0.1))';
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.boxShadow = '';
+                element.style.background = '';
+            }, 450);
+        }
+
+        // Renewable Energy image animation function
+        function animateRenewableImage(element) {
+            element.style.transform = 'scale(1.05) rotate(1deg)';
+            element.style.boxShadow = '0 25px 50px rgba(255, 107, 53, 0.4)';
+            element.style.filter = 'brightness(1.1)';
+            
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.boxShadow = '';
+                element.style.filter = '';
+            }, 600);
+        }
+    </script>
+
+</body>
+</html>

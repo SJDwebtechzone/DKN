@@ -1,0 +1,1265 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>DKN - Environment</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/slicknav.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/solidwaste.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-orange: #FF9800;
+      --primary-red: #E53935;
+      --gradient-primary: linear-gradient(135deg, #FF9800, #E53935);
+      --gradient-secondary: linear-gradient(135deg, #FFB74D, #EF5350);
+    }
+
+    /* Logo Theme Colors */
+    .logo-gradient {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-bg {
+      background: var(--gradient-primary);
+    }
+
+    .logo-border {
+      border: 3px solid transparent;
+      background: var(--gradient-primary);
+      background-clip: padding-box;
+    }
+
+    /* Enhanced Glass Cards */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(255, 152, 0, 0.15);
+      border: 1px solid rgba(255, 152, 0, 0.2);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.1), transparent);
+      transition: left 0.6s;
+    }
+
+    .glass-card:hover::before {
+      left: 100%;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(229, 57, 53, 0.2);
+    }
+
+    /* Professional Animations - Ultra Fast Speed */
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .zoom-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .rotate-in {
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.9);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .bounce-in {
+      opacity: 0;
+      transform: scale(0.3);
+      transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .flip-in {
+      opacity: 0;
+      transform: rotateY(-90deg);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .slide-up {
+      opacity: 0;
+      transform: translateY(80px);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* Animate class */
+    .animate {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1) rotate(0deg) rotateY(0deg);
+    }
+
+    /* Image Hover Effects */
+    .hover-zoom {
+      transition: transform 0.2s ease;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .hover-zoom:hover {
+      transform: scale(1.05);
+    }
+
+    .hover-zoom img {
+      transition: transform 0.2s ease;
+    }
+
+    .hover-zoom:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Enhanced Typography */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+    }
+
+    .subsection-title {
+      color: var(--primary-red);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Floating Animation - Ultra Fast */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .floating {
+      animation: float 1s ease-in-out infinite;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .pulse-animation {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    /* Enhanced Buttons */
+    .btn-logo-theme {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+    }
+
+    .btn-logo-theme:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(229, 57, 53, 0.4);
+      color: white;
+    }
+
+    /* Process Steps */
+    .process-step {
+      background: var(--gradient-primary);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3);
+    }
+
+    /* Enhanced Cards */
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary-orange);
+      box-shadow: 0 25px 60px rgba(255, 152, 0, 0.2);
+    }
+
+    /* Technology Titles - Larger Size */
+    .technology-title {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Subsection Titles - Larger Size */
+    .gradient-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Waste Type Titles - Logo Colors Only */
+    .waste-type-title {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+     <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header">
+                <div class="header-bottom header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
+                                            alt=""></a>
+                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                                </div>
+                            </div>
+                            <!--main-->
+                            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+    <div class="main-menu f-right">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="aboutus.html">About</a></li>
+                           <li class="dropdown">
+  <a href="#">Services</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text">W</span>aste Water Treatment</a></li>
+    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
+    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
+    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
+        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+
+  </ul>
+</li>
+
+                                            <!-- <li><a href="contact.html">Contact</a></li> -->
+                                            <!-- <li><a href="#">FAQ</a></li> -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+<div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="contact.html" class="btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                        <div class="col-6 d-flex align-items-center d-lg-none">
+  <div class="mobile_menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
+                    data-background="assets/img/banner/splant.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <div class="hero__caption">
+                                    <!-- <div class="hero-text1">
+                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing service</span>
+                                    </div> -->
+                                    <!-- <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1> -->
+                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                        <h2 class="batman-text">ENVIRONMENT</h2>
+                                        <h2 class="batman-text">ENVIRONMENT</h2>
+                                    </div>
+                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
+                                        <span><a href="#">Shaping a Sustainable future through Advanced
+                                                Engineering and Technology</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+
+    <!-- Overview Section -->
+    <section class="py-16 bg-gradient-to-br from-orange-50 to-red-50">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center fade-up">
+            <h2 class="section-title batman-text">Solid Waste Management</h2>
+            <p class="lead text-gray-700">
+              Solid Waste Management refers to the systematic collection, segregation, transportation, processing, recycling, and disposal of waste materials generated by residential, commercial, institutional, and industrial sources. Proper SWM is critical to public health, environmental protection, and urban sustainability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waste Classification Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title slide-in-left batman-text">Classification of Solid Waste Streams</h2>
+
+        <!-- MSW -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-5 zoom-in">
+            <div class="hover-zoom floating">
+              <img src="assets/img/banner/municipalwaste.jpg" class="img-fluid rounded shadow-lg" alt="Municipal Solid Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 slide-in-right">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Municipal Solid Waste (MSW)</h5>
+              <p>Municipal Solid Waste includes daily waste generated from households, commercial establishments,
+                institutions, and public spaces such as markets, offices, schools, and streets. It is heterogeneous in
+                composition, consisting of organic waste, recyclables like paper and plastics, and inert materials. The high
+                organic content makes MSW both a challenge and an opportunity for resource recovery.</p>
+              <p>Efficient MSW management focuses on source-level segregation, recycling, and composting or biomethanation
+                of biodegradable waste. Non-recyclable and residual waste is treated through engineered sanitary landfills
+                or waste-to-energy processes. Modern MSW systems emphasize regulatory compliance, environmental protection,
+                and circular economy practices to ensure cleaner, healthier, and more sustainable urban environments.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industrial Waste -->
+        <div class="row align-items-center mb-5 flex-lg-row-reverse">
+          <div class="col-lg-5 rotate-in">
+            <div class="hover-zoom floating" style="animation-delay: 1s;">
+              <img src="assets/img/banner/industrywaste.jpg" class="img-fluid rounded shadow-lg" alt="Industrial Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 slide-in-left">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Industrial Waste</h5>
+              <p>
+                Industrial waste is generated from manufacturing, processing, and industrial activities such as factories,
+                power plants, refineries, and mining operations. It includes a wide range of materials such as solid,
+                liquid, and semi-solid waste, including scrap materials, chemical residues, sludge, ash, and by-products.
+                Depending on the industry, industrial waste may be non-hazardous or hazardous in nature.
+              </p>
+              <p>
+                Effective industrial waste management involves waste minimization, segregation, recycling, and safe
+                treatment or disposal of hazardous components. Industries adopt methods such as secure landfilling,
+                incineration, co-processing, and effluent treatment to comply with environmental regulations. Modern
+                practices focus on resource recovery, pollution control, and sustainable production to reduce environmental
+                impact and ensure workplace and public safety.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agricultural Waste -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-5 bounce-in">
+            <div class="hover-zoom floating" style="animation-delay: 2s;">
+              <img src="assets/img/banner/agriwaste.jpg" class="img-fluid rounded shadow-lg" alt="Agricultural Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 flip-in">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Agricultural Waste</h5>
+              <p>
+                Agricultural waste is generated from farming and agro-based activities such as crop cultivation, livestock
+                rearing, and food processing. It includes crop residues (straw, husks, stalks), animal manure, poultry
+                litter, spoiled produce, and agro-processing by-products. This waste is largely organic and biodegradable in
+                nature.
+              </p>
+              <p>
+                Proper management of agricultural waste involves composting, mulching, anaerobic digestion, and bioenergy
+                production to convert waste into useful resources like organic manure and biogas. Sustainable agricultural
+                waste practices help improve soil health, reduce open burning, lower greenhouse gas emissions, and support
+                circular economy principles in rural and agro-industrial sectors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- C&D Waste -->
+        <div class="row align-items-center mb-5 flex-lg-row-reverse">
+          <div class="col-lg-5 fade-up">
+            <div class="hover-zoom floating" style="animation-delay: 0.5s;">
+              <img src="assets/img/banner/constructionwaste.jpg" class="img-fluid rounded shadow-lg"
+                alt="Construction and Demolition Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 zoom-in">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Construction & Demolition Waste</h5>
+              <p>
+                Construction and demolition waste is generated from building, renovation, repair, and demolition activities.
+                It includes materials such as concrete, bricks, wood, metals, glass, asphalt, soil, and debris. C&D waste is
+                largely inert but produced in large volumes, especially in urban development projects.
+              </p>
+              <p>
+                Effective management of C&D waste involves segregation at source, reuse, and recycling of materials such as
+                aggregates, metals, and wood. Recycled C&D materials can be used in road construction, backfilling, and new
+                building projects. Proper collection, transportation, and processing of C&D waste help prevent illegal
+                dumping and dust pollution. Compliance with regulatory standards ensures safer construction practices and
+                promotes a circular economy in the construction sector.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hazardous Waste -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-5 slide-in-left">
+            <div class="hover-zoom floating" style="animation-delay: 1.5s;">
+              <img src="assets/img/banner/hazardous.jpg" class="img-fluid rounded shadow-lg" alt="Hazardous Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 rotate-in">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Hazardous Waste</h5>
+              <p>
+                Hazardous waste is generated from industrial, healthcare, chemical, and manufacturing activities and
+                contains substances that are toxic, corrosive, flammable, or reactive. It includes chemicals, solvents,
+                pesticides, heavy metals, biomedical residues, and certain electronic waste that pose serious risks to human
+                health and the environment.
+              </p>
+              <p>
+                Effective hazardous waste management requires strict segregation, secure storage, and specialized treatment
+                methods such as incineration, stabilization, and secure landfilling. Continuous monitoring, proper labeling,
+                and trained personnel are critical to avoid accidents and environmental damage. Adhering to national and
+                international regulations helps industries minimize liability, protect ecosystems, and ensure long-term
+                environmental sustainability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-Waste -->
+        <div class="row align-items-center mb-5 flex-lg-row-reverse">
+          <div class="col-lg-5 flip-in">
+            <div class="hover-zoom floating" style="animation-delay: 2.5s;">
+              <img src="assets/img/banner/electronic.jpg" class="img-fluid rounded shadow-lg" alt="Electronic Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 bounce-in">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Electronic Waste (E-Waste)</h5>
+              <p>
+                Electronic waste is generated from discarded electrical and electronic equipment such as computers, mobile
+                phones, televisions, batteries, and household appliances. E-waste contains valuable materials like metals
+                and plastics, along with hazardous substances such as lead, mercury, and cadmium that can harm human health
+                and the environment if improperly handled.
+              </p>
+              <p>Effective e-waste management involves collection through authorized channels, dismantling, recycling, and
+                safe disposal of non-recoverable components. Recovering valuable materials reduces the demand for raw
+                resources, while regulated processing and compliance with e-waste rules help prevent soil, water, and air
+                pollution and support sustainable technology use.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biomedical Waste -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-5 slide-in-right">
+            <div class="hover-zoom floating" style="animation-delay: 3s;">
+              <img src="assets/img/banner/biomedical.jpg" class="img-fluid rounded shadow-lg" alt="Biomedical Waste">
+            </div>
+          </div>
+          <div class="col-lg-7 fade-up">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Biomedical Waste</h5>
+              <p>
+                Biomedical waste is generated from healthcare facilities such as hospitals, clinics, laboratories, and
+                research centers during diagnosis, treatment, or immunization activities. It includes infectious waste,
+                sharps, human tissues, laboratory waste, and discarded medicines, which can pose serious health risks if not
+                properly managed.
+              </p>
+              <p>
+                Effective biomedical waste management requires segregation at source using color-coded containers, safe
+                collection, treatment through methods such as autoclaving or incineration, and secure disposal. Proper
+                handling, staff training, and strict adherence to biomedical waste management rules are essential to prevent
+                infections, protect healthcare workers, and safeguard public health and the environment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Waste -->
+        <div class="row align-items-center">
+          <div class="col-lg-7 zoom-in">
+            <div class="feature-card">
+              <h5 class="waste-type-title batman-text">Special & Emerging Waste Streams</h5>
+              <p>
+                Special and emerging waste streams include waste types that are increasing due to technological advancement,
+                urbanization, and changing consumption patterns. These include lithium-ion batteries, solar panels, electric
+                vehicle components, expired pharmaceuticals, microplastics, and composite materials. Such wastes often
+                contain a mix of valuable and hazardous components, making their management complex.
+              </p>
+              <p>
+                Managing these waste streams requires advanced recycling technologies, extended producer responsibility
+                (EPR), and dedicated collection and treatment systems. Proactive policies, innovation in material recovery,
+                and regulatory frameworks are essential to safely handle these wastes, reduce environmental risks, and
+                support a sustainable and future-ready waste management ecosystem.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 rotate-in">
+            <div class="hover-zoom floating" style="animation-delay: 3.5s;">
+              <img src="assets/img/banner/special.jpg" class="img-fluid rounded shadow-lg"
+                alt="Special and Emerging Waste Streams">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Processes Section -->
+    <section class="py-5 bg-gradient-to-br from-red-50 to-orange-50">
+      <div class="container px-4 px-lg-5">
+        <!-- Section Heading -->
+        <div class="text-center mb-5 slide-in-right">
+          <h2 class="section-title batman-text">Key Processes in Solid Waste Management</h2>
+          <p class="text-muted">
+            Integrated systems for efficiency, compliance, and sustainability
+          </p>
+        </div>
+
+        <!-- PROCESS 1 -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-4 mb-lg-0 bounce-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/wastesegregate.jpg" class="img-fluid rounded w-100 shadow-lg" alt="Waste Segregation">
+            </div>
+          </div>
+          <div class="col-lg-6 flip-in">
+            <div class="glass-card">
+              <div class="process-step">1</div>
+              <h5 class="waste-type-title batman-text">Waste Segregation</h5>
+              <p>
+                Waste segregation is the foundation of an efficient solid waste management
+                system, enabling appropriate treatment and maximum resource recovery.
+              </p>
+
+              <h6 class="gradient-text mt-4">Industry Practices</h6>
+              <ul class="list-unstyled mb-3">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Source-level segregation into wet, dry, and hazardous waste
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-trash-fill text-success me-2"></i>
+                  Color-coded bins as per regulatory standards
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-people-fill text-success me-2"></i>
+                  Awareness and compliance monitoring programs
+                </li>
+              </ul>
+
+              <h6 class="gradient-text">Key Benefits</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-arrow-repeat text-primary me-2"></i>
+                  Improved recycling and composting efficiency
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-bar-chart-fill text-primary me-2"></i>
+                  Reduced landfill burden
+                </li>
+                <li>
+                  <i class="bi bi-shield-check text-primary me-2"></i>
+                  Safe handling of hazardous waste
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROCESS 2 -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-4 mb-lg-0 slide-in-left">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/colection.jpg" class="img-fluid rounded w-100 shadow-lg" alt="Collection & Transportation">
+            </div>
+          </div>
+          <div class="col-lg-6 zoom-in">
+            <div class="glass-card">
+              <div class="process-step">2</div>
+              <h5 class="waste-type-title batman-text">Collection & Transportation</h5>
+              <p>
+                Modern collection and transportation systems ensure safe, hygienic,
+                and efficient movement of waste from source to treatment facilities.
+              </p>
+
+              <h6 class="gradient-text mt-4">Industry Practices</h6>
+              <ul class="list-unstyled mb-3">
+                <li class="mb-2">
+                  <i class="bi bi-house-door-fill text-success me-2"></i>
+                  Door-to-door and bulk waste collection
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-geo-alt-fill text-success me-2"></i>
+                  GPS-enabled route-optimized vehicles
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-truck-front-fill text-success me-2"></i>
+                  Closed-body and compactor trucks
+                </li>
+              </ul>
+
+              <h6 class="gradient-text">Key Benefits</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-droplet-fill text-primary me-2"></i>
+                  Reduced pollution and odor
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-speedometer2 text-primary me-2"></i>
+                  Operational efficiency
+                </li>
+                <li>
+                  <i class="bi bi-eye-fill text-primary me-2"></i>
+                  Real-time tracking and monitoring
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROCESS 3 -->
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 rotate-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/processing.webp" class="img-fluid rounded w-100 h-75 shadow-lg"
+                alt="Processing Technologies">
+            </div>
+          </div>
+          <div class="col-lg-6 fade-up">
+            <div class="glass-card">
+              <div class="process-step">3</div>
+              <h5 class="waste-type-title batman-text">Processing Technologies</h5>
+              <p>
+                Advanced processing technologies convert waste into reusable materials,
+                energy, or environmentally safe residues, supporting a circular economy.
+              </p>
+
+              <h6 class="gradient-text mt-4">Industry Practices</h6>
+              <ul class="list-unstyled mb-3">
+                <li class="mb-2">
+                  <i class="bi bi-flower1 text-success me-2"></i>
+                  Composting and biological treatment
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-recycle text-success me-2"></i>
+                  Material recovery and recycling
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-lightning-fill text-success me-2"></i>
+                  Waste-to-Energy (WtE) systems
+                </li>
+              </ul>
+
+              <h6 class="gradient-text">Key Benefits</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-arrow-down-circle-fill text-primary me-2"></i>
+                  Reduced landfill dependency
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-battery-charging text-primary me-2"></i>
+                  Resource and energy recovery
+                </li>
+                <li>
+                  <i class="bi bi-globe text-primary me-2"></i>
+                  Sustainable waste management
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Technologies Section -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Main Heading -->
+        <div class="text-center mb-5 slide-in-left">
+          <h2 class="section-title batman-text">Modern Waste Management Technologies</h2>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-10 fade-up">
+            <p class="text-center">Modern waste management technologies are designed to address increasing waste generation, environmental
+              concerns, and resource scarcity. These technologies focus on waste reduction, material recovery, energy
+              generation, and safe disposal, forming an integrated system that supports sustainable urban and industrial
+              development.</p>
+          </div>
+        </div>
+
+        <!-- Composting Technology -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 slide-in-right">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Composting Technology</h3>
+              <p>Composting is a controlled aerobic biological process that decomposes organic waste into stable,
+                nutrient-rich compost. It is widely used for managing food waste, garden waste, and agricultural residues</p>
+
+              <h5 class="gradient-text mt-4 mb-3">How It Works:</h5>
+              <p>Organic waste is segregated, shredded, and biologically decomposed by microorganisms under controlled
+                conditions of oxygen, moisture, and temperature. Modern systems accelerate this process while minimizing
+                odor and emissions.</p>
+              
+              <h5 class="gradient-text mt-4 mb-3">Modern Composting Systems</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-droplet-fill text-primary fs-4 me-2"></i>Diverts
+                  biodegradable waste from landfills</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-emoji-smile text-success fs-4 me-2"></i>Produces
+                  organic manure for agriculture and landscaping</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Aerated
+                  static pile systems</li>
+              </ul>
+              
+              <div class="mt-4">
+                <h6 class="gradient-text mb-3">Benefits</h6>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-2"><i class="bi bi-droplet-fill text-primary fs-4 me-2"></i>In-vessel
+                    composting</li>
+                  <li class="d-flex align-items-start mb-2"><i class="bi bi-emoji-smile text-success fs-4 me-2"></i>Tunnel
+                    composting</li>
+                  <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Reduces methane emissions and improves soil
+                    health</li>
+                  <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-danger fs-4 me-2"></i>Windrow composting (mechanized)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 zoom-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/composting.png" class="rounded w-100 shadow-lg" alt="Composting">
+            </div>
+          </div>
+        </div>
+
+        <!-- Biogas Technology -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 bounce-in">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Biogas / Anaerobic Digestion Technology</h3>
+              <p>Anaerobic digestion (AD) is a biological process conducted in the absence of oxygen, converting organic
+                waste into biogas and digestate.</p>
+
+              <h5 class="gradient-text mt-4 mb-3">How It Works:</h5>
+              <p>Organic waste is pre-treated and fed into sealed digesters where microorganisms break it down, producing
+                biogas (methane + CO₂) and nutrient-rich digestate.</p>
+              
+              <h5 class="gradient-text mt-4 mb-3">Applications</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-leaf-fill text-success fs-4 me-2"></i>Electricity
+                  and heat generation</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2"></i>Compressed biogas (CBG) for vehicles</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Digestate
+                  used as organic fertilizer</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Benefits</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-leaf-fill text-success fs-4 me-2"></i>Renewable
+                  energy production</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2"></i>Reduction
+                  of greenhouse gas emissions</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Energy-positive waste treatment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 flip-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/biogas.png" class="rounded w-100 shadow-lg" alt="Biogas">
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue with other technologies... -->
+        <!-- Recycling -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 rotate-in">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Recycling</h3>
+              <p>Recycling converts waste materials into new products, reducing raw material extraction, energy usage, and
+                environmental pollution.</p>
+
+              <h5 class="gradient-text mt-4 mb-3">Key Features:</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Reduces
+                  landfill burden</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-box-seam text-success fs-4 me-2"></i>Creates new
+                  products</li>
+                <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Saves
+                  energy</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Applications:</h5>
+              <p>Plastic, paper, metals, and glass waste</p>
+            </div>
+          </div>
+          <div class="col-lg-6 slide-in-left">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/recycle.jpg" class="rounded w-100 shadow-lg" alt="Recycling Technologies">
+            </div>
+          </div>
+        </div>
+
+        <!-- Waste-to-Energy -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 fade-up">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Waste-to-Energy (WtE) Technologies</h3>
+              <p>
+                Waste-to-Energy technologies convert non-recyclable, high-calorific waste into usable energy through
+                controlled thermal processes.
+                These systems reduce environmental impact, lower landfill dependency, and generate electricity or heat from
+                residual waste.
+              </p>
+
+              <h5 class="gradient-text mt-4 mb-3">Common WtE Methods:</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-fire text-danger fs-4 me-2"></i>
+                  Mass burn incineration with energy recovery
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-flash text-warning fs-4 me-2"></i>
+                  Refuse-Derived Fuel (RDF) systems
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-building text-primary fs-4 me-2"></i>
+                  Co-processing in cement kilns
+                </li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Benefits:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Significant reduction in waste
+                  volume</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Continuous energy generation</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reduced reliance on landfills</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 zoom-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/wte.jpg" class="rounded w-100 shadow-lg" alt="Waste-to-Energy Technologies">
+            </div>
+          </div>
+        </div>
+
+        <!-- Pyrolysis and Gasification -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 slide-in-right">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Pyrolysis and Gasification</h3>
+              <p>
+                Pyrolysis and gasification are advanced thermal treatment technologies operating under limited or no oxygen
+                conditions.
+                These processes convert waste into energy-rich products while reducing environmental impact compared to
+                conventional incineration.
+              </p>
+
+              <h5 class="gradient-text mt-4 mb-3">How They Work:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-lightning-fill text-warning me-2"></i><strong>Pyrolysis:</strong> Produces
+                  oil, gas, and char</li>
+                <li><i class="bi bi-flame-fill text-danger me-2"></i><strong>Gasification:</strong> Produces syngas (CO +
+                  H₂)</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Applications:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>Energy generation</li>
+                <li class="mb-2"><i class="bi bi-fuel-pump-fill text-primary me-2"></i>Alternative fuels</li>
+                <li><i class="bi bi-gear-fill text-info me-2"></i>Chemical feedstocks</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Benefits:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Higher energy efficiency than
+                  incineration</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Lower air emissions</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Suitable for plastic and hazardous waste</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 bounce-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/pyrolysis.jpg" class="rounded w-100 shadow-lg" alt="Pyrolysis and Gasification">
+            </div>
+          </div>
+        </div>
+
+        <!-- Material Recovery Facility -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 flip-in">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Material Recovery Facility (MRF)</h3>
+              <p>
+                Material Recovery Facilities (MRFs) are mechanized plants designed to sort, segregate, and recover
+                recyclable materials
+                from mixed or segregated waste. They form a critical part of modern waste management systems, ensuring
+                efficient
+                recycling and resource recovery.
+              </p>
+
+              <h5 class="gradient-text mt-4 mb-3">Key Technology Features:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-arrow-repeat text-primary me-2"></i>Conveyor-based sorting lines for
+                  efficient segregation</li>
+                <li class="mb-2"><i class="bi bi-magnet text-success me-2"></i>Magnetic, optical, and eddy current
+                  separators for material recovery</li>
+                <li><i class="bi bi-box-seam text-warning me-2"></i>Automated baling and storage systems for collected
+                  recyclables</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Industry Value:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Maximizes recyclable recovery</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Improves quality of recovered
+                  materials</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Enhances overall system efficiency</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 rotate-in">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/mrf.jpg" class="rounded w-100 shadow-lg" alt="Material Recovery Facility">
+            </div>
+          </div>
+        </div>
+
+        <!-- Landfill Management -->
+        <div class="row g-5 align-items-start mb-5">
+          <div class="col-lg-6 slide-in-left">
+            <div class="glass-card">
+              <h3 class="technology-title batman-text">Landfill Management Technology</h3>
+              <p>
+                Modern landfill management focuses on engineered disposal systems for residual waste that cannot be recycled
+                or processed.
+                These systems ensure environmental safety, reduce pollution, and allow for efficient monitoring and resource
+                recovery from landfill gas.
+              </p>
+
+              <h5 class="gradient-text mt-4 mb-3">Key Technology Features:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-hash text-primary me-2"></i>Lined landfill cells with leachate collection
+                  systems</li>
+                <li class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>Landfill gas capture and
+                  utilization for energy recovery</li>
+                <li><i class="bi bi-graph-up-arrow text-warning me-2"></i>Environmental monitoring and closure systems for
+                  long-term safety</li>
+              </ul>
+
+              <h5 class="gradient-text mt-4 mb-3">Industry Value:</h5>
+              <ul class="list-unstyled ms-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Prevention of soil and groundwater
+                  contamination</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Controlled methane emissions</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Long-term environmental safety</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 fade-up">
+            <div class="hover-zoom">
+              <img src="assets/img/banner/landfills.jpg" class="rounded w-100 shadow-lg" alt="Landfill Management Technology">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer>
+        <!-- Footer Start-->
+        <div class="footer-main">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-md-6 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mt-10">
+                                    <a href="index.html"><img src="assets/img/banner/b_logo.png" alt=""></a>
+                                </div>
+                                <!-- <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                            eiusmod tempor incididunt ut labore.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- QUICK LINKS -->
+                        <div class="col-lg-6 col-md-7 col-sm-12 footer-links-center">
+
+                            <div class="single-footer-caption mb-50 mt-16">
+                                <div class="footer-tittle">
+                                    <h4 class="batman-text">Quick Links</h4>
+                                    <ul class="">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
+                                        <li><a href="environment.html">Environment</a></li>
+                                        <li><a href="technology.html">Technology</a></li>
+                                        <li><a href="renewable_energy.html">Engineering</a></li>
+                                        <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
+
+                                        <!-- <li><a href="#">Projects</a></li> -->
+                                        <!-- <li><a href="#">Contact Us</a></li> -->
+                                        <!-- <li><a href="#">FAQ</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-3 col-md-4 col-sm-7">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4>Contact</h4>
+                                        <div class="footer-pera">
+                                            <p class="info1">2nd floor, 9, Cholambedu Rd, Vivek Nagar, Ambattur,
+                                                Chennai,
+                                                Tamil Nadu 600053</p>
+                                        </div>
+                                        <ul>
+                                            <li><a href="tel:9994266616">Phone: 9994266616</a></li>
+                                            <li><a href="tel:9884606311">Cell: 9884606311</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-8">
+                                <div class="single-footer-caption mb-50"> -->
+                        <!-- Form -->
+
+                        <!-- Map -->
+                        <!-- <div class="map-footer">
+                                        <img src="assets/img/gallery/map-footer.png" alt="">
+                                    </div>
+                                </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <!-- Copy-Right -->
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://devspectra.in"
+                                        target="_blank">DevSpectra</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+
+  <!-- JS here -->
+  <!-- All JS Custom Plugins Link Here here -->
+  <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <!-- Date Picker -->
+  <script src="./assets/js/gijgo.min.js"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/animated.headline.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+  <!-- Scrollup, nice-select, sticky -->
+  <script src="./assets/js/jquery.scrollUp.min.js"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="./assets/js/jquery.sticky.js"></script>
+
+  <!-- counter , waypoint -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+
+  <!-- contact js -->
+  <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/jquery.form.js"></script>
+  <script src="./assets/js/jquery.validate.min.js"></script>
+  <script src="./assets/js/mail-script.js"></script>
+  <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+  <!-- Jquery Plugins, main Jquery -->
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <script>
+    // Smooth scroll animation observer
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right, .zoom-in, .rotate-in, .bounce-in, .flip-in, .slide-up');
+      
+      animateElements.forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth parallax effect for floating images
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating');
+            
+            parallax.forEach((element, index) => {
+              const yPos = -(scrolled * 0.02 * (index + 1));
+              element.style.transform = `translateY(${yPos}px)`;
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
