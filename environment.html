@@ -29,9 +29,10 @@
   <style>
     :root {
       --primary-orange: #FF9800;
+      --primary-yellow: #FFEB3B;
       --primary-red: #E53935;
-      --gradient-primary: linear-gradient(135deg, #FF9800, #E53935);
-      --gradient-secondary: linear-gradient(135deg, #FFB74D, #EF5350);
+      --gradient-primary: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
+      --gradient-secondary: linear-gradient(135deg, #FFF176, #FFB74D, #EF5350);
     }
 
     /* Logo Theme Colors */
@@ -58,7 +59,7 @@
       backdrop-filter: blur(15px);
       padding: 2.5rem;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(255, 152, 0, 0.15);
+      box-shadow: 0 20px 60px rgba(255, 235, 59, 0.15);
       border: 1px solid rgba(255, 152, 0, 0.2);
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
@@ -72,7 +73,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 235, 59, 0.1), transparent);
       transition: left 0.6s;
     }
 
@@ -82,7 +83,7 @@
 
     .glass-card:hover {
       transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 30px 80px rgba(229, 57, 53, 0.2);
+      box-shadow: 0 30px 80px rgba(255, 152, 0, 0.2);
     }
 
     /* Professional Animations - Ultra Fast Speed */
@@ -163,7 +164,7 @@
     .section-title {
       font-size: 2.5rem;
       font-weight: 800;
-      background: var(--gradient-primary);
+      background: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -171,7 +172,7 @@
     }
 
     .subsection-title {
-      color: var(--primary-red);
+      color: #FF9800;
       font-weight: 700;
       font-size: 1.5rem;
       margin-bottom: 1rem;
@@ -199,7 +200,7 @@
 
     /* Gradient Text */
     .gradient-text {
-      background: var(--gradient-primary);
+      background: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -237,7 +238,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(255, 235, 59, 0.3);
     }
 
     /* Enhanced Cards */
@@ -272,7 +273,7 @@
     .technology-title {
       font-size: 2rem;
       font-weight: 800;
-      background: var(--gradient-primary);
+      background: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -291,7 +292,7 @@
 
     /* Waste Type Titles - Logo Colors Only */
     .waste-type-title {
-      background: var(--gradient-primary);
+      background: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -302,7 +303,6 @@
     .batman-text {
       font-family: 'Creepster', cursive;
       font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     /* Navbar Size Reduction */
@@ -324,17 +324,17 @@
       margin-top: 5px !important;
     }
 
-    /* Custom Hero Text Styling */
+    /* Custom Hero Text Styling - increase minimum pixel size */
     .stock-text h2 {
-      font-size: 5rem !important;
+      font-size: clamp(96px, 8vw, 160px) !important; /* min 96px */
       margin: 0 !important;
       padding: 0 !important;
-      line-height: 1.2 !important;
+      line-height: 1.1 !important;
     }
 
     @media (max-width: 768px) {
       .stock-text h2 {
-        font-size: 3rem !important;
+        font-size: clamp(56px, 10vw, 96px) !important; /* mobile min 56px */
       }
     }
   </style>
@@ -417,7 +417,7 @@
         <div class="slider-area ">
             <div class="slider-active">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="assets/img/banner/rplant.jpg">
+                    data-background="assets/img/banner/splant.jpg">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-12 text-center">
@@ -666,7 +666,8 @@
       </div>
     </section>
 
-    <!-- Key Processes Section -->
+    <!-- Key Processes in Solid Waste Management -->
+
     <section class="py-5 bg-gradient-to-br from-red-50 to-orange-50">
       <div class="container px-4 px-lg-5">
         <!-- Section Heading -->
@@ -695,35 +696,33 @@
 
               <h6 class="gradient-text mt-4">Industry Practices</h6>
               <ul class="list-unstyled mb-3">
-                <li class="mb-2">
-                  <i class="bi bi-check-circle-fill text-success me-2"> </i>
-                  Source-level segregation into wet, dry, and hazardous waste
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-check-circle-fill text-success flex-shrink-0"></i>
+                  <span>Source-level segregation into wet, dry, and hazardous waste</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-trash-fill text-success me-2"> </i>
-                  Color-coded bins as per regulatory standards
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-trash-fill text-success flex-shrink-0"></i>
+                  <span>Color-coded bins as per regulatory standards</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-people-fill text-success me-2"> </i>
-                  Awareness and compliance monitoring programs
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-people-fill text-success flex-shrink-0"></i>
+                  <span>Awareness and compliance monitoring programs</span>
                 </li>
               </ul>
 
               <h6 class="gradient-text">Key Benefits</h6>
               <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-arrow-repeat text-primary me-2">
-                  </i>
-                  Improved recycling and composting efficiency
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-arrow-repeat text-primary flex-shrink-0"></i>
+                  <span>Improved recycling and composting efficiency</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-bar-chart-fill text-primary me-2">
-                  </i>
-                  Reduced landfill burden
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-bar-chart-fill text-primary flex-shrink-0"></i>
+                  <span>Reduced landfill burden</span>
                 </li>
-                <li>
-                  <i class="bi bi-shield-check text-primary me-2"></i>
-                  Safe handling of hazardous waste
+                <li class="flex items-start gap-x-3">
+                  <i class="bi bi-shield-check text-primary flex-shrink-0"></i>
+                  <span>Safe handling of hazardous waste</span>
                 </li>
               </ul>
             </div>
@@ -748,33 +747,51 @@
 
               <h6 class="gradient-text mt-4">Industry Practices</h6>
               <ul class="list-unstyled mb-3">
-                <li class="mb-2">
-                  <i class="bi bi-house-door-fill text-success me-2"></i>
-                  Door-to-door and bulk waste collection
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-house-door-fill text-success flex-shrink-0"></i>
+                  <span>Door-to-door and bulk waste collection</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-geo-alt-fill text-success me-2"></i>
-                  GPS-enabled route-optimized vehicles
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-geo-alt-fill text-success flex-shrink-0"></i>
+                  <span>GPS-enabled route-optimized vehicles</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-truck-front-fill text-success me-2"></i>
-                  Closed-body and compactor trucks
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-truck-front-fill text-success flex-shrink-0"></i>
+                  <span>Closed-body and compactor trucks</span>
                 </li>
               </ul>
 
               <h6 class="gradient-text">Key Benefits</h6>
               <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-droplet-fill text-primary me-2"></i>
-                  Reduced pollution and odor
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-droplet-fill text-primary flex-shrink-0"></i>
+                  <span>Reduced pollution and odor</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-speedometer2 text-primary me-2"></i>
-                  Operational efficiency
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-speedometer2 text-primary flex-shrink-0"></i>
+                  <span>Operational efficiency</span>
                 </li>
-                <li>
-                  <i class="bi bi-eye-fill text-primary me-2"></i>
-                  Real-time tracking and monitoring
+                <li class="flex items-start gap-x-3">
+                  <i class="bi bi-eye-fill text-primary flex-shrink-0"></i>
+                  <span>Real-time tracking and monitoring</span>
+                </li>
+              </ul> and compactor trucks</span>
+                </li>
+              </ul>
+
+              <h6 class="gradient-text">Key Benefits</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-droplet-fill text-primary flex-shrink-0"></i>
+                  <span>Reduced pollution and odor</span>
+                </li>
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-speedometer2 text-primary flex-shrink-0"></i>
+                  <span>Operational efficiency</span>
+                </li>
+                <li class="flex items-start gap-x-3">
+                  <i class="bi bi-eye-fill text-primary flex-shrink-0"></i>
+                  <span>Real-time tracking and monitoring</span>
                 </li>
               </ul>
             </div>
@@ -800,33 +817,33 @@
 
               <h6 class="gradient-text mt-4">Industry Practices</h6>
               <ul class="list-unstyled mb-3">
-                <li class="mb-2">
-                  <i class="bi bi-flower1 text-success me-2"></i>
-                  Composting and biological treatment
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-flower1 text-success flex-shrink-0"></i>
+                  <span>Composting and biological treatment</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-recycle text-success me-2"></i>
-                  Material recovery and recycling
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-recycle text-success flex-shrink-0"></i>
+                  <span>Material recovery and recycling</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-lightning-fill text-success me-2"></i>
-                  Waste-to-Energy (WtE) systems
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-lightning-fill text-success flex-shrink-0"></i>
+                  <span>Waste-to-Energy (WtE) systems</span>
                 </li>
               </ul>
 
               <h6 class="gradient-text">Key Benefits</h6>
               <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-arrow-down-circle-fill text-primary me-2"></i>
-                  Reduced landfill dependency
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-arrow-down-circle-fill text-primary flex-shrink-0"></i>
+                  <span>Reduced landfill dependency</span>
                 </li>
-                <li class="mb-2">
-                  <i class="bi bi-battery-charging text-primary me-2"></i>
-                  Resource and energy recovery
+                <li class="mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-battery-charging text-primary flex-shrink-0"></i>
+                  <span>Resource and energy recovery</span>
                 </li>
-                <li>
-                  <i class="bi bi-globe text-primary me-2"></i>
-                  Sustainable waste management
+                <li class="flex items-start gap-x-3">
+                  <i class="bi bi-globe text-primary flex-shrink-0"></i>
+                  <span>Sustainable waste management</span>
                 </li>
               </ul>
             </div>
@@ -867,24 +884,24 @@
               
               <h5 class="gradient-text mt-4 mb-3">Modern Composting Systems</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-droplet-fill text-primary fs-4 me-2"></i>Diverts
-                  biodegradable waste from landfills</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-emoji-smile text-success fs-4 me-2"></i>Produces
-                  organic manure for agriculture and landscaping</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Aerated
-                  static pile systems</li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-droplet-fill text-primary fs-4 me-2 flex-shrink-0"></i><span>Diverts
+                  biodegradable waste from landfills</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-emoji-smile text-success fs-4 me-2 flex-shrink-0"></i><span>Produces
+                  organic manure for agriculture and landscaping</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-fill text-warning fs-4 me-2 flex-shrink-0"></i><span>Aerated
+                  static pile systems</span></li>
               </ul>
               
               <div class="mt-4">
                 <h6 class="gradient-text mb-3">Benefits</h6>
                 <ul class="list-unstyled">
-                  <li class="d-flex align-items-start mb-2"><i class="bi bi-droplet-fill text-primary fs-4 me-2"></i>In-vessel
-                    composting</li>
-                  <li class="d-flex align-items-start mb-2"><i class="bi bi-emoji-smile text-success fs-4 me-2"></i>Tunnel
-                    composting</li>
-                  <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Reduces methane emissions and improves soil
-                    health</li>
-                  <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-danger fs-4 me-2"></i>Windrow composting (mechanized)</li>
+                  <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-droplet-fill text-primary fs-4 me-2 flex-shrink-0"></i><span>In-vessel
+                    composting</span></li>
+                  <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-emoji-smile text-success fs-4 me-2 flex-shrink-0"></i><span>Tunnel
+                    composting</span></li>
+                  <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-fill text-warning fs-4 me-2 flex-shrink-0"></i><span>Reduces methane emissions and improves soil
+                    health</span></li>
+                  <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-danger fs-4 me-2 flex-shrink-0"></i><span>Windrow composting (mechanized)</span></li>
                 </ul>
               </div>
             </div>
@@ -910,20 +927,20 @@
               
               <h5 class="gradient-text mt-4 mb-3">Applications</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-leaf-fill text-success fs-4 me-2"></i>Electricity
-                  and heat generation</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2"></i>Compressed biogas (CBG) for vehicles</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Digestate
-                  used as organic fertilizer</li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-leaf-fill text-success fs-4 me-2 flex-shrink-0"></i><span>Electricity
+                  and heat generation</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2 flex-shrink-0"></i><span>Compressed biogas (CBG) for vehicles</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-arrow-repeat text-primary fs-4 me-2 flex-shrink-0"></i><span>Digestate
+                  used as organic fertilizer</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Benefits</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-leaf-fill text-success fs-4 me-2"></i>Renewable
-                  energy production</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2"></i>Reduction
-                  of greenhouse gas emissions</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Energy-positive waste treatment</li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-leaf-fill text-success fs-4 me-2 flex-shrink-0"></i><span>Renewable
+                  energy production</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-geo-alt-fill text-warning fs-4 me-2 flex-shrink-0"></i><span>Reduction
+                  of greenhouse gas emissions</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-arrow-repeat text-primary fs-4 me-2 flex-shrink-0"></i><span>Energy-positive waste treatment</span></li>
               </ul>
             </div>
           </div>
@@ -945,12 +962,12 @@
 
               <h5 class="gradient-text mt-4 mb-3">Key Features:</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-arrow-repeat text-primary fs-4 me-2"></i>Reduces
-                  landfill burden</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-box-seam text-success fs-4 me-2"></i>Creates new
-                  products</li>
-                <li class="d-flex align-items-start mb-2"><i class="bi bi-lightning-fill text-warning fs-4 me-2"></i>Saves
-                  energy</li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-arrow-repeat text-primary fs-4 me-2 flex-shrink-0"></i><span>Reduces
+                  landfill burden</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-box-seam text-success fs-4 me-2 flex-shrink-0"></i><span>Creates new
+                  products</span></li>
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-fill text-warning fs-4 me-2 flex-shrink-0"></i><span>Saves
+                  energy</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Applications:</h5>
@@ -978,26 +995,26 @@
 
               <h5 class="gradient-text mt-4 mb-3">Common WtE Methods:</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-2">
-                  <i class="bi bi-fire text-danger fs-4 me-2"></i>
-                  Mass burn incineration with energy recovery
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-fire text-danger fs-4 me-2 flex-shrink-0"></i>
+                  <span>Mass burn incineration with energy recovery</span>
                 </li>
-                <li class="d-flex align-items-start mb-2">
-                  <i class="bi bi-flash text-warning fs-4 me-2"></i>
-                  Refuse-Derived Fuel (RDF) systems
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-fuel-pump text-warning fs-4 me-2 flex-shrink-0"></i>
+                  <span>Refuse-Derived Fuel (RDF) systems</span>
                 </li>
-                <li class="d-flex align-items-start mb-2">
-                  <i class="bi bi-building text-primary fs-4 me-2"></i>
-                  Co-processing in cement kilns
+                <li class="d-flex align-items-start mb-2 flex items-start gap-x-3">
+                  <i class="bi bi-building text-primary fs-4 me-2 flex-shrink-0"></i>
+                  <span>Co-processing in cement kilns</span>
                 </li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Benefits:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Significant reduction in waste
-                  volume</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Continuous energy generation</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reduced reliance on landfills</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Significant reduction in waste
+                  volume</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Continuous energy generation</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Reduced reliance on landfills</span></li>
               </ul>
             </div>
           </div>
@@ -1022,25 +1039,25 @@
 
               <h5 class="gradient-text mt-4 mb-3">How They Work:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-lightning-fill text-warning me-2"></i><strong>Pyrolysis:</strong> Produces
-                  oil, gas, and char</li>
-                <li><i class="bi bi-flame-fill text-danger me-2"></i><strong>Gasification:</strong> Produces syngas (CO +
-                  H₂)</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-fill text-warning me-2 flex-shrink-0"></i><span><strong>Pyrolysis:</strong> Produces
+                  oil, gas, and char</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-cloud-fill text-info me-2 flex-shrink-0"></i><span><strong>Gasification:</strong> Produces syngas (CO +
+                  H₂)</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Applications:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>Energy generation</li>
-                <li class="mb-2"><i class="bi bi-fuel-pump-fill text-primary me-2"></i>Alternative fuels</li>
-                <li><i class="bi bi-gear-fill text-info me-2"></i>Chemical feedstocks</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-charge-fill text-success me-2 flex-shrink-0"></i><span>Energy generation</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-fuel-pump-fill text-primary me-2 flex-shrink-0"></i><span>Alternative fuels</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-gear-fill text-info me-2 flex-shrink-0"></i><span>Chemical feedstocks</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Benefits:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Higher energy efficiency than
-                  incineration</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Lower air emissions</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Suitable for plastic and hazardous waste</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Higher energy efficiency than
+                  incineration</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Lower air emissions</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Suitable for plastic and hazardous waste</span></li>
               </ul>
             </div>
           </div>
@@ -1066,20 +1083,20 @@
 
               <h5 class="gradient-text mt-4 mb-3">Key Technology Features:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-arrow-repeat text-primary me-2"></i>Conveyor-based sorting lines for
-                  efficient segregation</li>
-                <li class="mb-2"><i class="bi bi-magnet text-success me-2"></i>Magnetic, optical, and eddy current
-                  separators for material recovery</li>
-                <li><i class="bi bi-box-seam text-warning me-2"></i>Automated baling and storage systems for collected
-                  recyclables</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-arrow-repeat text-primary me-2 flex-shrink-0"></i><span>Conveyor-based sorting lines for
+                  efficient segregation</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-magnet text-success me-2 flex-shrink-0"></i><span>Magnetic, optical, and eddy current
+                  separators for material recovery</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-box-seam text-warning me-2 flex-shrink-0"></i><span>Automated baling and storage systems for collected
+                  recyclables</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Industry Value:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Maximizes recyclable recovery</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Improves quality of recovered
-                  materials</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Enhances overall system efficiency</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Maximizes recyclable recovery</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Improves quality of recovered
+                  materials</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Enhances overall system efficiency</span></li>
               </ul>
             </div>
           </div>
@@ -1104,20 +1121,20 @@
 
               <h5 class="gradient-text mt-4 mb-3">Key Technology Features:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-hash text-primary me-2"></i>Lined landfill cells with leachate collection
-                  systems</li>
-                <li class="mb-2"><i class="bi bi-lightning-charge-fill text-success me-2"></i>Landfill gas capture and
-                  utilization for energy recovery</li>
-                <li><i class="bi bi-graph-up-arrow text-warning me-2"></i>Environmental monitoring and closure systems for
-                  long-term safety</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-hash text-primary me-2 flex-shrink-0"></i><span>Lined landfill cells with leachate collection
+                  systems</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-lightning-charge-fill text-success me-2 flex-shrink-0"></i><span>Landfill gas capture and
+                  utilization for energy recovery</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-graph-up-arrow text-warning me-2 flex-shrink-0"></i><span>Environmental monitoring and closure systems for
+                  long-term safety</span></li>
               </ul>
 
               <h5 class="gradient-text mt-4 mb-3">Industry Value:</h5>
               <ul class="list-unstyled ms-3">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Prevention of soil and groundwater
-                  contamination</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Controlled methane emissions</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Long-term environmental safety</li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Prevention of soil and groundwater
+                  contamination</span></li>
+                <li class="mb-2 flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Controlled methane emissions</span></li>
+                <li class="flex items-start gap-x-3"><i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i><span>Long-term environmental safety</span></li>
               </ul>
             </div>
           </div>

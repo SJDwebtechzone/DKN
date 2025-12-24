@@ -24,6 +24,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
+
+    /* Navbar Size Reduction */
+    .header-bottom {
+      background-color: #1a2142;
+      height: 100px;
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+    }
+    
+    .main-menu ul li a {
+      padding: 10px 18px !important;
+      line-height: 1.2 !important;
+    }
+    
+    .logo img {
+      max-height: 220px;
+      margin-top: 5px !important;
+    }
+
+        .about-img {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-content h2 {
+            font-weight: 800;
+        }
+
     /* Renewable Energy Theme - Orange & Red */
     .energy-gradient {
       background: linear-gradient(135deg, #FF6B35, #F7931E, #FF4500);
@@ -378,6 +408,61 @@
     .heat-animate {
       animation: heat-pulse 2.5s ease-in-out infinite;
     }
+
+    /* Wind Image Slider */
+.wind-images-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.wind-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out, transform 0.4s ease;
+}
+
+.wind-image.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.wind-image:hover {
+  transform: scale(1.05);
+}
+
+/* Wind Item Animations */
+@keyframes wind-flow {
+  0% { transform: translateX(-6px); }
+  50% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes wind-gust {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+.wind-animate {
+  animation: wind-flow 3s ease-in-out infinite;
+}
+
+.wind-item {
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.wind-item:hover {
+  transform: translateX(8px) scale(1.02);
+  background: linear-gradient(135deg, rgba(125,211,252,.15), rgba(59,130,246,.15));
+  box-shadow: 0 12px 25px rgba(125,211,252,.35);
+}
+
 </style>
 </head>
 
@@ -396,8 +481,7 @@
     <!-- Preloader End -->
 
     <!-- Header Start -->
-     <header>
-        <!-- Header Start -->
+       <!-- Header Start -->
         <div class="header-area header-transparent">
             <div class="main-header">
                 <div class="header-bottom header-sticky">
@@ -408,29 +492,37 @@
                                 <div class="logo">
                                     <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
                                             alt=""></a>
-                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
                                 </div>
                             </div>
                             <!--main-->
                             <div class="col-xl-8 col-lg-8 d-none d-lg-block">
-    <div class="main-menu f-right">
+                                <div class="main-menu f-right">
                                     <nav>
-                                        <ul id="navigation">
+                                        <ul id="navigation" class="nav-gradient font-bold batman-text">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="aboutus.html">About</a></li>
-                           <li class="dropdown">
-  <a href="#">Services</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text">W</span>aste Water Treatment</a></li>
-    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
-    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
-    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
-        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="watertreatment.html"><span
+                                                                class="gradient-text batman-text">W</span>ater & Waste
+                                                            Water Treatment</a></li>
+                                                    <li><a class="dropdown-item" href="environment.html"><span
+                                                                class="gradient-text ">E</span>nvironment</a></li>
+                                                    <li><a class="dropdown-item" href="technology.html"><span
+                                                                class="gradient-text">T</span>echnology</a></li>
+                                                    <li><a class="dropdown-item" href="renewable_energy.html"><span
+                                                                class="gradient-text">E</span>ngineering</a></li>
+                                                    <li><a class="dropdown-item" href="carbonmonitor.html"><span
+                                                                class="gradient-text">C</span>limatic & Carbon
+                                                            Monitoring</a></li>
 
-  </ul>
-</li>
+                                                </ul>
+                                            </li>
 
                                             <!-- <li><a href="contact.html">Contact</a></li> -->
                                             <!-- <li><a href="#">FAQ</a></li> -->
@@ -438,20 +530,17 @@
                                     </nav>
                                 </div>
                             </div>
-<div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                                <div class="header-right-btn f-right d-none d-lg-block">
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-6" >
+                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
                                     <a href="contact.html" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
-                        <div class="col-6 d-flex align-items-center d-lg-none">
-  <div class="mobile_menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+                            <div class="col-6 d-flex align-items-center d-lg-none">
+                                <div class="mobile_menu">
+                                </div>
 
-</div>
+                            </div>
 
                         </div>
                     </div>
@@ -459,8 +548,6 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>
-    <!-- Header End -->
 
     <main>
         <!-- Slider Area Start -->
@@ -592,13 +679,20 @@
         </section>
         <!-- Solar Energy Section End -->
 
-        <!-- Wind Energy Section Start -->
+
+<!-- Wind Energy Section Start -->
         <section class="py-16 bg-gradient-to-l from-blue-100 to-orange-100">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="assets/img/banner/Wind-Turbines.jpg" alt="Wind Energy" 
-                             class="rounded-2xl shadow-2xl w-full">
+                        <div class="wind-images-container rounded-2xl shadow-2xl">
+                            <img src="assets/img/banner/Wind-Turbines.jpg" alt="Wind Energy" 
+                                 class="wind-image active rounded-2xl">
+                            <img src="assets/img/banner/offshore.png" alt="Offshore Wind Energy" 
+                                 class="wind-image rounded-2xl">
+                            <img src="assets/img/banner/smallwind.png" alt="Small Wind Energy" 
+                                 class="wind-image rounded-2xl">
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2 scroll-animate">
                         <h2 class="text-4xl font-bold energy-text mb-6">Wind Energy Systems</h2>
@@ -638,40 +732,6 @@
             </div>
         </section>
         <!-- Wind Energy Section End -->
-
-        <!-- Hydro Energy Section Start -->
-        <section class="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center energy-text mb-12 scroll-animate">Hydro-Electric Power</h2>
-                
-                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 scroll-animate">
-                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
-                        <img src="assets/img/banner/Large_Hydroelectric.jpg" alt="Large Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Large Hydroelectric</h3>
-                        <p class="text-sm text-gray-600">Major dam installations for large-scale power generation and water management.</p>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
-                        <img src="assets/img/banner/Small_Hydro_Systems.jpg" alt="Small Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Small Hydro Systems</h3>
-                        <p class="text-sm text-gray-600">Run-of-river systems with minimal environmental impact for local communities.</p>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
-                        <img src="assets/img/banner/Pumped_Storage.webp" alt="Pumped Storage" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Pumped Storage</h3>
-                        <p class="text-sm text-gray-600">Energy storage systems using water reservoirs for grid stability and peak demand.</p>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl p-6 text-center shadow-lg hydro-card water-animate" onclick="animateHydroCard(this)">
-                        <img src="assets/img/banner/Micro_Hydropower.jpg" alt="Micro Hydro" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Micro Hydropower</h3>
-                        <p class="text-sm text-gray-600">Small-scale systems for remote areas and distributed power generation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Hydro Energy Section End -->
 
         <!-- Geothermal Energy Section Start -->
         <section class="py-16 bg-gradient-to-r from-red-100 to-orange-100">
@@ -966,6 +1026,27 @@
             }, 450);
         }
 
+
+        // Hydro card animation function
+        function animateHydroCard(element) {
+            element.style.transform = 'translateY(-8px) scale(1.03)';
+            element.style.boxShadow = '0 16px 32px rgba(59, 130, 246, 0.3)';
+            element.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(147, 197, 253, 0.08))';
+            
+            // Add ripple effect
+            const ripple = element.querySelector('::before');
+            if (element.querySelector('::before')) {
+                element.style.setProperty('--ripple-opacity', '1');
+            }
+            
+            setTimeout(() => {
+                element.style.transform = '';
+                element.style.boxShadow = '';
+                element.style.background = '';
+            }, 450);
+        }
+
+
         // Bio card animation function
         function animateBioCard(element) {
             element.style.transform = 'translateY(-8px) scale(1.02)';
@@ -1002,6 +1083,32 @@
                 element.style.filter = '';
             }, 600);
         }
+
+  const windImages = document.querySelectorAll(".wind-image");
+  let windIndex = 0;
+  let windTimer;
+
+  function showWindImage(index) {
+    windImages.forEach(img => img.classList.remove("active"));
+    windImages[index].classList.add("active");
+    windIndex = index;
+    resetWindSlider();
+  }
+
+  function autoWindSlide() {
+    windIndex = (windIndex + 1) % windImages.length;
+    showWindImage(windIndex);
+  }
+
+  function resetWindSlider() {
+    clearInterval(windTimer);
+    windTimer = setInterval(autoWindSlide, 3000);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    windTimer = setInterval(autoWindSlide, 3000);
+  });
+
     </script>
 
 </body>
