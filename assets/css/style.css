@@ -21,6 +21,7 @@
 } */
 
 
+
 .batman-text {
   font-family: 'BatmanFont' !important;
   font-weight: normal !important;
@@ -31,6 +32,16 @@
   letter-spacing: 1px;
   line-height: 1.1;
 }
+
+/* NEW: Override for hero second heading gradient (yellow → orange → deep orange → red) */
+.slider-area .hero__caption .stock-text h2:nth-child(2) {
+  background: linear-gradient(90deg, #FFD700 0%, #FF9800 40%, #FF5722 70%, #E53935 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
 
 
 /* Reduce main logo size */
@@ -48,6 +59,43 @@
     justify-content: center; /* vertical center */
     text-align: center;
     height: 100%;
+}
+
+/* Increase "Contact Now" header button size and adjust line effect */
+.header-right-btn .btn,
+.header-right-btn a.btn {
+  padding: 16px 34px !important; /* taller and wider */
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  border-radius: 28px !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
+
+/* Make the animated overlay (::before) thicker so the "line" effect appears larger */
+.header-right-btn .btn::before,
+.header-right-btn a.btn::before {
+  height: 120% !important;
+  transform-origin: 0 0;
+  transition: transform 0.45s cubic-bezier(0.5, 1.6, 0.4, 0.7) !important;
+}
+
+/* Slightly larger hover scale for emphasis on desktop */
+@media (min-width: 992px) {
+  .header-right-btn .btn:hover,
+  .header-right-btn a.btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Ensure mobile spacing is not excessive */
+@media (max-width: 575px) {
+  .header-right-btn .btn,
+  .header-right-btn a.btn {
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+    border-radius: 22px !important;
+  }
 }
 
 /* Center the WETEC stock text */
