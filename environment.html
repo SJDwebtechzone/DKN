@@ -337,6 +337,22 @@
         font-size: clamp(56px, 10vw, 96px) !important; /* mobile min 56px */
       }
     }
+
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
@@ -458,213 +474,406 @@
       <div class="container">
         <h2 class="text-center section-title slide-in-left batman-text">Classification of Solid Waste Streams</h2>
 
-        <!-- MSW -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-5 zoom-in">
-            <div class="hover-zoom floating">
-              <img src="assets/img/banner/municipalwaste.jpg" class="img-fluid rounded shadow-lg" alt="Municipal Solid Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 slide-in-right">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Municipal Solid Waste (MSW)</h5>
-              <p>Municipal Solid Waste includes daily waste generated from households, commercial establishments,
-                institutions, and public spaces such as markets, offices, schools, and streets. It is heterogeneous in
-                composition, consisting of organic waste, recyclables like paper and plastics, and inert materials. The high
-                organic content makes MSW both a challenge and an opportunity for resource recovery.</p>
-              <p>Efficient MSW management focuses on source-level segregation, recycling, and composting or biomethanation
-                of biodegradable waste. Non-recyclable and residual waste is treated through engineered sanitary landfills
-                or waste-to-energy processes. Modern MSW systems emphasize regulatory compliance, environmental protection,
-                and circular economy practices to ensure cleaner, healthier, and more sustainable urban environments.</p>
-            </div>
-          </div>
-        </div>
+       <!-- MSW Section -->
+<div class="row align-items-center mb-5">
+  <!-- Left: Image -->
+  <div class="col-lg-5 zoom-in">
+    <div class="hover-zoom floating">
+      <img src="assets/img/banner/municipalwaste.jpg" class="img-fluid rounded shadow-lg" alt="Municipal Solid Waste">
+    </div>
+  </div>
 
-        <!-- Industrial Waste -->
-        <div class="row align-items-center mb-5 flex-lg-row-reverse">
-          <div class="col-lg-5 rotate-in">
-            <div class="hover-zoom floating" style="animation-delay: 1s;">
-              <img src="assets/img/banner/industrywaste.jpg" class="img-fluid rounded shadow-lg" alt="Industrial Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 slide-in-left">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Industrial Waste</h5>
-              <p>
-                Industrial waste is generated from manufacturing, processing, and industrial activities such as factories,
-                power plants, refineries, and mining operations. It includes a wide range of materials such as solid,
-                liquid, and semi-solid waste, including scrap materials, chemical residues, sludge, ash, and by-products.
-                Depending on the industry, industrial waste may be non-hazardous or hazardous in nature.
-              </p>
-              <p>
-                Effective industrial waste management involves waste minimization, segregation, recycling, and safe
-                treatment or disposal of hazardous components. Industries adopt methods such as secure landfilling,
-                incineration, co-processing, and effluent treatment to comply with environmental regulations. Modern
-                practices focus on resource recovery, pollution control, and sustainable production to reduce environmental
-                impact and ensure workplace and public safety.
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- Right: Content -->
+  <div class="col-lg-7 slide-in-right">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size: 2.2rem;">
+        Municipal Solid Waste (MSW)
+      </h2>
 
-        <!-- Agricultural Waste -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-5 bounce-in">
-            <div class="hover-zoom floating" style="animation-delay: 2s;">
-              <img src="assets/img/banner/agriwaste.jpg" class="img-fluid rounded shadow-lg" alt="Agricultural Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 flip-in">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Agricultural Waste</h5>
-              <p>
-                Agricultural waste is generated from farming and agro-based activities such as crop cultivation, livestock
-                rearing, and food processing. It includes crop residues (straw, husks, stalks), animal manure, poultry
-                litter, spoiled produce, and agro-processing by-products. This waste is largely organic and biodegradable in
-                nature.
-              </p>
-              <p>
-                Proper management of agricultural waste involves composting, mulching, anaerobic digestion, and bioenergy
-                production to convert waste into useful resources like organic manure and biogas. Sustainable agricultural
-                waste practices help improve soil health, reduce open burning, lower greenhouse gas emissions, and support
-                circular economy principles in rural and agro-industrial sectors.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Bullet Points -->
+      <ul class="list-unstyled text mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🌿</span>
+          <span>MSW includes daily waste from households, commercial establishments, institutions, and public spaces</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">📄</span>
+          <span>Heterogeneous composition: organic waste, recyclables like paper and plastics, and inert materials</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">⚡</span>
+          <span>High organic content presents both challenges and opportunities for resource recovery</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">♻️</span>
+          <span>Efficient management focuses on source-level segregation, recycling, and composting/biomethanation</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🏭</span>
+          <span>Non-recyclable and residual waste treated via engineered sanitary landfills or waste-to-energy processes</span>
+        </li>
+        <li class="d-flex align-items-start gap-3">
+          <span style="font-size:1.4rem;">🌎</span>
+          <span>Modern MSW systems emphasize regulatory compliance, environmental protection, and circular economy practices</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-        <!-- C&D Waste -->
-        <div class="row align-items-center mb-5 flex-lg-row-reverse">
-          <div class="col-lg-5 fade-up">
-            <div class="hover-zoom floating" style="animation-delay: 0.5s;">
-              <img src="assets/img/banner/constructionwaste.jpg" class="img-fluid rounded shadow-lg"
-                alt="Construction and Demolition Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 zoom-in">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Construction & Demolition Waste</h5>
-              <p>
-                Construction and demolition waste is generated from building, renovation, repair, and demolition activities.
-                It includes materials such as concrete, bricks, wood, metals, glass, asphalt, soil, and debris. C&D waste is
-                largely inert but produced in large volumes, especially in urban development projects.
-              </p>
-              <p>
-                Effective management of C&D waste involves segregation at source, reuse, and recycling of materials such as
-                aggregates, metals, and wood. Recycled C&D materials can be used in road construction, backfilling, and new
-                building projects. Proper collection, transportation, and processing of C&D waste help prevent illegal
-                dumping and dust pollution. Compliance with regulatory standards ensures safer construction practices and
-                promotes a circular economy in the construction sector.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Hazardous Waste -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-5 slide-in-left">
-            <div class="hover-zoom floating" style="animation-delay: 1.5s;">
-              <img src="assets/img/banner/hazardous.jpg" class="img-fluid rounded shadow-lg" alt="Hazardous Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 rotate-in">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Hazardous Waste</h5>
-              <p>
-                Hazardous waste is generated from industrial, healthcare, chemical, and manufacturing activities and
-                contains substances that are toxic, corrosive, flammable, or reactive. It includes chemicals, solvents,
-                pesticides, heavy metals, biomedical residues, and certain electronic waste that pose serious risks to human
-                health and the environment.
-              </p>
-              <p>
-                Effective hazardous waste management requires strict segregation, secure storage, and specialized treatment
-                methods such as incineration, stabilization, and secure landfilling. Continuous monitoring, proper labeling,
-                and trained personnel are critical to avoid accidents and environmental damage. Adhering to national and
-                international regulations helps industries minimize liability, protect ecosystems, and ensure long-term
-                environmental sustainability.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Industrial Waste Section -->
+<div class="row align-items-center mb-5 flex-lg-row-reverse">
+  <!-- Left: Image -->
+  <div class="col-lg-5 rotate-in">
+    <div class="hover-zoom floating" style="animation-delay: 1s;">
+      <img src="assets/img/banner/industrywaste.jpg" class="img-fluid rounded shadow-lg" alt="Industrial Waste">
+    </div>
+  </div>
 
-        <!-- E-Waste -->
-        <div class="row align-items-center mb-5 flex-lg-row-reverse">
-          <div class="col-lg-5 flip-in">
-            <div class="hover-zoom floating" style="animation-delay: 2.5s;">
-              <img src="assets/img/banner/electronic.jpg" class="img-fluid rounded shadow-lg" alt="Electronic Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 bounce-in">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Electronic Waste (E-Waste)</h5>
-              <p>
-                Electronic waste is generated from discarded electrical and electronic equipment such as computers, mobile
-                phones, televisions, batteries, and household appliances. E-waste contains valuable materials like metals
-                and plastics, along with hazardous substances such as lead, mercury, and cadmium that can harm human health
-                and the environment if improperly handled.
-              </p>
-              <p>Effective e-waste management involves collection through authorized channels, dismantling, recycling, and
-                safe disposal of non-recoverable components. Recovering valuable materials reduces the demand for raw
-                resources, while regulated processing and compliance with e-waste rules help prevent soil, water, and air
-                pollution and support sustainable technology use.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Right: Content -->
+  <div class="col-lg-7 slide-in-left">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size: 2.2rem;">
+        Industrial Waste
+      </h2>
 
-        <!-- Biomedical Waste -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-5 slide-in-right">
-            <div class="hover-zoom floating" style="animation-delay: 3s;">
-              <img src="assets/img/banner/biomedical.jpg" class="img-fluid rounded shadow-lg" alt="Biomedical Waste">
-            </div>
-          </div>
-          <div class="col-lg-7 fade-up">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Biomedical Waste</h5>
-              <p>
-                Biomedical waste is generated from healthcare facilities such as hospitals, clinics, laboratories, and
-                research centers during diagnosis, treatment, or immunization activities. It includes infectious waste,
-                sharps, human tissues, laboratory waste, and discarded medicines, which can pose serious health risks if not
-                properly managed.
-              </p>
-              <p>
-                Effective biomedical waste management requires segregation at source using color-coded containers, safe
-                collection, treatment through methods such as autoclaving or incineration, and secure disposal. Proper
-                handling, staff training, and strict adherence to biomedical waste management rules are essential to prevent
-                infections, protect healthcare workers, and safeguard public health and the environment.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Bullet Points -->
+      <ul class="list-unstyled text mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🏭</span>
+          <span>Generated from manufacturing, processing, and industrial activities including factories, power plants, refineries, and mining operations</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">⚠️</span>
+          <span>Includes solid, liquid, and semi-solid waste such as scrap materials, chemical residues, sludge, ash, and by-products</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">💧</span>
+          <span>Industrial waste may be hazardous or non-hazardous depending on the industry and processes involved</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">♻️</span>
+          <span>Effective management includes waste minimization, segregation, recycling, and safe treatment or disposal of hazardous components</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🔥</span>
+          <span>Industries adopt secure landfilling, incineration, co-processing, and effluent treatment to comply with regulations</span>
+        </li>
+        <li class="d-flex align-items-start gap-3">
+          <span style="font-size:1.4rem;">🌱</span>
+          <span>Modern practices emphasize resource recovery, pollution control, and sustainable production to reduce environmental impact and ensure safety</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-        <!-- Special Waste -->
-        <div class="row align-items-center">
-          <div class="col-lg-7 zoom-in">
-            <div class="feature-card">
-              <h5 class="waste-type-title batman-text">Special & Emerging Waste Streams</h5>
-              <p>
-                Special and emerging waste streams include waste types that are increasing due to technological advancement,
-                urbanization, and changing consumption patterns. These include lithium-ion batteries, solar panels, electric
-                vehicle components, expired pharmaceuticals, microplastics, and composite materials. Such wastes often
-                contain a mix of valuable and hazardous components, making their management complex.
-              </p>
-              <p>
-                Managing these waste streams requires advanced recycling technologies, extended producer responsibility
-                (EPR), and dedicated collection and treatment systems. Proactive policies, innovation in material recovery,
-                and regulatory frameworks are essential to safely handle these wastes, reduce environmental risks, and
-                support a sustainable and future-ready waste management ecosystem.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-5 rotate-in">
-            <div class="hover-zoom floating" style="animation-delay: 3.5s;">
-              <img src="assets/img/banner/special.jpg" class="img-fluid rounded shadow-lg"
-                alt="Special and Emerging Waste Streams">
-            </div>
-          </div>
-        </div>
+
+        <!-- Agricultural Waste Section -->
+<div class="row align-items-center mb-5">
+  <!-- Left: Image -->
+  <div class="col-lg-5 bounce-in">
+    <div class="hover-zoom floating" style="animation-delay: 2s;">
+      <img src="assets/img/banner/agriwaste.jpg" class="img-fluid rounded shadow-lg" alt="Agricultural Waste">
+    </div>
+  </div>
+
+  <!-- Right: Content -->
+  <div class="col-lg-7 flip-in">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size: 2.2rem;">
+        Agricultural Waste
+      </h2>
+
+      <!-- Bullet Points -->
+      <ul class="list-unstyled text mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🌾</span>
+          <span>Generated from farming and agro-based activities including crop cultivation, livestock rearing, and food processing</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🍂</span>
+          <span>Includes crop residues (straw, husks, stalks), animal manure, poultry litter, spoiled produce, and agro-processing by-products</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">♻️</span>
+          <span>Proper management involves composting, mulching, anaerobic digestion, and bioenergy production</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">💡</span>
+          <span>Converts waste into useful resources like organic manure and biogas</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🌱</span>
+          <span>Sustainable practices improve soil health, reduce open burning, lower greenhouse gas emissions, and support circular economy principles</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+       <!-- C&D Waste Section -->
+<div class="row align-items-center mb-5 flex-lg-row-reverse">
+  <!-- Image -->
+  <div class="col-lg-5 fade-up">
+    <div class="hover-zoom floating" style="animation-delay: 0.5s;">
+      <img src="assets/img/banner/constructionwaste.jpg" class="img-fluid rounded shadow-lg" alt="Construction and Demolition Waste">
+    </div>
+  </div>
+  <!-- Content -->
+  <div class="col-lg-7 zoom-in">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size:2.2rem;">Construction & Demolition Waste</h2>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🏗️</span>
+          <span>Generated from building, renovation, repair, and demolition activities</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🧱</span>
+          <span>Includes materials like concrete, bricks, wood, metals, glass, asphalt, soil, and debris</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">♻️</span>
+          <span>Managed through segregation, reuse, and recycling of aggregates, metals, and wood</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🚧</span>
+          <span>Recycled C&D materials can be used in road construction, backfilling, and new building projects</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">✅</span>
+          <span>Proper handling ensures compliance with regulations and promotes a circular economy</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Hazardous Waste Section -->
+<div class="row align-items-center mb-5">
+  <div class="col-lg-5 slide-in-left">
+    <div class="hover-zoom floating" style="animation-delay: 1.5s;">
+      <img src="assets/img/banner/hazardous.jpg" class="img-fluid rounded shadow-lg" alt="Hazardous Waste">
+    </div>
+  </div>
+  <div class="col-lg-7 rotate-in">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size:2.2rem;">Hazardous Waste</h2>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">☣️</span>
+          <span>Generated from industrial, healthcare, chemical, and manufacturing activities containing toxic, corrosive, flammable, or reactive substances</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🧪</span>
+          <span>Includes chemicals, solvents, pesticides, heavy metals, biomedical residues, and certain electronic waste</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🔒</span>
+          <span>Requires strict segregation, secure storage, and specialized treatment like incineration and stabilization</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">📋</span>
+          <span>Continuous monitoring, proper labeling, and trained personnel prevent accidents and environmental damage</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">✅</span>
+          <span>Compliance with regulations ensures ecosystem protection and long-term sustainability</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- E-Waste Section -->
+<div class="row align-items-center mb-5 flex-lg-row-reverse">
+  <div class="col-lg-5 flip-in">
+    <div class="hover-zoom floating" style="animation-delay: 2.5s;">
+      <img src="assets/img/banner/electronic.jpg" class="img-fluid rounded shadow-lg" alt="Electronic Waste">
+    </div>
+  </div>
+  <div class="col-lg-7 bounce-in">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size:2.2rem;">Electronic Waste (E-Waste)</h2>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">💻</span>
+          <span>Generated from discarded electrical and electronic equipment like computers, phones, and appliances</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🔋</span>
+          <span>Contains valuable materials like metals and plastics, along with hazardous substances such as lead and mercury</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">♻️</span>
+          <span>Managed through collection, dismantling, recycling, and safe disposal of non-recoverable components</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🌍</span>
+          <span>Reduces demand for raw resources and supports sustainable technology use</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Biomedical Waste Section -->
+<div class="row align-items-center mb-5">
+  <div class="col-lg-5 slide-in-right">
+    <div class="hover-zoom floating" style="animation-delay: 3s;">
+      <img src="assets/img/banner/biomedical.jpg" class="img-fluid rounded shadow-lg" alt="Biomedical Waste">
+    </div>
+  </div>
+  <div class="col-lg-7 fade-up">
+    <div class="feature-card">
+      <h2 class="section-title gradient-text scroll-scale batman-text" style="font-size:2.2rem;">Biomedical Waste</h2>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🧬</span>
+          <span>Generated from healthcare facilities including hospitals, clinics, and laboratories</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">💉</span>
+          <span>Includes infectious waste, sharps, human tissues, laboratory waste, and discarded medicines</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">🔒</span>
+          <span>Requires safe collection, treatment via autoclaving or incineration, and secure disposal</span>
+        </li>
+        <li class="d-flex align-items-start gap-3 mb-3">
+          <span style="font-size:1.4rem;">✅</span>
+          <span>Proper handling and training prevent infections and protect public health</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Food Waste Treatment Plant (FWTP) -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Main Heading -->
+    <div class="text-center mb-16 animate-fade-up">
+      <h2 class="text-4xl font-extrabold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+        Food Waste Treatment Plant (FWTP)
+      </h2>
+      <p class="text-gray-600 mt-3">
+        Sustainable Organic Waste Processing Solution
+      </p>
+    </div>
+
+    <!-- WHAT IS FWTP -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-fade-up">
+      <img src="assets/img/banner/foodwaste.png"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-lg hover:scale-105 transition"
+           alt="Food Waste Treatment Plant">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-orange-400 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          What is a FWTP?
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>🌱 Converts food waste into organic compost</li>
+          <li>♻️ Reduces landfill waste & methane emissions</li>
+          <li>💧 Treats moisture & leachate safely</li>
+          <li>🌬️ Enclosed odor-free processing</li>
+          <li>🌍 Supports eco-friendly waste management</li>
+        </ul>
       </div>
-    </section>
+    </div>
+
+    <!-- HOW FWTP WORKS -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-fade-up">
+      <img src="assets/img/banner/howitwork.jpeg"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-lg hover:scale-105 transition"
+           alt="How FWTP Works">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-yellow-400 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          How FWTP Works
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>📥 Waste collection & inlet feeding</li>
+          <li>⚙️ Shredding & homogenization</li>
+          <li>🔥 Biological / thermal digestion</li>
+          <li>💧 Moisture separation & treatment</li>
+          <li>🌿 Compost / digestate output</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODEL TYPES -->
+    <div class="text-center mb-16 animate-fade-up">
+      <h2 class="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+        FWTP Model Types
+      </h2>
+    </div>
+
+    <!-- MODEL ALPHA -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 animate-fade-up">
+      <img src="assets/img/banner/alphaa.png"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-lg hover:scale-105 transition"
+           alt="FWTP Alpha">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-yellow-400 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          Model Alpha (FWTP-α / α+)
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>🏠 Homes & small restaurants</li>
+          <li>⚡ Low energy consumption</li>
+          <li>⏱️ 24-hour compost cycle</li>
+          <li>🌬️ Odor control filtration</li>
+          <li>🧩 Compact footprint</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODEL BETA -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 animate-fade-up">
+      <img src="assets/img/banner/betta.png"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-lg hover:scale-105 transition"
+           alt="FWTP Beta">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-orange-400 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          Model Beta (FWTP-β / β+)
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>🏨 Hotels & hostels</li>
+          <li>🔄 Auto mixing & heating</li>
+          <li>💧 Moisture separation system</li>
+          <li>📦 Medium waste capacity</li>
+          <li>✅ Stable compost output</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODEL GAMMA -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center animate-fade-up">
+      <img src="assets/img/banner/gamma.png"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-lg hover:scale-105 transition"
+           alt="FWTP Gamma">
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-red-500 hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          Model Gamma (FWTP-γ / γ+)
+        </h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>🏭 Industrial-scale processing</li>
+          <li>🧠 PLC-based automation</li>
+          <li>🔥 Biogas & compost generation</li>
+          <li>🔁 Continuous operation</li>
+          <li>📊 Real-time monitoring</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- Key Processes in Solid Waste Management -->
 
@@ -679,55 +888,73 @@
         </div>
 
         <!-- PROCESS 1 -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-6 mb-4 mb-lg-0 bounce-in">
-            <div class="hover-zoom">
-              <img src="assets/img/banner/D.png" class="img-fluid rounded w-100 shadow-lg" alt="Waste Segregation">
-            </div>
-          </div>
-          <div class="col-lg-6 flip-in">
-            <div class="glass-card">
-              <div class="process-step">1</div>
-              <h5 class="waste-type-title batman-text">Waste Segregation</h5>
-              <p>
-                Waste segregation is the foundation of an efficient solid waste management
-                system, enabling appropriate treatment and maximum resource recovery.
-              </p>
+        <!-- SECTION WRAPPER -->
+<div class="row align-items-center mb-5">
 
-              <h6 class="gradient-text mt-4">Industry Practices</h6>
-              <ul class="list-unstyled mb-3">
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0"></i>
-                  <span>Source-level segregation into wet, dry, and hazardous waste</span>
-                </li>
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-trash-fill text-success flex-shrink-0"></i>
-                  <span>Color-coded bins as per regulatory standards</span>
-                </li>
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-people-fill text-success flex-shrink-0"></i>
-                  <span>Awareness and compliance monitoring programs</span>
-                </li>
-              </ul>
+  <!-- IMAGE SLIDER -->
+  <div class="col-lg-6 relative h-96 overflow-hidden rounded-2xl shadow-2xl">
 
-              <h6 class="gradient-text">Key Benefits</h6>
-              <ul class="list-unstyled">
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-arrow-repeat text-primary flex-shrink-0"></i>
-                  <span>Improved recycling and composting efficiency</span>
-                </li>
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-bar-chart-fill text-primary flex-shrink-0"></i>
-                  <span>Reduced landfill burden</span>
-                </li>
-                <li class="flex items-start gap-x-3">
-                  <i class="bi bi-shield-check text-primary flex-shrink-0"></i>
-                  <span>Safe handling of hazardous waste</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <img
+      src="assets/img/banner/collection1.png"
+      class="slider-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+      alt="Wastewater Treatment 1"
+    >
+
+    <img
+      src="assets/img/banner/collection2.jpeg"
+      class="slider-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+      alt="Wastewater Treatment 2"
+    >
+  </div>
+
+  <!-- CONTENT -->
+  <div class="col-lg-6 flip-in">
+    <div class="glass-card p-6 rounded-2xl shadow-xl">
+
+      <div class="process-step">1</div>
+
+      <h2 class="waste-type-title gradient-text mt-4">
+        Waste Segregation
+      </h2>
+
+      <p class="mt-3 text-gray-700">
+        Waste segregation is the foundation of an efficient solid waste
+        management system, enabling appropriate treatment and maximum resource recovery.
+      </p>
+
+      <h2 class="gradient-text mt-4">Industry Practices</h2>
+      <ul class="mb-4 space-y-2">
+        <li class="flex gap-3">✔ Source-level segregation</li>
+        <li class="flex gap-3">✔ Color-coded bins</li>
+        <li class="flex gap-3">✔ Compliance monitoring</li>
+      </ul>
+
+      <h2 class="gradient-text">Key Benefits</h2>
+      <ul class="space-y-2">
+        <li class="flex gap-3">🔁 Improved recycling efficiency</li>
+        <li class="flex gap-3">📉 Reduced landfill usage</li>
+        <li class="flex gap-3">🛡️ Safe hazardous waste handling</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE AUTO SLIDER SCRIPT -->
+<script>
+  const slides = document.querySelectorAll('.slider-img');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('opacity-100');
+    slides[current].classList.add('opacity-0');
+
+    current = (current + 1) % slides.length;
+
+    slides[current].classList.remove('opacity-0');
+    slides[current].classList.add('opacity-100');
+  }, 3000);
+</script>
 
         <!-- PROCESS 2 -->
         <div class="row align-items-center mb-5">
@@ -739,13 +966,13 @@
           <div class="col-lg-6 zoom-in">
             <div class="glass-card">
               <div class="process-step">2</div>
-              <h5 class="waste-type-title batman-text">Collection & Transportation</h5>
+              <h2 class="waste-type-title gradient-text mt-4">Collection & Transportation</h2>
               <p>
                 Modern collection and transportation systems ensure safe, hygienic,
                 and efficient movement of waste from source to treatment facilities.
               </p>
 
-              <h6 class="gradient-text mt-4">Industry Practices</h6>
+              <h2 class="gradient-text mt-4">Industry Practices</h2>
               <ul class="list-unstyled mb-3">
                 <li class="mb-2 flex items-start gap-x-3">
                   <i class="bi bi-house-door-fill text-success flex-shrink-0"></i>
@@ -761,25 +988,7 @@
                 </li>
               </ul>
 
-              <h6 class="gradient-text">Key Benefits</h6>
-              <ul class="list-unstyled">
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-droplet-fill text-primary flex-shrink-0"></i>
-                  <span>Reduced pollution and odor</span>
-                </li>
-                <li class="mb-2 flex items-start gap-x-3">
-                  <i class="bi bi-speedometer2 text-primary flex-shrink-0"></i>
-                  <span>Operational efficiency</span>
-                </li>
-                <li class="flex items-start gap-x-3">
-                  <i class="bi bi-eye-fill text-primary flex-shrink-0"></i>
-                  <span>Real-time tracking and monitoring</span>
-                </li>
-              </ul> and compactor trucks</span>
-                </li>
-              </ul>
-
-              <h6 class="gradient-text">Key Benefits</h6>
+              <h2 class="gradient-text">Key Benefits</h2>
               <ul class="list-unstyled">
                 <li class="mb-2 flex items-start gap-x-3">
                   <i class="bi bi-droplet-fill text-primary flex-shrink-0"></i>
@@ -809,13 +1018,13 @@
           <div class="col-lg-6 fade-up">
             <div class="glass-card">
               <div class="process-step">3</div>
-              <h5 class="waste-type-title batman-text">Processing Technologies</h5>
+              <h2 class="waste-type-title gradient-text mt-4">Processing Technologies</h2>
               <p>
                 Advanced processing technologies convert waste into reusable materials,
                 energy, or environmentally safe residues, supporting a circular economy.
               </p>
 
-              <h6 class="gradient-text mt-4">Industry Practices</h6>
+              <h2 class="gradient-text mt-4">Industry Practices</h2>
               <ul class="list-unstyled mb-3">
                 <li class="mb-2 flex items-start gap-x-3">
                   <i class="bi bi-flower1 text-success flex-shrink-0"></i>
@@ -831,7 +1040,7 @@
                 </li>
               </ul>
 
-              <h6 class="gradient-text">Key Benefits</h6>
+              <h2 class="gradient-text">Key Benefits</h2>
               <ul class="list-unstyled">
                 <li class="mb-2 flex items-start gap-x-3">
                   <i class="bi bi-arrow-down-circle-fill text-primary flex-shrink-0"></i>

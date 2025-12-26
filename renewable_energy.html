@@ -577,31 +577,54 @@
         <!-- Slider Area End -->
 
         <!-- Renewable Energy Introduction Section Start -->
-        <section class="py-20 bg-gradient-to-br from-orange-50 to-red-50 renewable-intro">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="transform -translate-x-10 opacity-0 animate-slide-in-left renewable-text">
-                        <h2 class="text-4xl font-bold energy-text mb-6">Renewable Energy Solutions</h2>
-                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                            Renewable energy represents the <strong>future of sustainable power generation</strong>, harnessing natural resources 
-                            that are continuously replenished by nature. Our comprehensive renewable energy solutions encompass 
-                            <strong>solar, wind, hydro, geothermal, and bio-energy technologies</strong> designed to reduce carbon footprint 
-                            and provide clean, reliable energy for residential, commercial, and industrial applications.
-                        </p>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Through advanced engineering and cutting-edge technology, we deliver <strong>efficient, cost-effective, 
-                            and environmentally responsible energy systems</strong> that contribute to global sustainability goals 
-                            while ensuring energy security and independence.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/img/banner/Renewable_Energy.jpg" alt="Renewable Energy" 
-                             class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto renewable-image cursor-pointer" onclick="animateRenewableImage(this)">
-                    </div>
-                </div>
+<section class="py-20 bg-gradient-to-br from-orange-50 to-red-50 renewable-intro">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Left: Content with bullet points -->
+            <div class="transform -translate-x-10 opacity-0 animate-slide-in-left renewable-text">
+                <h2 class="text-4xl font-bold energy-text mb-6">Renewable Energy Solutions</h2>
+                
+                <ul class="list-unstyled text-lg space-y-4">
+                    <li class="d-flex align-items-start gap-3">
+                        <span style="font-size:1.5rem;">☀️</span>
+                        <span><strong>Solar energy:</strong> Harnessing sunlight to generate clean, sustainable electricity for various applications.</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3">
+                        <span style="font-size:1.5rem;">💨</span>
+                        <span><strong>Wind energy:</strong> Converting wind power into electricity using advanced turbine technology.</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3">
+                        <span style="font-size:1.5rem;">💧</span>
+                        <span><strong>Hydro energy:</strong> Utilizing water flow and hydraulic systems for renewable power generation.</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3">
+                        <span style="font-size:1.5rem;">🔥</span>
+                        <span><strong>Geothermal energy:</strong> Extracting heat from the Earth to produce reliable electricity and heating.</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-3">
+                        <span style="font-size:1.5rem;">🌿</span>
+                        <span><strong>Bio-energy:</strong> Converting organic waste and biomass into clean energy solutions.</span>
+                    </li>
+                </ul>
+
+                <p class="text-gray-700 text-lg leading-relaxed mt-6">
+                    These solutions are designed to reduce carbon footprint, enhance energy security, and support sustainable development goals globally.
+                </p>
             </div>
-        </section>
-        <!-- Renewable Energy Introduction Section End -->
+
+            <!-- Right: Image -->
+            <div class="text-center">
+                <img src="assets/img/banner/Renewable_Energy.jpg" alt="Renewable Energy" 
+                     class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto renewable-image cursor-pointer" 
+                     onclick="animateRenewableImage(this)">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Renewable Energy Introduction Section End -->
+
 
         <!-- Solar Energy Section Start -->
         <section class="py-16 bg-gradient-to-r from-yellow-100 to-orange-100">
@@ -787,10 +810,10 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Mass Power Plants</h3>
                             <p class="text-gray-600 mb-4">Converting organic waste materials into clean electricity through advanced combustion and gasification technologies.</p>
-                            <div class="flex items-center text-orange-600">
-                                <i class="fas fa-leaf mr-2 bio-icon"></i>
-                                <span class="text-sm font-medium">Carbon Neutral</span>
-                            </div>
+                            <div class="flex items-center gap-x-2 text-orange-600">
+                              <span class="text-lg leading-none">🍃</span>
+                              <span class="text-sm font-medium">Carbon Neutral</span>
+                          </div>
                         </div>
                     </div>
                     
@@ -800,10 +823,11 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Gas Production</h3>
                             <p class="text-gray-600 mb-4">Anaerobic digestion systems converting organic waste into methane for heating, electricity, and vehicle fuel.</p>
-                            <div class="flex items-center text-orange-600">
-                                <i class="fas fa-recycle mr-2 bio-icon"></i>
-                                <span class="text-sm font-medium">Waste to Energy</span>
-                            </div>
+                            <div class="flex items-center gap-x-2 text-orange-600">
+                              <span class="text-lg leading-none">♻</span>
+                              <span class="text-sm font-medium">Waste to Energy</span>
+                          </div>
+
                         </div>
                     </div>
                     
@@ -813,10 +837,11 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Fuel Production</h3>
                             <p class="text-gray-600 mb-4">Advanced biofuel manufacturing from algae, agricultural residues, and energy crops for transportation.</p>
-                            <div class="flex items-center text-orange-600">
-                                <i class="fas fa-gas-pump mr-2 bio-icon"></i>
-                                <span class="text-sm font-medium">Clean Transportation</span>
-                            </div>
+                            <div class="flex items-center gap-x-2 text-orange-600">
+                              <span class="text-lg leading-none">⛽</span>
+                              <span class="text-sm font-medium">Clean Transportation</span>
+                          </div>
+
                         </div>
                     </div>
                 </div>
@@ -842,12 +867,7 @@
                                 <div class="footer-logo mt-10">
                                     <a href="index.html"><img src="assets/img/banner/b_logo.png" alt=""></a>
                                 </div>
-                                <!-- <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
-                                            eiusmod tempor incididunt ut labore.</p>
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                         <!-- QUICK LINKS -->
@@ -871,32 +891,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-3 col-md-4 col-sm-7">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="footer-tittle">
-                                        <h4>Contact</h4>
-                                        <div class="footer-pera">
-                                            <p class="info1">2nd floor, 9, Cholambedu Rd, Vivek Nagar, Ambattur,
-                                                Chennai,
-                                                Tamil Nadu 600053</p>
-                                        </div>
-                                        <ul>
-                                            <li><a href="tel:9994266616">Phone: 9994266616</a></li>
-                                            <li><a href="tel:9884606311">Cell: 9884606311</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
-                        <!-- <div class="col-lg-3 col-md-6 col-sm-8">
-                                <div class="single-footer-caption mb-50"> -->
-                        <!-- Form -->
-
-                        <!-- Map -->
-                        <!-- <div class="map-footer">
-                                        <img src="assets/img/gallery/map-footer.png" alt="">
-                                    </div>
-                                </div> -->
-                        <!-- </div> -->
+                       
                     </div>
                     <!-- Copy-Right -->
                     <div class="row align-items-center">
