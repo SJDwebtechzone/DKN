@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
 
     <style>
         /* Navbar Size Reduction */
@@ -51,9 +52,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .about-content h2 {
-            font-weight: 800;
-        }
+
 
         /* GLASS CARDS */
         .glass-card {
@@ -104,10 +103,26 @@
 
         @supports (-webkit-background-clip: text) {
             .contact-info__icon i {
-                background: linear-gradient(90deg, #ff7e5f, #feb47b);
+                background: linear-gradient(135deg, #FFEB3B, #FF9800, #E53935);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
+        }
+
+        /* Logo Theme Colors - Yellow + Orange + Red */
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700, #FF9800, #E53935);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Contact Title Styling */
+        .contact-title {
+            background: linear-gradient(135deg, #FFD700, #FF9800, #E53935);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
 </head>
@@ -183,6 +198,9 @@
                             <!-- Mobile Menu -->
                             <div class="col-6 d-flex align-items-center d-lg-none">
                                 <div class="mobile_menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </div>
 
                             </div>
@@ -199,31 +217,20 @@
 
         <div class="slider-area ">
             <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
-                data-background="assets/img/banner/contact1.png">
+                data-background="assets/img/banner/">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
+                            <div class="hero-cap pt-100" >
                                 <h2>Contact</h2>
-                                <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
-                                    </ol>
-                                </nav>
+                                
                                 <div class="hero__caption">
-                                    <!-- <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing service</span>
-                                    </div> -->
-                                    <!-- <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1> -->
+                                    
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Let's Talk</h2>
-                                        <h2>Let's Talk</h2>
+                                        <h2 class="batman-text">Let's Talk</h2>
+                                        <h2 class="batman-text">Let's Talk</h2>
                                     </div>
-                                    <!-- <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Shaping a Sustainable future through Advanced
-                                                Engineering and Technology</a></span>
-                                    </div> -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -240,30 +247,30 @@
 
             <!-- LEFT: Contact Details -->
             <div class="col-lg-7">
-                <h2 class="contact-title mt-10 gradient-text batman-text">Get in Touch</h2>
+                <h2 class="contact-title mt-10 gradient-text batman-text fw-bold">Get in Touch</h2>
 
                 <div class="media contact-info mt-4">
                         <span class="contact-info__icon"><i class="bi bi-geo-alt-fill"></i></span>
                         <div class="media-body">
-                            <h3 class="gradient-text">DKN WETEC PVT LTD</h3>
-                            <p>#9, Vivek Nagar, Cholapuram Main Road, Ambattur, Chennai - 600053</p>
+                            <h3 class="gradient-text fw-bold">DKN WETEC PVT LTD</h3>
+                            <p><strong>#9, Vivek Nagar, Cholapuram Main Road, Ambattur, Chennai - 600053</strong></p>
                         </div>
                     </div>
 
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                     <div class="media-body">
-                        <h3 class="gradient-text">+91 9884776311</h3>
-                        <h3 class="gradient-text">+91 9884606311</h3>
-                        <p>Mon to Sat  9am to 6pm</p>
+                        <h3 class="gradient-text fw-bold">+91 9884606311</h3>
+                        <h3 class="gradient-text fw-bold">+91 9884776311</h3>
+                        <p><strong>Mon to Sat  9am to 6pm</strong></p>
                     </div>
                 </div>
 
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-email"></i></span>
-                    <div class="media-body">
-                        <h3 class="gradient-text">support@dkninfra.com</h3>
-                        <p>Send us your query anytime!</p>
+                    <div class=" media-body">
+                        <h3 class="gradient-text fw-bold">support@dkninfra.com</h3>
+                        <p><strong>Send us your query anytime!</strong></p>
                     </div>
                 </div>
             </div>
@@ -296,21 +303,37 @@
                 <div class="container">
                     <div class="row align-items-center">
 
-                        <div class="col-lg-5 col-md-6 col-sm-12 footer-links-center">
-
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo mt-10">
-                                    <a href="index.html"><img src="assets/img/banner/b_logo.png" alt=""></a>
-                                </div>
-                                <!-- <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
-                                            eiusmod tempor incididunt ut labore.</p>
+                    <div class="col-lg-5 col-md-6 col-sm-12 footer-links-center">
+                        <div class="footer-content">
+                            <!-- Footer Logo -->
+                            <div class="footer-logo text-center mb-3">
+                                <a href="index.html">
+                                    <img src="assets/img/banner/footer_logo.png" alt="Logo" style="max-width: 200px; height: auto;">
+                                </a>
+                            </div>
+                            
+                            <!-- Social Media Icons -->
+                            <div class="social-icons">
+                                <div class="row justify-content-center">
+                                    <div class="col-4 text-center">
+                                        <a href="https://www.instagram.com/dknwetec_2025?igsh=MW14c3VvYWt1ODR5eQ==" target="_blank">
+                                            <img src="assets/img/icon/Insta.png" alt="Instagram" style="width: 30px; height: 30px;">
+                                        </a>
                                     </div>
-                                </div> -->
+                                    <div class="col-4 text-center">
+                                        <a href="https://x.com/sekar_v58960" target="_blank">
+                                            <img src="assets/img/icon/X.png" alt="X" style="width: 30px; height: 30px;">
+                                        </a>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <a href="https://www.facebook.com/SekarV25/" target="_blank">
+                                            <img src="assets/img/icon/Facebook.png" alt="Facebook" style="width: 30px; height: 30px;">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
                         <!-- QUICK LINKS -->
                         <div class="col-lg-6 col-md-7 col-sm-12 footer-links-center">
 
@@ -318,46 +341,17 @@
                                 <div class="footer-tittle">
                                     <h4 class="batman-text">Quick Links</h4>
                                     <ul class="">
-                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="aboutus.html">About Us</a></li>
                                         <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
                                         <li><a href="environment.html">Environment</a></li>
                                         <li><a href="technology.html">Technology</a></li>
                                         <li><a href="renewable_energy.html">Engineering</a></li>
                                         <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
-
-                                        <!-- <li><a href="#">Projects</a></li> -->
-                                        <!-- <li><a href="#">Contact Us</a></li> -->
-                                        <!-- <li><a href="#">FAQ</a></li> -->
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-3 col-md-4 col-sm-7">
-                                <div class="single-footer-caption mb-50">
-                                    <div class="footer-tittle">
-                                        <h4>Contact</h4>
-                                        <div class="footer-pera">
-                                            <p class="info1">2nd floor, 9, Cholambedu Rd, Vivek Nagar, Ambattur,
-                                                Chennai,
-                                                Tamil Nadu 600053</p>
-                                        </div>
-                                        <ul>
-                                            <li><a href="tel:9994266616">Phone: 9994266616</a></li>
-                                            <li><a href="tel:9884606311">Cell: 9884606311</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
-                        <!-- <div class="col-lg-3 col-md-6 col-sm-8">
-                                <div class="single-footer-caption mb-50"> -->
-                        <!-- Form -->
-
-                        <!-- Map -->
-                        <!-- <div class="map-footer">
-                                        <img src="assets/img/gallery/map-footer.png" alt="">
-                                    </div>
-                                </div> -->
-                        <!-- </div> -->
+                        
                     </div>
                     <!-- Copy-Right -->
                     <div class="row align-items-center">
@@ -377,6 +371,14 @@
             </div>
         </div>
         <!-- Footer End-->
+                <!-- WhatsApp Chat Button -->
+        <a class="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp Chat"
+            >
+        </a>
+
     </footer>
 
         <!-- JS here -->
@@ -429,7 +431,38 @@
                 nav.classList.toggle('active'); // add .active in CSS to show menu
             });
 
-        </script>
+
+                function openWhatsApp() {
+                    const phone = "919500396045";
+                    const message = "Hello, I want to know more";
+
+                    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+                    if (isMobile) {
+                        window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+                    } else {
+                        window.open(
+                            `https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`,
+                            "_blank"
+                        );
+                    }
+                }
+
+                /* Show WhatsApp button on scroll */
+                const whatsappBtn = document.querySelector(".whatsapp-float");
+
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 200) {
+                        whatsappBtn.classList.add("show");
+                    } else {
+                        whatsappBtn.classList.remove("show");
+                    }
+                });
+
+
+
+
+</script>
 
 </body>
 
