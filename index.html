@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>DKN</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
@@ -96,6 +96,65 @@
     letter-spacing: 1px !important;
 }
 
+/* Mobile slider area - keep desktop look */
+@media (max-width: 768px) {
+    .slider-height {
+        min-height: 600px !important; /* increase mobile height */
+    }
+    
+    .hero__caption {
+        padding-top: 100px !important;
+        text-align: center;
+    }
+    
+    .stock-text h2 {
+        font-size: 3rem !important; /* reduced WETEC text on mobile */
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 60px !important; /* reduced spacing */
+    }
+    
+    .hero-text2 span a {
+        font-size: 16px !important; /* reduced subtitle text */
+        line-height: 1.4 !important;
+        margin-left: 0 !important; /* center on mobile */
+        padding: 0 20px;
+        display: block;
+    }
+}
+
+/* Mobile services section fix */
+@media (max-width: 768px) {
+    .section-padding30 {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    
+    .section-tittle .front-text h2 {
+        font-size: 2rem !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .single-service-cap {
+        margin-bottom: 40px !important;
+    }
+    
+    .service-cap h4 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-img img {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+    }
+}
+
 
 
     </style>
@@ -122,14 +181,9 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="col-8 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
-                                            alt=""></a>
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNav">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
+                                    <a href="index.html"><img src="assets/img/banner/g_logo.png" alt=""></a>
                                 </div>
                             </div>
                             <!--main-->
@@ -157,26 +211,43 @@
 
                                                 </ul>
                                             </li>
-
-                                            <!-- <li><a href="contact.html">Contact</a></li> -->
-                                            <!-- <li><a href="#">FAQ</a></li> -->
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                            <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
+                            <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                                <div class="header-right-btn f-right batman-text">
                                     <a href="contact.html" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
-                            <div class="col-6 d-flex align-items-center d-lg-none">
-                                <div class="mobile_menu">
+                            <div class="col-4 d-flex justify-content-end d-lg-none">
+                                <div class="mobile_menu" id="mobile-menu-toggle">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
-
+                            </div>
+                            
+                            <!-- Mobile Navigation Overlay -->
+                            <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+                                <div class="mobile-nav-content">
+                                    <ul class="mobile-nav-menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="aboutus.html">About</a></li>
+                                        <li class="mobile-dropdown">
+                                            <a href="#" class="dropdown-toggle">Services <i class="fa fa-chevron-down"></i></a>
+                                            <ul class="mobile-submenu">
+                                                <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
+                                                <li><a href="environment.html">Environment</a></li>
+                                                <li><a href="technology.html">Technology</a></li>
+                                                <li><a href="renewable_energy.html">Engineering</a></li>
+                                                <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html" class="mobile-contact-btn">Contact Now</a></li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>
@@ -202,8 +273,7 @@
                                         <h2 class="batman-text">WETEC</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="#">Shaping a Sustainable future through Advanced
-                                                Engineering and Technology</a></span>
+                                        <span><a href="#">Shaping a Sustainable future through AdvancedEngineering and Technology</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -235,10 +305,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-55">
-                            <!-- <div class="front-text">
-                                <h2 class="">Our Services</h2>
-                            </div> -->
-                            <span class="back-text gradient-text batman-text">Our Services</span>
+                            <div class="front-text">
+                                <h2 class="batman-text gradient-text">Our Services</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -520,12 +589,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileClose = document.getElementById('mobile-close');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', () => {
+            if (mobileNavOverlay.classList.contains('active')) {
+                // Close menu
+                mobileNavOverlay.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else {
+                // Open menu
+                mobileNavOverlay.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+      
+
+        // Close menu when clicking overlay
+        mobileNavOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileNavOverlay) {
+                mobileNavOverlay.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Mobile dropdown functionality
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                if (submenu) {
+                    submenu.classList.toggle('active');
+                }
+                if (icon) {
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                }
+            });
+        });
+
         const menu = document.querySelector('.mobile_menu');
         const nav = document.querySelector('#navigation');
 
-        menu.addEventListener('click', () => {
-            nav.classList.toggle('active'); // add .active in CSS to show menu
-        });
+        // Disable SlickNav initialization
+        if (typeof $.fn.slicknav !== 'undefined') {
+            $('#navigation').slicknav('destroy');
+        }
 
           function openWhatsApp() {
                     const phone = "919500396045";

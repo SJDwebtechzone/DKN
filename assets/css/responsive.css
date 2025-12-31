@@ -1,32 +1,226 @@
 /* Normal desktop :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
-
-
+  .container {
+    max-width: 1140px;
+  }
 }
-
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
-
-
+  .container {
+    max-width: 960px;
+  }
+  
+  .hero__caption h1 {
+    font-size: 120px !important;
+  }
+  
+  .stock-text h2 {
+    font-size: 100px !important;
+  }
 }
 
- 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
-
-
+  .container {
+    max-width: 720px;
+  }
+  
+  .header-bottom {
+    padding: 10px 20px !important;
+  }
+  
+  .hero__caption {
+    padding-top: 80px !important;
+  }
+  
+  .hero__caption h1 {
+    font-size: 80px !important;
+  }
+  
+  .stock-text h2 {
+    font-size: 70px !important;
+  }
+  
+  .hero-text2 span a {
+    font-size: 24px !important;
+    margin-left: 0 !important;
+  }
+  
+  .section-tittle .front-text h2 {
+    font-size: 50px !important;
+  }
+  
+  .section-tittle span.back-text {
+    font-size: 80px !important;
+  }
+  
+  .services-area1 .single-service-cap {
+    margin-bottom: 30px;
+  }
+  
+  .why-card {
+    margin-bottom: 30px;
+  }
 }
 
- 
-/* small mobile :320px. */
+/* Small mobile and tablet :320px to 767px */
 @media (max-width: 767px) {
-
- 
+  .header-bottom {
+    padding: 5px 15px !important;
+    height: 70px !important;
+  }
+  
+  .logo img {
+    max-height: 50px !important;
+    margin-top: 0 !important;
+  }
+  
+  .slider-height {
+    min-height: 350px !important;
+  }
+  
+  .section-tittle span.back-text {
+    font-size: 35px !important;
+    opacity: 0.3 !important;
+  }
+  
+  .section-tittle .front-text h2 {
+    font-size: 28px !important;
+  }
+  
+  .section-padding30 {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  
+  .section-tittle {
+    margin-bottom: 40px !important;
+  }
+  
+  .section-tittle .front-text h2 {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+  }
+  
+  .section-tittle span.back-text {
+    font-size: 56px !important;
+    transform: translateY(-120%) !important;
+  }
+  
+  .services-area1 .single-service-cap {
+    margin-bottom: 30px;
+  }
+  
+  .service-cap h4 {
+    min-height: auto !important;
+    font-size: 18px !important;
+  }
+  
+  .service-cap h4 a {
+    font-size: 18px !important;
+  }
+  
+  .why-card {
+    margin-bottom: 20px;
+    padding: 25px 15px !important;
+  }
+  
+  .why-icon {
+    font-size: 32px !important;
+  }
+  
+  .footer-area {
+    padding: 30px 0 15px !important;
+  }
+  
+  .footer-tittle h4 {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .footer-tittle ul {
+    grid-template-columns: 1fr !important;
+    column-gap: 0 !important;
+    row-gap: 10px !important;
+  }
+  
+  .footer-tittle ul li a {
+    font-size: 16px !important;
+  }
+  
+  .footer-logo img {
+    max-width: 150px !important;
+  }
+  
+  .social-landscape {
+    gap: 15px !important;
+  }
+  
+  .social-landscape img {
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
  
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-.container {width:450px}
- 
+  .container {
+    width: 450px;
+  }
+  
+  .hero__caption h1 {
+    font-size: 42px !important;
+  }
+  
+  .stock-text h2 {
+    font-size: 38px !important;
+  }
+  
+  .hero-text2 span a {
+    font-size: 20px !important;
+  }
+}
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 479px) {
+  .container {
+    width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .hero__caption h1 {
+    font-size: 28px !important;
+  }
+  
+  .stock-text h2 {
+    font-size: 24px !important;
+  }
+  
+  .hero-text2 span a {
+    font-size: 16px !important;
+  }
+  
+  .section-tittle .front-text h2 {
+    font-size: 28px !important;
+  }
+  
+  .section-tittle span.back-text {
+    font-size: 42px !important;
+  }
+  
+  .why-card {
+    padding: 20px 15px !important;
+  }
+  
+  .mobile-nav-menu a {
+    font-size: 16px !important;
+    padding: 15px !important;
+  }
+  
+  .mobile-submenu a {
+    font-size: 14px !important;
+    padding: 12px 30px !important;
+  }
 }

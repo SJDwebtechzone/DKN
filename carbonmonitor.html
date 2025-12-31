@@ -272,54 +272,74 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="col-8 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html" class="logo"><img src="assets/img/banner/b_logo.png"
-                                            alt=""></a>
-                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                                    <a href="index.html"><img src="assets/img/banner/g_logo.png" alt=""></a>
                                 </div>
                             </div>
                             <!--main-->
                             <div class="col-xl-8 col-lg-8 d-none d-lg-block">
-    <div class="main-menu f-right">
+                                <div class="main-menu f-right">
                                     <nav>
                                         <ul id="navigation" class="nav-gradient font-bold batman-text">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="aboutus.html">About</a></li>
-                           <li class="dropdown">
-  <a href="#">Services</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="watertreatment.html"><span class="gradient-text batman-text">W</span>ater & Waste Water Treatment</a></li>
-    <li><a class="dropdown-item" href="environment.html"><span class="gradient-text">E</span>nvironment</a></li>
-    <li><a class="dropdown-item" href="technology.html"><span class="gradient-text">T</span>echnology</a></li>
-    <li><a class="dropdown-item" href="renewable_energy.html"><span class="gradient-text">E</span>ngineering</a></li>
-        <li><a class="dropdown-item" href="carbonmonitor.html"><span class="gradient-text">C</span>limatic & Carbon Monitoring</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Services</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="watertreatment.html"><span
+                                                                class="gradient-text batman-text">W</span>ater & Waste
+                                                            Water Treatment</a></li>
+                                                    <li><a class="dropdown-item" href="environment.html"><span
+                                                                class="gradient-text ">E</span>nvironment</a></li>
+                                                    <li><a class="dropdown-item" href="technology.html"><span
+                                                                class="gradient-text">T</span>echnology</a></li>
+                                                    <li><a class="dropdown-item" href="renewable_energy.html"><span
+                                                                class="gradient-text">E</span>ngineering</a></li>
+                                                    <li><a class="dropdown-item" href="carbonmonitor.html"><span
+                                                                class="gradient-text">C</span>limatic & Carbon
+                                                            Monitoring</a></li>
 
-  </ul>
-</li>
-
-                                            <!-- <li><a href="contact.html">Contact</a></li> -->
-                                            <!-- <li><a href="#">FAQ</a></li> -->
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                      <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                                <div class="header-right-btn f-right d-none d-lg-block batman-text">
+                            <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                                <div class="header-right-btn f-right batman-text">
                                     <a href="contact.html" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
-                        <div class="col-6 d-flex align-items-center d-lg-none">
-                     <div class="mobile_menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </div>
-
-                    </div>
+                            <div class="col-4 d-flex justify-content-end d-lg-none">
+                                <div class="mobile_menu" id="mobile-menu-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Mobile Navigation Overlay -->
+                            <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+                                <div class="mobile-nav-content">
+                                    <ul class="mobile-nav-menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="aboutus.html">About</a></li>
+                                        <li class="mobile-dropdown">
+                                            <a href="#" class="dropdown-toggle">Services <i class="fa fa-chevron-down"></i></a>
+                                            <ul class="mobile-submenu">
+                                                <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
+                                                <li><a href="environment.html">Environment</a></li>
+                                                <li><a href="technology.html">Technology</a></li>
+                                                <li><a href="renewable_energy.html">Engineering</a></li>
+                                                <li><a href="carbonmonitor.html">Climatic & Carbon Monitoring</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html" class="mobile-contact-btn">Contact Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -1075,6 +1095,59 @@
 
 
     <script>
+
+         // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileClose = document.getElementById('mobile-close');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', () => {
+            if (mobileNavOverlay.classList.contains('active')) {
+                // Close menu
+                mobileNavOverlay.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else {
+                // Open menu
+                mobileNavOverlay.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+      
+
+        // Close menu when clicking overlay
+        mobileNavOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileNavOverlay) {
+                mobileNavOverlay.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Mobile dropdown functionality
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                if (submenu) {
+                    submenu.classList.toggle('active');
+                }
+                if (icon) {
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                }
+            });
+        });
+
+        const menu = document.querySelector('.mobile_menu');
+        const nav = document.querySelector('#navigation');
+        
         document.querySelectorAll('[data-background]').forEach(el => {
             el.style.backgroundImage = `url(${el.getAttribute('data-background')})`;
             el.style.backgroundSize = 'cover';
