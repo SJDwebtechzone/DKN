@@ -582,6 +582,39 @@
     .carousel-image:first-child {
       position: relative;
     }
+
+    /* Mobile Navigation Content Size */
+.mobile-nav-content {
+    width: 309.33px !important;
+    height: 431.33px !important;
+    max-width: 309.33px !important;
+    max-height: 431.33px !important;
+    overflow-y: auto;
+}
+
+/* Remove overlay background for screens 496px and above */
+@media (min-width: 496px) {
+    .mobile-nav-overlay {
+        background: transparent !important;
+    }
+    
+    .mobile-nav-content {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background: #1a2142 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    }
+}
+
+@media (max-width: 495px) {
+    .mobile-nav-content {
+        width: 280px !important;
+        max-width: 280px !important;
+    }
+}
 </style>
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
