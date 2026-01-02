@@ -7,7 +7,7 @@
     <title>DKN - WW Treatment</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
@@ -31,7 +31,20 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
 
+@media (max-width: 768px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+   .slider-area,
+  .single-slider {
+    overflow-x: hidden;
+  }
+}
 
+body, html {
+    overflow-x: hidden;
+}
 
     /* GLASS CARDS */
     .glass-card {
@@ -158,20 +171,8 @@
       margin: 0 auto;
     }
 
-    /* Increase minimum pixel size for W&W TREATMENT: min 64px, fluid up to 120px */
-    .stock-text h2 {
-      font-size: clamp(48px, 9vw, 120px) !important; /* min 64px */
+  
 
-      text-align: center;
-      margin: 0 auto;
-      line-height: 1 !important;
-    }
-
-    @media (max-width: 768px) {
-      .stock-text h2 {
-        font-size: clamp(32px, 8vw, 56px) !important; /* decreased mobile size */
-      }
-    }
 
     /* Image Carousel Styles */
     .image-carousel {
@@ -252,26 +253,137 @@
     font-size: 1.1rem; /* adjust font size */
 }
 
- @media (max-width: 768px) {
-      .stock-text h2 {
-        font-size: clamp(30px, 8vw, 4rem) !important;
-        text-align: center;
-        line-height: 1.1 !important;
-      }
-      
-      .hero-text2 {
-        margin-top: 20px !important;
-      }
-      
-      .mobile_menu {
-        width: 25px;
-        height: 20px;
-      }
-      
-      .mobile_menu span {
-        height: 2px;
-      }
+
+@media (max-width: 768px) {
+  .single-slider .container {
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden;
+  }
+}
+
+.slider-area,
+.slider-active,
+.slick-list {
+  overflow-x: hidden;
+}
+
+/* Hero text responsive */
+/* Desktop & tablet */
+.stock-text h2 {
+    font-size: 3rem;        /* base desktop font */
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Mobile: scale text to fit 2 lines */
+@media (max-width: 768px) {
+    .stock-text h2 {
+        font-size: 6vw; /* shrink font */
+        line-height: 1.1;
+        margin: 0;
     }
+}
+
+
+
+
+/* Hero caption padding adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero__caption {
+        padding-top: 70px !important; /* reduce top padding */
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero__caption {
+        padding-top: 50px !important; /* even smaller on mobile */
+    }
+
+    .stock-text h2 {
+        font-size: clamp(1.2rem, 7vw, 2.5rem); /* smaller font on very small screens */
+    }
+}
+
+
+
+ @media (max-width: 768px) {
+  .slider-height {
+    min-height: 600px !important; /* adjust per page */
+  }
+
+  .hero__caption {
+    padding-top: 100px !important;
+    text-align: center;
+  }
+
+  /* Stock Text Mobile Styling */
+  .stock-text h2 {
+    font-size: 3rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Optional: show layered second heading */
+  .stock-text h2:nth-child(2) {
+    display: block;
+    opacity: 0.6; /* semi-transparent for depth effect */
+  }
+
+  .hero-text2 {
+    margin-top: 20px !important;
+  }
+
+  .hero-text2 span a {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    padding: 0 16px;
+    display: block;
+    margin-top: 20px;
+  }
+
+  /* Mobile hamburger */
+  .mobile_menu {
+    width: 24px;
+    height: 18px;
+  }
+
+  .mobile_menu span {
+    height: 2px;
+  }
+}
+.hero__caption .stock-text + .stock-text {
+    margin-top: 40px; /* gap between W & W and TREATMENT */
+}
+
+.hero__caption .stock-text + .hero-text2 {
+    margin-top: 40px; /* gap between TREATMENT and subtext */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero__caption .stock-text + .stock-text {
+        margin-top: 40px !important;
+    }
+    .hero__caption .stock-text + .hero-text2 {
+        margin-top: 40px !important;
+    }
+    .hero-text2 a {
+    display: inline-block; /* allows wrapping */
+    max-width: 90%; /* adjust width for 2 lines */
+    text-align: center; /* center text */
+    word-break: break-word; /* ensures long words break */
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* responsive font */
+}
+
+}
+
 
 
 /* Mobile Navigation Content Size */
@@ -385,7 +497,7 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="aboutus.html">About</a></li>
                                         <li class="mobile-dropdown">
-                                            <a href="#" class="dropdown-toggle">Services <i class="fa fa-chevron-down"></i></a>
+                                            <a href="#" class="dropdown-toggle">Services</a>
                                             <ul class="mobile-submenu">
                                                 <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
                                                 <li><a href="environment.html">Environment</a></li>
@@ -418,14 +530,14 @@
                             <div class="col-lg-12 text-center">
                                 <div class="hero__caption">
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                      <h2 class="batman-text" style="-webkit-text-stroke: 0.5px white; position: absolute; white-space: nowrap; left: -50px;">WASTE-WATER</h2>
-                                      <h2 class="batman-text" style="-webkit-text-stroke: 0.5px white; position: absolute; white-space: nowrap; left: -50px;">WASTE-WATER</h2>
+                                      <h2 class="batman-text">Water</h2>
+                                      <h2 class="batman-text">Water </h2>
                                     </div>
-                                    <div class="stock-text" data-animation="fadeInUp" data-delay="1s" style="margin-top: 150px;">
-                                        <h2 class="batman-text" style="-webkit-text-stroke: 0.5px white; position: absolute;">TREATMENT</h2>
-                                        <h2 class="batman-text" style="-webkit-text-stroke: 0.5px white; position: absolute;">TREATMENT</h2>
+                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                        <h2 class="batman-text">TREATMENT</h2>
+                                        <h2 class="batman-text">TREATMENT</h2>
                                     </div>
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s" style="margin-top: 200px;">
+                                    <div class="hero-text2" data-animation="fadeInUp" data-delay=".9s">
                                         <span><a href="#">Shaping a Sustainable future through Advanced
                                                 Engineering and Technology</a></span>
                                     </div>
