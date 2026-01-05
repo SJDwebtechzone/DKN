@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DKN</title>
+    <title>DKN-About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -31,7 +31,11 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-
+ body,
+    html {
+      overflow-x: hidden;
+      
+    }
 
         /* GLASS CARDS */
         .glass-card {
@@ -69,6 +73,7 @@
             padding: 35px;
             border-radius: 16px;
             text-align: center;
+            height: 150px;
            
         }
         .header-bottom {
@@ -95,27 +100,116 @@
     line-height: 1 !important;
     letter-spacing: 1px !important;
 }
-
+ .stock-text h2 {
+      font-size: 5rem !important;
+      /* base desktop font */
+      line-height: 1.1;
+      text-align: center;
+      margin: 0 auto;
+      color: #fff;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .slider-area,
+.slider-active,
+.single-slider,
+.slick-list,
+.slick-track {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+}
+.hero__caption {
+            width: 100%;
+        }
 /* Mobile About Us text - increase minimum size */
 @media (max-width: 768px) {
-    .stock-text h2 {
-        font-size: clamp(35px, 12vw, -6px) !important;
+     .slider-area {
+    margin-top: -20px !important;
+  }
+    .slider-height {
+        min-height: 600px !important; /* increase mobile height */
+    }
+    .single-slider .container {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden;
+      }
+    .hero__caption {
+        padding-top: 0px !important;
         text-align: center;
-        line-height: 1.1 !important;
+    }
+    .slick-slide {
+        width: 100vw !important;
+    }
+    .stock-text h2 {
+        font-size: 1.5rem !important; /* reduced WETEC text on mobile */
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 60px !important; /* reduced spacing */
+        text-align: center;
+    
+    }
+    
+   .hero-text2 span {
+        position: relative;
+        display: inline-block;
+        padding: 0 55px; /* space for lines */
+    }
+      .hero-text2 span a {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        padding: 0;
+        display: inline-block;
+        text-align: center;
+          max-width: 320px;   /* tweak: 300–340 */
+    margin: 0 auto;
+    }
+    .container,
+    .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+      .hero-text2 span::before,
+    .hero-text2 span::after {
+        content: "";
+        position: absolute;
+        top: 0.95em; /* aligns with first text line */
+        width: 30px;
+        height: 2px;
+        background: linear-gradient(90deg, #FFD700, #FF9800, #E53935);
+        box-shadow: 0 0 6px rgba(255, 152, 0, 0.6);
+    }
+    
+
+    .hero-text2 span::before {
+        left: 0;
+    }
+
+    .hero-text2 span::after {
+        right: 0;
+    }
+      .whatsapp-float {
+        right: 15px !important; /* adjust this value as needed */
     }
 }
 
 /* Mobile Navigation Content Size */
-.mobile-nav-content {
+/* .mobile-nav-content {
     width: 309.33px !important;
     height: 431.33px !important;
     max-width: 309.33px !important;
     max-height: 431.33px !important;
     overflow-y: auto;
-}
+} */
 
 /* Remove overlay background for screens 496px and above */
-@media (min-width: 496px) {
+/* @media (min-width: 496px) {
     .mobile-nav-overlay {
         background: transparent !important;
     }
@@ -136,7 +230,7 @@
         width: 280px !important;
         max-width: 280px !important;
     }
-}
+} */
 
     </style>
 </head>
@@ -221,7 +315,7 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="aboutus.html">About</a></li>
                                         <li class="mobile-dropdown">
-                                            <a href="#" class="dropdown-toggle">Services <i class="fa fa-chevron-down"></i></a>
+                                            <a href="#" class="dropdown-toggle">Services </a>
                                             <ul class="mobile-submenu">
                                                 <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
                                                 <li><a href="environment.html">Environment</a></li>
@@ -246,7 +340,7 @@
 
         <!-- slider Area Start-->
         <div class="slider-area ">
-            <div class="slider-active">
+            <div class="slider-active auto-slider">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
                     data-background="assets/img/banner/about.jpeg">
                     <div class="container">
@@ -269,29 +363,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="hero__caption">
-                                    <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing
-                                            service</span>
-                                    </div>
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
-                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Construction</h2>
-                                        <h2>Construction</h2>
-                                    </div>
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Our Services</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <!-- slider Area End-->
@@ -444,18 +516,17 @@
             </div>
         </div>
         <!-- Footer End-->
-                <!-- WhatsApp Chat Button -->
-        <a class="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
+      
+
+    </footer>
+ <a class="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
             <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
             alt="WhatsApp Chat"
             >
         </a>
-
-    </footer>
-
     <!-- JS here -->
-
+<script src="./assets/js/scripts.js"></script>
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
@@ -494,67 +565,10 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-
-    <script>
-        // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-        const mobileClose = document.getElementById('mobile-close');
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-        // Toggle mobile menu
-        mobileMenuToggle.addEventListener('click', () => {
-            if (mobileNavOverlay.classList.contains('active')) {
-                // Close menu
-                mobileNavOverlay.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            } else {
-                // Open menu
-                mobileNavOverlay.classList.add('active');
-                mobileMenuToggle.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-      
-
-        // Close menu when clicking overlay
-        mobileNavOverlay.addEventListener('click', (e) => {
-            if (e.target === mobileNavOverlay) {
-                mobileNavOverlay.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Mobile dropdown functionality
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                const submenu = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
-                
-                if (submenu) {
-                    submenu.classList.toggle('active');
-                }
-                if (icon) {
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                }
-            });
-        });
-
-        const menu = document.querySelector('.mobile_menu');
-        const nav = document.querySelector('#navigation');
-
-        // Disable SlickNav initialization
-        if (typeof $.fn.slicknav !== 'undefined') {
-            $('#navigation').slicknav('destroy');
-        }
-
-          function openWhatsApp() {
-                    const phone = "919500396045";
+<script>
+    
+     function openWhatsApp() {
+                    const phone = "919884606311";
                     const message = "Hello, I want to know more";
 
                     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -579,8 +593,8 @@
                         whatsappBtn.classList.remove("show");
                     }
                 });
-
-
-    </script>
+                </script>
+                          <!-- WhatsApp Chat Button -->
+       
 </body> 
 </html>

@@ -7,7 +7,7 @@
     <title>DKN - Renewable Energy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
@@ -44,12 +44,7 @@
       margin-top: 5px !important;
     }
 
-        .about-img {
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
+     
 
 
     /* Renewable Energy Theme - Orange & Red */
@@ -460,27 +455,88 @@
   background: linear-gradient(135deg, rgba(125,211,252,.15), rgba(59,130,246,.15));
   box-shadow: 0 12px 25px rgba(125,211,252,.35);
 }
-
-/* Mobile Engineering Text Size */
+  .stock-text h2 {
+      font-size: 5rem !important;
+      /* base desktop font */
+      line-height: 1.1;
+      text-align: center;
+      margin: 0 auto;
+      color: #fff;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .slider-area,
+.slider-active,
+.single-slider,
+.slick-list,
+.slick-track {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+}
+ .hero__caption{
+  width: 100%;
+ }
 @media (max-width: 768px) {
-    .stock-text h2 {
-        font-size: clamp(30px, 12vw, 6px) !important;
+       .slider-area {
+    margin-top: -20px !important;
+  }
+    .slider-height {
+        min-height: 600px !important; /* increase mobile height */
+    }
+    .single-slider .container {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden;
+      }
+    .hero__caption {
+        padding-top: 100px !important;
         text-align: center;
-        line-height: 1.1 !important;
+    }
+    .slick-slide {
+        width: 100vw !important;
+    }
+    .stock-text h2 {
+        font-size: 1.5rem !important; /* reduced WETEC text on mobile */
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-text2 {
+        margin-top: 60px !important; /* reduced spacing */
+         text-align: center;
+    }
+      .hero-text2 span {
+        position: relative;
+        display: inline-block;
+        padding: 0 55px; /* space for lines */
+    }
+
+    .hero-text2 span a {
+        font-size: 14px !important; /* reduced subtitle text */
+        line-height: 1.4 !important;
+        margin-left: 0 !important; /* center on mobile */
+        padding: 0 20px;
+        display: block;
+    }
+    .container,
+    .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 auto;
+        max-width: 100%;
     }
 }
-
 /* Mobile Navigation Content Size */
-.mobile-nav-content {
+/* .mobile-nav-content {
     width: 309.33px !important;
     height: 431.33px !important;
     max-width: 309.33px !important;
     max-height: 431.33px !important;
     overflow-y: auto;
-}
+} */
 
 /* Remove overlay background for screens 496px and above */
-@media (min-width: 496px) {
+/* @media (min-width: 496px) {
     .mobile-nav-overlay {
         background: transparent !important;
     }
@@ -501,7 +557,7 @@
         width: 280px !important;
         max-width: 280px !important;
     }
-}
+} */
 </style>
 </head>
 
@@ -582,7 +638,7 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="aboutus.html">About</a></li>
                                         <li class="mobile-dropdown">
-                                            <a href="#" class="dropdown-toggle">Services <i class="fa fa-chevron-down"></i></a>
+                                            <a href="#" class="dropdown-toggle">Services</a>
                                             <ul class="mobile-submenu">
                                                 <li><a href="watertreatment.html">Water & Waste Water Treatment</a></li>
                                                 <li><a href="environment.html">Environment</a></li>
@@ -823,22 +879,22 @@
                         
                         <div class="grid md:grid-cols-2 gap-6 ">
                             <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500 geo-card heat-animate" onclick="animateGeoCard(this)">
-                                <h4 class="font-bold text-gray-800 mb-2">Power Generation</h4>
+                                <h4 class="font-bold gradient-text mb-2">Power Generation</h4>
                                 <p class="text-gray-600 text-sm text-justify">Binary cycle and flash steam power plants for electricity production.</p>
                             </div>
                             
                             <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 geo-card heat-animate" onclick="animateGeoCard(this)">
-                                <h4 class="font-bold text-gray-800 mb-2">Direct Use Applications</h4>
+                                <h4 class="font-bold gradient-text mb-2">Direct Use Applications</h4>
                                 <p class="text-gray-600 text-sm text-justify">Heating systems for buildings, greenhouses, and industrial processes.</p>
                             </div>
                             
                             <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500 geo-card heat-animate" onclick="animateGeoCard(this)">
-                                <h4 class="font-bold text-gray-800 mb-2">Ground Source Heat Pumps</h4>
+                                <h4 class="font-bold gradient-text mb-2">Ground Source Heat Pumps</h4>
                                 <p class="text-gray-600 text-sm text-justify">Efficient heating and cooling systems for residential and commercial use.</p>
                             </div>
                             
                             <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 geo-card heat-animate" onclick="animateGeoCard(this)">
-                                <h4 class="font-bold text-gray-800 mb-2">Enhanced Geothermal</h4>
+                                <h4 class="font-bold gradient-text mb-2">Enhanced Geothermal</h4>
                                 <p class="text-gray-600 text-sm text-justify">Advanced drilling techniques to access deeper geothermal resources.</p>
                             </div>
                         </div>
@@ -862,7 +918,7 @@
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
                         <img src="assets/img/banner/Biomass-power-plant.jpg" alt="Biomass Power" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Mass Power Plants</h3>
+                            <h3 class="text-xl font-bold gradient-text mb-3">Bio-Mass Power Plants</h3>
                             <p class="text-gray-600 mb-4">Converting organic waste materials into clean electricity through advanced combustion and gasification technologies.</p>
                             <div class="flex items-center gap-x-2 text-orange-600">
                               <span class="text-lg leading-none">🍃</span>
@@ -875,7 +931,7 @@
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
                         <img src="assets/img/banner/Biogas-power-production-plant.webp" alt="Biogas Plant" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Gas Production</h3>
+                            <h3 class="text-xl font-bold gradient-text mb-3">Bio-Gas Production</h3>
                             <p class="text-gray-600 mb-4">Anaerobic digestion systems converting organic waste into methane for heating, electricity, and vehicle fuel.</p>
                             <div class="flex items-center gap-x-2 text-orange-600">
                               <span class="text-lg leading-none">♻</span>
@@ -889,7 +945,7 @@
                     <div class="bg-white rounded-2xl shadow-xl overflow-hidden bio-card" onclick="animateBioCard(this)">
                         <img src="assets/img/banner/Biofuel_production,_Brazil.jpg" alt="Biofuels" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Bio-Fuel Production</h3>
+                            <h3 class="text-xl font-bold gradient-text mb-3">Bio-Fuel Production</h3>
                             <p class="text-gray-600 mb-4">Advanced biofuel manufacturing from algae, agricultural residues, and energy crops for transportation.</p>
                             <div class="flex items-center gap-x-2 text-orange-600">
                               <span class="text-lg leading-none">⛽</span>
@@ -1236,8 +1292,10 @@
     windTimer = setInterval(autoWindSlide, 3000);
   });
 
-    function openWhatsApp() {
-                    const phone = "919500396045";
+
+    
+     function openWhatsApp() {
+                    const phone = "919884606311";
                     const message = "Hello, I want to know more";
 
                     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -1262,7 +1320,19 @@
                         whatsappBtn.classList.remove("show");
                     }
                 });
+              
+                          <!-- WhatsApp Chat Button -->
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header-sticky");
+    if (!header) return;
 
+    if (window.scrollY > 100) {
+      header.classList.add("sticky-bar");
+    } else {
+      header.classList.remove("sticky-bar");
+    }
+  });
+  
     </script>
 
 </body>

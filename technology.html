@@ -7,7 +7,7 @@
   <title>DKN - Technology</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
   <!-- CSS here -->
@@ -335,11 +335,11 @@
       line-height: 1.2 !important;
     }
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
       .stock-text h2 {
         font-size: 3rem !important;
       }
-    }
+    } */
 
     /* Bubble Background Animation */
     .bubble-bg {
@@ -402,6 +402,7 @@
     /* Meter Card Animation */
     .tech-card {
       transition: all 0.3s ease;
+      padding: 28px;
       cursor: pointer;
     }
 
@@ -492,37 +493,68 @@
 
     /* Hero Text Size */
     .stock-text h2 {
-      font-size: 8rem !important;
+      font-size: 5rem !important;
     
       text-align: center;
       margin: 0 auto;
     }
-
+.hero__caption{
+    width: 100%;
+}
     @media (max-width: 768px) {
-      .stock-text h2 {
-        font-size: clamp(30px, 8vw, 4rem) !important;
-        text-align: center;
-        line-height: 1.1 !important;
+           .slider-area {
+    margin-top: -20px !important;
+  }
+        .slider-height {
+        min-height: 600px !important; /* increase mobile height */
+    }
+    .single-slider .container {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden;
       }
+    .hero__caption {
+        padding-top: 100px !important;
+        text-align: center;
+    }
+    .slick-slide {
+        width: 100vw !important;
+    }
+      .stock-text h2 {
+        font-size: 1.5rem !important; /* reduced WETEC text on mobile */
+        margin-bottom: 0 !important;
+    }
       
       .hero-text2 {
-        margin-top: 20px !important;
+        margin-top: 60px !important;
       }
+       .hero-text2 span a {
+        font-size: 14px !important; /* reduced subtitle text */
+        line-height: 1.4 !important;
+        margin-left: 0 !important; /* center on mobile */
+        padding: 0 20px;
+        display: block;
+    }
+    .container,
+    .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+      .hero-text2 span a {
+        font-size: 14px !important; /* reduced subtitle text */
+        line-height: 1.4 !important;
+        margin-left: 0 !important; /* center on mobile */
+        padding: 0 20px;
+        display: block;
+    }
     }
 
-    /* Hero Text Styling */
-    .hero-text2 {
-      margin-top: 50px;
-      text-align: center;
-    }
+  
 
-    .hero-text2 a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      display: block;
-      margin: 0 auto;
-    }
+    
 
     /* Feature Lists */
     .feature-list {
@@ -584,16 +616,16 @@
     }
 
     /* Mobile Navigation Content Size */
-.mobile-nav-content {
+/* .mobile-nav-content {
     width: 309.33px !important;
     height: 431.33px !important;
     max-width: 309.33px !important;
     max-height: 431.33px !important;
     overflow-y: auto;
-}
+} */
 
 /* Remove overlay background for screens 496px and above */
-@media (min-width: 496px) {
+/* @media (min-width: 496px) {
     .mobile-nav-overlay {
         background: transparent !important;
     }
@@ -614,7 +646,7 @@
         width: 280px !important;
         max-width: 280px !important;
     }
-}
+} */
 </style>
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
@@ -710,12 +742,12 @@
     <main>
         <!-- Slider Area Start -->
         <div class="slider-area ">
-            <div class="slider-active">
+            <div class="slider-active auto-slider">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
                     data-background="assets/img/banner/tech.jpg">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12 text-center">
+                        <div class="row">
+                            <div class="col-lg-11">
                                 <div class="hero__caption">
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
                                         <h2 class="batman-text">TECHNOLOGY</h2>
@@ -848,9 +880,9 @@
                             <img src="assets/img/banner/Elactromagnetic.png" alt="Electromagnetic Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Electromagnetic Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Electromagnetic Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Measures conductive liquid flow using Faraday's Law with no moving parts.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700 text-justify">Water treatment plants, wastewater management, chemical and process industries.</p>
                         </div>
                     </div>
@@ -861,9 +893,9 @@
                             <img src="assets/img/banner/Ultrasonic.png" alt="Ultrasonic Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Ultrasonic Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Ultrasonic Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Measures flow velocity by transmitting ultrasonic waves through fluid and calculating time difference.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700 text-justify">Clean water systems, HVAC, energy monitoring, temporary flow measurement.</p>
                         </div>
                     </div>
@@ -874,9 +906,9 @@
                             <img src="assets/img/banner/Turbin.png" alt="Turbine Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Turbine Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Turbine Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300 text-justify"><strong class="gradient-text"></strong> Measures fluid flow by detecting rotational speed of turbine placed in flow path.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700 text-justify">Fuel monitoring, oil & gas pipelines, chemical processing plants.</p>
                         </div>
                     </div>
@@ -887,9 +919,9 @@
                             <img src="assets/img/banner/Vortex.png" alt="Vortex Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Vortex Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Vortex Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Measures flow by detecting vortices formed when fluid passes a bluff body.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Steam flow measurement, gas flow systems, power plants.</p>
                         </div>
                     </div>
@@ -901,9 +933,9 @@
                             <img src="assets/img/banner/Coriolis.png" alt="Coriolis Mass Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Coriolis Mass Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Coriolis Mass Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Direct mass flow measurement using Coriolis force on vibrating tubes.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Steam flow measurement, gas flow systems, power plants.</p>
                         </div>
                     </div>
@@ -915,9 +947,9 @@
                             <img src="assets/img/banner/Thermal.png" alt="Thermal Mass Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Thermal Mass Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Thermal Mass Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Gas flow measurement through heat transfer monitoring.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Compressed air, gas monitoring, HVAC</p>
                         </div>
                     </div>
@@ -929,9 +961,9 @@
                             <img src="assets/img/banner/Differential.png" alt="Differential Pressure Flow Transmitter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 ">Differential Pressure Flow Transmitter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Differential Pressure Flow Transmitter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300 text-justify"><strong class="gradient-text"></strong> Measures flow via pressure difference across flow restrictions.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Steam flow, refinery pipelines</p>
                         </div>
                     </div>
@@ -943,9 +975,9 @@
                             <img src="assets/img/banner/Handheld.png" alt="Handheld Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Handheld Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Handheld Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300 text-justify"><strong class="gradient-text"></strong> Portable device for on-site flow measurement and calibration.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Field testing, system commissioning</p>
                         </div>
                     </div>
@@ -957,9 +989,9 @@
                             <img src="assets/img/banner/Level_Transmeter.png" alt="Level Transmitter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Level Transmitter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Level Transmitter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Radar/ultrasonic level measurement for tanks and vessels.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p class="text-sm text-gray-700">Storage tanks, silos, wastewater plants</p>
                         </div>
                     </div>
@@ -970,9 +1002,9 @@
                             <img src="assets/img/banner/Flow_Sensors.jpg" alt="Flow Totalizer" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Flow Totalizer</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Flow Totalizer</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Real-time flow display with accumulated flow calculation.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Billing systems, utility management</p>
                         </div>
                     </div>
@@ -983,9 +1015,9 @@
                             <img src="assets/img/banner/Compact.png" alt="Compact Flow Sensor" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Compact Flow Sensor</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Compact Flow Sensor</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300 text-justify"><strong class="gradient-text"></strong> Small form factor flow detection with electrical signal output.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Industrial automation, cooling systems</p>
                         </div>
                     </div>
@@ -997,9 +1029,9 @@
                             <img src="assets/img/banner/Pressure.png" alt="Pressure Transmitter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Pressure Transmitter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Pressure Transmitter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Converts pressure into standardized electrical output signals.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Pipelines, pumps, hydraulic systems</p>
                         </div>
                     </div>
@@ -1010,9 +1042,9 @@
                             <img src="assets/img/banner/Intelligent.png" alt="Intelligent Flow Transmitter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Intelligent Flow Transmitter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Intelligent Flow Transmitter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300 text-justify"><strong class="gradient-text"></strong> Smart transmitter with digital processing and communication.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Smart factories, Industry 4.0 systems</p>
                         </div>
                     </div>
@@ -1023,9 +1055,9 @@
                             <img src="assets/img/banner/Inline.png" alt="Inline Flow Meter" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Inline Flow Meter</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Inline Flow Meter</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Direct pipeline installation with digital display capability.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Water distribution, process lines</p>
                         </div>
                     </div>
@@ -1036,9 +1068,9 @@
                             <img src="assets/img/banner/Industrial.png" alt="Industrial Process Controller" class="w-full h-full object-contain transition-transform duration-300 hover:scale-110">
                         </div>
                         <div class="p-4">
-                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300">Industrial Process Controller</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-2 transition-colors duration-300 mt-4 mb-3">Industrial Process Controller</h3>
                             <p class="text-gray-600 mb-2 text-sm transition-colors duration-300"><strong class="gradient-text"></strong> Automated control system for flow, pressure, level, and temperature.</p>
-                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300"><strong class="gradient-text">Applications</strong></p>
+                            <p class="text-gray-500 mb-1 text-sm transition-colors duration-300 mt-4 mb-3"><strong class="gradient-text">Applications</strong></p>
                             <p>Control panels, automation, SCADA</p>
                         </div>
                     </div>
@@ -1181,14 +1213,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 scroll-slide-left">
                         <div class="glass-card">
-                            <h2 class="gradient-text mb-4">Integrated Control Systems</h2>
+                            <h2 class="gradient-text mt-4 mb-3">Integrated Control Systems</h2>
                             <p class="mb-4">
                                 Our advanced control systems integrate all sensor technologies into comprehensive monitoring and 
                                 automation platforms, providing centralized control, data analytics, and intelligent decision-making 
                                 capabilities for optimal system performance.
                             </p>
                             
-                            <h5 class="gradient-text mb-3">System Features:</h5>
+                            <h5 class="gradient-text mt-4 mb-3">System Features:</h5>
                             <ul class="feature-list">
                                 <li><i class="bi bi-cpu-fill text-success"></i>Real-time data acquisition and processing</li>
                                 <li><i class="bi bi-cpu-fill text-success"></i>Advanced analytics and reporting</li>
@@ -1302,7 +1334,7 @@
         </a>
 
     </footer>
-
+<script src="./assets/js/scripts.js"></script>
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -1345,57 +1377,7 @@
 
     <script>
 
-               // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-        const mobileClose = document.getElementById('mobile-close');
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-        // Toggle mobile menu
-        mobileMenuToggle.addEventListener('click', () => {
-            if (mobileNavOverlay.classList.contains('active')) {
-                // Close menu
-                mobileNavOverlay.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            } else {
-                // Open menu
-                mobileNavOverlay.classList.add('active');
-                mobileMenuToggle.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-      
-
-        // Close menu when clicking overlay
-        mobileNavOverlay.addEventListener('click', (e) => {
-            if (e.target === mobileNavOverlay) {
-                mobileNavOverlay.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Mobile dropdown functionality
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                const submenu = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
-                
-                if (submenu) {
-                    submenu.classList.toggle('active');
-                }
-                if (icon) {
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                }
-            });
-        });
-
-        const menu = document.querySelector('.mobile_menu');
-        const nav = document.querySelector('#navigation');
+             
 
         // Scroll animation observer
         const observerOptions = {
@@ -1450,8 +1432,10 @@
                 }, 300);
             }
 
-              function openWhatsApp() {
-                    const phone = "919500396045";
+          
+    
+     function openWhatsApp() {
+                    const phone = "919884606311";
                     const message = "Hello, I want to know more";
 
                     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -1476,8 +1460,9 @@
                         whatsappBtn.classList.remove("show");
                     }
                 });
+                </script>
+                          <!-- WhatsApp Chat Button -->   
 
-    </script>
 
 </body>
 
