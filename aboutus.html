@@ -7,9 +7,11 @@
     <title>DKN-About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="title" content="About DKN Infra | Leaders in Environmental & Energy Engineering">
+<meta name="description" content="Discover DKN Infra's mission: delivering specialized technical services in water treatment, solid waste management, and carbon monitoring. We bridge the gap between engineering and sustainability.">
+<meta name="keywords" content="about DKN Infra, environmental consultancy services, water treatment experts, solid waste management specialists, renewable energy engineering firm, carbon monitoring experts, DKN mission and vision">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.ico">
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -357,7 +359,7 @@
             <div class="slider-active auto-slider">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
                     data-background="assets/img/banner/about.jpeg">
-                    <div class="container">
+                    <div class="container-fluid px-0">
                         <div class="row">
                             <div class="col-lg-11">
                                 <div class="hero__caption">
@@ -387,7 +389,7 @@
 
     <!-- HEADING (always on top) -->
     <div class="row mb-3">
-      <div class="col-12 text-center text-lg-start">
+      <div class="col-12 text-center text-lg-center">
         <h2 class="batman-text gradient-text">Who We Are</h2>
       </div>
     </div>
@@ -507,6 +509,11 @@
                                             <img src="assets/img/icon/Facebook.png" alt="Facebook" style="width: 30px; height: 30px;">
                                         </a>
                                     </div>
+                                     <!-- <div class="col-2 text-center">
+                                        <a href="https://www.facebook.com/DknInfra" target="_blank">
+                                            <img src="assets/img/icon/Linkedin.png" alt="Linkedin" style="width: 30px; height: 30px;">
+                                        </a>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -625,6 +632,14 @@
                         whatsappBtn.classList.remove("show");
                     }
                 });
+                  // Always scroll to top on page load / refresh
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
                 </script>
                           <!-- WhatsApp Chat Button -->
        

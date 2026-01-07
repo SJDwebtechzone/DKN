@@ -1,0 +1,19 @@
+{
+  "name": "DKN Water Treatment",
+  "short_name": "DKN",
+  "icons": [
+    {
+      "src": "/icon/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#ff9800",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

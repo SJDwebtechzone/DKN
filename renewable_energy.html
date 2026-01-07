@@ -7,9 +7,11 @@
     <title>DKN - Renewable Energy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
+    <meta name="description" content="Technical engineering services for Solar and Wind energy. DKN Infra provides feasibility studies, EPC management, and renewable energy system optimization.">
+<meta name="keywords" content="renewable energy engineering, solar energy services, wind power consultancy, energy EPC services, DKN renewable engineering">
+    
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.ico">
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -757,7 +759,7 @@
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
                         <img src="assets/img/banner/Photovoltaic.webp" alt="Photovoltaic Systems" class="w-full h-52 object-cover">
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-800 mb-3">Photovoltaic Systems</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-3">Photovoltaic Systems</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Advanced solar panel installations converting sunlight directly into electricity with high efficiency rates and long-term reliability.</p>
                         </div>
                     </div>
@@ -766,7 +768,7 @@
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
                         <img src="assets/img/banner/Thermal.jpg" alt="Solar Thermal" class="w-full h-52 object-cover">
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-800 mb-3">Solar Thermal</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-3">Solar Thermal</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Heat collection systems for water heating and space heating applications in residential and commercial buildings.</p>
                         </div>
                     </div>
@@ -775,7 +777,7 @@
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg energy-card solar-card" onclick="blinkCard(this)">
                         <img src="assets/img/banner/Concentrated_Solar.jpg" alt="Concentrated Solar Power" class="w-full h-52 object-cover">
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-800 mb-3">Concentrated Solar Power</h3>
+                            <h3 class="text-lg font-bold gradient-text mb-3">Concentrated Solar Power</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">Large-scale solar thermal power plants using mirrors to concentrate sunlight for electricity generation.</p>
                         </div>
                     </div>
@@ -789,21 +791,21 @@
                             <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-leaf text-white"></i>
                             </div>
-                            <h4 class="font-bold text-gray-800 mb-2">Clean Energy</h4>
+                            <h4 class="font-bold gradient-text mb-2">Clean Energy</h4>
                             <p class="text-gray-600 text-sm">Zero emissions during operation, contributing to environmental protection.</p>
                         </div>
                         <div class="text-center solar-benefits">
                             <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-coins text-white"></i>
                             </div>
-                            <h4 class="font-bold text-gray-800 mb-2">Cost Effective</h4>
+                            <h4 class="font-bold gradient-text mb-2">Cost Effective</h4>
                             <p class="text-gray-600 text-sm">Significant long-term savings on electricity bills and maintenance.</p>
                         </div>
                         <div class="text-center solar-benefits">
                             <div class="w-12 h-12 energy-gradient rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-infinity text-white"></i>
                             </div>
-                            <h4 class="font-bold text-gray-800 mb-2">Renewable</h4>
+                            <h4 class="font-bold gradient-text mb-2">Renewable</h4>
                             <p class="text-gray-600 text-sm">Inexhaustible energy source available for billions of years.</p>
                         </div>
                     </div>
@@ -1332,7 +1334,14 @@
       header.classList.remove("sticky-bar");
     }
   });
-  
+    // Always scroll to top on page load / refresh
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
     </script>
 
 </body>
