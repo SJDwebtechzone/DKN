@@ -1221,3 +1221,110 @@ h1,h2,h3,h4,h5,h6{
         bottom: 90px;    /* optional: adjust vertical position */
     }
 }
+/* ISO Section */
+.iso-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.iso-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.iso-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FF9800; /* Orange Title */
+    margin-bottom: 20px;
+}
+
+.iso-description {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Grid Layout */
+.iso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Card Styling with Animations */
+.iso-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient Background Slide Effect */
+.iso-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 152, 0, 0.05), transparent);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.iso-card:hover::before {
+    width: 100%;
+}
+
+/* Hover Effects: Lift & Glow */
+.iso-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 152, 0, 0.15);
+    border-color: #FF9800;
+}
+
+/* Icon Styling & Spin Animation */
+.iso-icon {
+    font-size: 24px;
+    color: #FF9800;
+    margin-right: 20px;
+    min-width: 50px;
+    height: 50px;
+    background: rgba(255, 152, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.iso-card:hover .iso-icon {
+    background: #FF9800;
+    color: white;
+    transform: rotateY(360deg); /* 3D Spin */
+}
+
+/* Text Styling */
+.iso-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a2142;
+}
+
+.iso-text p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
